@@ -10,6 +10,7 @@ process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 var express = require('express');
 var mongoose = require('mongoose');
 var config = require('./config/environment');
+var winston = require('./config/winston');
 
 // Connect to database
 mongoose.connect(config.mongo.uri, config.mongo.options);
@@ -27,7 +28,7 @@ require('./routes')(app);
 
 // Start server
 server.listen(config.port, config.ip, function () {
-  console.log('Express server listening on %d, in %s mode', config.port, app.get('env'));
+  winston.info('Express server listening on %d, in %s mode', config.port, app.get('env'));
 });
 
 // Expose app

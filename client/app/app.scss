@@ -15,6 +15,12 @@ $fa-font-path: "/bower_components/font-awesome/fonts";
     padding: 0.2em 0;
 }
 
+// Add a little more padding to the container
+.container-fluid {
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
     .container {
