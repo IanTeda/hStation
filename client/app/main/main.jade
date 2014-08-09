@@ -1,31 +1,30 @@
-div(ng-include='"components/navbar/navbar.html"')
+header(ng-include='"components/navbar/navbar.html"')
 
-header#banner.hero-unit
-  .container
-    h1 'Allo, 'Allo!
-    p.lead Kick-start your next web app with Angular Fullstack
-    img(src='assets/images/yeoman.png', alt='I\'m Yeoman')
+.container-fluid
+  .row(ng-init="getLatestReadings()")
+    .col-md-3.col-sm-6
+      .panel.panel-default
+        .panel-heading Temperature
+        .panel-body.text-center
+          h1.reading {{latestTemperature.reading}}
+          .small {{latestTemperature.timestamp | date:'HH:mm EEE, dd MMM yyyy Z'}}
+    .col-md-3.col-sm-6
+      .panel.panel-default
+        .panel-heading Dew Point
+        .panel-body.text-center
+          h1.reading {{latestDewPoint.reading}}
+          .small {{latestDewPoint.timestamp | date:'HH:mm EEE, dd MMM yyyy Z'}}
+    .col-md-3.col-sm-6
+      .panel.panel-default
+        .panel-heading Humidity
+        .panel-body.text-center
+          h1.reading {{latestHumidity.reading}}
+          .small {{latestHumidity.timestamp | date:'HH:mm EEE, dd MMM yyyy Z'}}
+    .col-md-3.col-sm-6
+      .panel.panel-default
+        .panel-heading Pressure
+        .panel-body.text-center
+          h1.reading {{latestPressure.reading | number:1}}
+          .small {{latestPressure.timestamp | date:'HH:mm EEE, dd MMM yyyy Z'}}
 
-.container
-  .row
-    .col-lg-12
-      h1.page-header Features:
-      ul.nav.nav-tabs.nav-stacked.col-lg-6(ng-repeat='thing in awesomeThings')
-        li
-          a(href='#', tooltip='{{thing.info}}')
-            | {{thing.name}}
-            button.close(type='button', ng-click='deleteThing(thing)') ×
-
-  form.thing-form
-    label Syncs in realtime across clients
-    p.input-group
-      input.form-control(type='text', placeholder='Add a new thing here.', ng-model='newThing')
-      span.input-group-btn
-        button.btn.btn-primary(type='submit', ng-click='addThing()') Add New
-
-footer.footer
-  .container
-    p
-      a(href='https://twitter.com/tyhenkel') @tyhenkel
-      = ' | '
-      a(href='https://github.com/DaftMonk/generator-angular-fullstack/issues?state=open') Issues
+footer.footer(ng-include='"components/footer/footer.html"')

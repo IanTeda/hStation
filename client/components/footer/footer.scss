@@ -1,0 +1,24 @@
+/* Sticky footer styles
+-------------------------------------------------- */
+$footer-height: 34px;
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: $footer-height;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: $footer-height;
+    /* Push text down to center */
+    padding: (($footer-height - 20)/2) 0;
+    background-color: #f5f5f5;
+}
