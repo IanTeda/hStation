@@ -1,6 +1,12 @@
 {
-  "name": "h-station",
-  "version": "0.0.0",
+  "name": "hStation",
+  "description": "A MEAN stack Raspberry Pi Weather Station",
+  "version": "0.0.1",
+  "author": {
+    "name": "Ian Teda",
+    "email": "ian@teda.id.au",
+    "web": "http://www.teda.id.au/weatherpi"
+  },
   "main": "server/app.js",
   "dependencies": {
     "body-parser": "~1.0.0",
