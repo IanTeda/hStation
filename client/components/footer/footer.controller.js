@@ -3,21 +3,21 @@
 angular.module('hStationApp')
   .controller('FooterCtrl', function ($scope, $http) {
 
-    console.log('FooterCtrl');
-
-    $scope.hStationApp = [
+    $scope.appInfo = [
       {
         'name': 'Not Found',
         'description' : 'Description',
-        'author' : 'Some One',
-        'email' : 'someone@hotmail.com',
-        'homepage' : 'www.someone.com',
-        'version': '-1'
+        'version': '-1',
+        'author' : {
+          'name' : 'Some One',
+          'email' : 'someone@hotmail.com',
+          'web' : 'www.someone.com'
+        }
       }
     ];
 
-    $http.get('/api/app/version').success(function(hStationAppVersion) {
-      $scope.hStationApp.version = hStationAppVersion;
+    $http.get('/api/app').success(function(appInfo) {
+      $scope.appInfo = appInfo;
     });
 
   });
