@@ -21,20 +21,6 @@ exports.index = function(req, res) {
 };
 
 /**
- * Creates a new user
- */
-exports.create = function (req, res, next) {
-  var newUser = new User(req.body);
-  newUser.provider = 'local';
-  newUser.role = 'user';
-  newUser.save(function(err, user) {
-    if (err) return validationError(res, err);
-    var token = jwt.sign({_id: user._id }, config.secrets.session, { expiresInMinutes: 60*5 });
-    res.json({ token: token });
-  });
-};
-
-/**
  * Get a single user
  */
 exports.show = function (req, res, next) {
@@ -44,17 +30,6 @@ exports.show = function (req, res, next) {
     if (err) return next(err);
     if (!user) return res.send(401);
     res.json(user.profile);
-  });
-};
-
-/**
- * Deletes a user
- * restriction: 'admin'
- */
-exports.destroy = function(req, res) {
-  User.findByIdAndRemove(req.params.id, function(err, user) {
-    if(err) return res.send(500, err);
-    return res.send(204);
   });
 };
 

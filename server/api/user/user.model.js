@@ -3,6 +3,7 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 var crypto = require('crypto');
+var winston = require('./../../config/winston');
 
 var authTypes = ['github', 'twitter', 'facebook', 'google'];
 
@@ -14,6 +15,7 @@ var UserSchema = new Schema({
     default: 'user'
   },
   hashedPassword: String,
+  isResetRequire: false,
   provider: String,
   salt: String,
   facebook: {},
@@ -146,6 +148,51 @@ UserSchema.methods = {
     if (!password || !this.salt) return '';
     var salt = new Buffer(this.salt, 'base64');
     return crypto.pbkdf2Sync(password, salt, 10000, 64).toString('base64');
+  }
+};
+
+UserSchema.statics = {
+
+  /**
+   * Check if user collection is empty, if so add default admin user
+   */
+  seedIfEmpty: function () {
+    // Check if User collection is empty
+    this.find(function (err, users) {
+
+      if (err) {
+        console.log(err);
+      }
+
+      if (users.length === 0) {
+
+        // Add default user to database
+        var User = mongoose.model('User');
+
+        // Set default user info
+        var newUser = new User({
+          name: 'Webmaster',
+          email: 'admin@test.com',
+          mobile: '0410000111',
+          role: 'Admin',
+          provider: 'local',
+          isResetRequire: true
+        });
+
+        // Set default user password
+        newUser.password = 'admin';
+
+        // Save default user to database
+        newUser.save(function (error) {
+          if (error) {
+            wintson.error('Error saving default users: ' + error);
+          } else {
+            winston.info('User collection empty so added default admin user');
+          }
+        });
+
+      }
+    });
   }
 };
 
