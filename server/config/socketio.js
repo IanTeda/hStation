@@ -18,6 +18,8 @@ function onConnect(socket) {
   });
 
   // Insert sockets below
+  require('../api/settings/settings.socket').register(socket);
+  require('../api/serialport/serialport.socket').register(socket);
   require('../api/pressure/pressure.socket').register(socket);
   require('../api/humidity/humidity.socket').register(socket);
   require('../api/dewpoint/dewpoint.socket').register(socket);

@@ -9,6 +9,8 @@ var errors = require('./components/errors');
 module.exports = function(app) {
 
   // Insert routes below
+  app.use('/api/settings', require('./api/settings'));
+  app.use('/api/serialport', require('./api/serialport'));
   app.use('/api/pressures', require('./api/pressure'));
   app.use('/api/humiditys', require('./api/humidity'));
   app.use('/api/dewpoints', require('./api/dewpoint'));
