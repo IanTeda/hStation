@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('hStationApp')
-  .controller('LoginCtrl', function ($scope, Auth, $location, $window) {
+  .controller('LoginCtrl', function ($scope, Auth, $location, $window, $http) {
     $scope.user = {};
     $scope.errors = {};
 
@@ -22,6 +22,24 @@ angular.module('hStationApp')
         });
       }
     };
+
+
+    $scope.appInfo = [
+      {
+        'name': 'Not Found',
+        'description' : 'Description',
+        'version': '-1',
+        'author' : {
+          'name' : 'Some One',
+          'email' : 'someone@hotmail.com',
+          'web' : 'www.someone.com'
+        }
+      }
+    ];
+
+    $http.get('/api/app').success(function(appInfo) {
+      $scope.appInfo = appInfo;
+    });
 
     $scope.loginOauth = function(provider) {
       $window.location.href = '/auth/' + provider;
