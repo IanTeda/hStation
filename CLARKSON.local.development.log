@@ -135,3 +135,6 @@
 {"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-08-13T11:16:18.315Z"}
 {"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-08-13T11:16:42.329Z"}
 {"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-08-13T11:16:42.346Z"}
+{"level":"info","message":"Mongoose disconnected","timestamp":"2014-08-13T11:25:12.183Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-08-18T04:01:04.257Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-08-18T04:01:04.272Z"}
