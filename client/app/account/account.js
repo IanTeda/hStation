@@ -8,10 +8,10 @@ angular.module('hStationApp')
         templateUrl: 'app/account/login/login.html',
         controller: 'LoginCtrl'
       })
-      .state('settings', {
-        url: '/settings',
-        templateUrl: 'app/account/settings/settings.html',
-        controller: 'SettingsCtrl',
+      .state('account', {
+        url: '/account',
+        templateUrl: 'app/account/details/details.html',
+        controller: 'DetailsCtrl',
         authenticate: true
       });
   });
