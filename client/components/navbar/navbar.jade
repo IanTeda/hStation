@@ -35,6 +35,11 @@ nav.navbar.navbar-default.navbar-static-top(ng-controller='NavbarCtrl', role='na
             li
               a(ng-click='logout()') Logout
 
-        li(ng-show='isLoggedIn()', ng-class='{active: isActive("/admin")}')
-          a(href='/admin')
+        li.dropdown(ng-show='isLoggedIn()', ng-class='{active: isActive("/settings")}')
+          a.dropdown-toggle(data-toggle='dropdown')
             span.glyphicon.glyphicon-cog
+          ul.dropdown-menu
+            li
+              a(ui-sref='settings') Settings
+            li
+              a(ui-sref='log') Log

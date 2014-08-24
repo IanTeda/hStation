@@ -1,0 +1,34 @@
+table#app-log {
+    .col_level {
+        width: 80px;
+    }
+    .col_date_time {
+        width: 220px;
+    }
+    .col_message {
+        //Table will fill out the remained of the view
+    }
+    tbody tr {
+        td.log-silly {
+            color: magenta;
+        }
+        td.log-verbose {
+            color: cyan;
+        }
+        td.log-info {
+            color: green;
+        }
+        td.log-data {
+            color: grey;
+        }
+        td.log-warn {
+            color: yellow;
+        }
+        td.log-debug {
+            color: blue;
+        }
+        td.log-error {
+            color: red;
+        }
+    }
+}
