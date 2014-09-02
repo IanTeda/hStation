@@ -3,11 +3,14 @@
 var _ = require('lodash');
 var Settings = require('./settings.model');
 
-// Get list of settingss
+// Get list of settings
 exports.index = function(req, res) {
-  Settings.find(function (err, settingss) {
-    if(err) { return handleError(res, err); }
-    return res.json(200, settingss);
+  Settings.getAllSettings(function (err, settings) {
+    if (settings) {
+      res.jsonp(settings);
+    } else {
+      res.send(404, 'Empty settings');
+    }
   });
 };
 
@@ -26,6 +29,11 @@ exports.create = function(req, res) {
     if(err) { return handleError(res, err); }
     return res.json(201, settings);
   });
+};
+
+// Updates an existing settings in the DB.
+exports.updateSetting = function(req, res) {
+  console.log('updateSetting ' + req.params.setting + ":" + req.body.comName);
 };
 
 // Updates an existing settings in the DB.

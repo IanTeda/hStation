@@ -3,9 +3,8 @@
 var _ = require('lodash');
 var serialPort = require("serialport");
 
-// Return list of serial ports
+// Return list of serial ports available
 exports.index = function(req, res) {
-  console.log('serialport.index');
   serialPort.list(function (err, ports) {
     if(err) { return handleError(res, err); }
     return res.json(200, ports);

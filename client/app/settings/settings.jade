@@ -1,5 +1,17 @@
 header(ng-include='"components/navbar/navbar.html"')
 .container-fluid
+  .page-header
+    h1
+      | Settings &nbsp;
+      small Change how hStation Works
+
   .row
-    h1 hStation Settings
+    .col-sm-10
+      form.form-horizontal(role='form')
+        .form-group
+          label.col-sm-2.control-label(for='serialPort') Arduino Serial Port:
+          .col-sm-4
+            select.form-control(ng-model='comPort', ng-change='serialportSelected(comPort)', ng-options='serialport.comName for serialport in serialports', name='serialPort')
+              option(value='') Select Serial Port
+
 footer.footer(ng-include='"components/footer/footer.html"')
