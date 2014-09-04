@@ -13,5 +13,10 @@ header(ng-include='"components/navbar/navbar.html"')
           .col-sm-4
             select.form-control(ng-model='selectedSerialPort', ng-options='serialport.comName for serialport in serialports', ng-change='serialportSelected()')
               option(value='') Select Serial Port
+          .col-sm-4
+              button.btn.btn-default.col-sm-5(ng-click='connectArduino()') Connect Arduino
+
+  .row
+
 
 footer.footer(ng-include='"components/footer/footer.html"')

@@ -10,18 +10,29 @@
  */
 
 angular.module('hStationApp')
-  .factory('SettingsModel', function ($resource) {
+  .factory('TemperatureModel', function ($resource) {
 
-    return $resource('/api/settings/:id', {
+    return $resource('/api/temperature/:id', {
         id: '@_id'
       }, {
-        index: {
+        index : {
           method: 'GET',
           isArray: true
+        },
+        create : {
+          method: 'POST',
+          params: {}
+        },
+        show: {
+          method: 'GET',
+          params: {}
         },
         update: {
           method: 'PUT',
           params: {}
+        },
+        destroy: {
+          method: 'DELETE'
         }
       }
     );
