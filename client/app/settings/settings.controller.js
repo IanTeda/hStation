@@ -15,13 +15,11 @@ angular.module('hStationApp')
     // Request JSON from server end point
     $http.get('/api/serialport').success(function(serialports) {
       $scope.serialports = serialports;
+      //console.log('serialports: ' + JSON.stringify(serialports));
     });
 
     // When serial port select is changed update setting document
     $scope.serialportSelected = function() {
-
-      // Update settings scope with new serial port selection
-      $scope.settings[0].serialport = $scope.selectedSerialPort.comName;
 
       // Update settings document
       SettingsService.update($scope.settings[0]);

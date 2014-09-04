@@ -10,8 +10,10 @@ header(ng-include='"components/navbar/navbar.html"')
       form.form-horizontal(role='form')
         .form-group
           label.col-sm-2.control-label(for='serialPort') Arduino Serial Port:
-          .col-sm-4
-            select.form-control(ng-model='selectedSerialPort', ng-options='serialport.comName for serialport in serialports', ng-change='serialportSelected()')
+          .col-sm-5
+            select.form-control(ng-model='settings[0].serialport',
+              ng-options='serialport.comName as serialport.comName + " (" + serialport.manufacturer + ")"  for serialport in serialports',
+              ng-change='serialportSelected()')
               option(value='') Select Serial Port
           .col-sm-4
               button.btn.btn-default.col-sm-5(ng-click='connectArduino()') Connect Arduino
