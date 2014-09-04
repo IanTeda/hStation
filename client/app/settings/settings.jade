@@ -11,7 +11,7 @@ header(ng-include='"components/navbar/navbar.html"')
         .form-group
           label.col-sm-2.control-label(for='serialPort') Arduino Serial Port:
           .col-sm-4
-            select.form-control(ng-model='comPort', ng-change='serialportSelected(comPort)', ng-options='serialport.comName for serialport in serialports', name='serialPort')
+            select.form-control(ng-model='selectedSerialPort', ng-options='serialport.comName for serialport in serialports', ng-change='serialportSelected()')
               option(value='') Select Serial Port
 
 footer.footer(ng-include='"components/footer/footer.html"')

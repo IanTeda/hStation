@@ -304,3 +304,103 @@
 {"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-01T10:34:55.922Z"}
 {"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-01T10:36:54.666Z"}
 {"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-01T10:36:54.681Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-02T09:25:10.598Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-02T09:25:10.611Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-02T09:42:21.095Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-02T09:42:21.111Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-02T09:43:00.256Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-02T09:43:00.271Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-02T09:43:03.995Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-02T09:43:04.009Z"}
+{"level":"info","message":"Mongoose disconnected","timestamp":"2014-09-02T09:43:19.969Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-02T09:43:23.391Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-02T09:43:23.405Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-02T09:49:41.804Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-02T09:49:41.817Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-02T09:58:19.886Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-02T09:58:19.899Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-02T09:59:01.932Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-02T09:59:01.945Z"}
+{"level":"info","message":"Mongoose disconnected","timestamp":"2014-09-02T09:59:44.714Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-02T09:59:48.025Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-02T09:59:48.041Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-02T10:00:30.042Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-02T10:00:30.055Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-02T10:00:59.411Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-02T10:00:59.424Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-02T10:03:46.039Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-02T10:03:46.052Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-02T10:05:38.960Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-02T10:05:38.973Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-02T10:10:58.551Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-02T10:10:58.567Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-02T10:18:43.550Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-02T10:18:43.564Z"}
+{"level":"info","message":"Settings default values for setting","timestamp":"2014-09-02T10:18:43.574Z"}
+{"level":"info","message":"Settings schema empty","timestamp":"2014-09-02T10:18:43.574Z"}
+{"level":"info","message":"Mongoose disconnected","timestamp":"2014-09-02T10:22:09.553Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-02T10:22:12.887Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-02T10:22:12.901Z"}
+{"level":"info","message":"Settings default values for setting","timestamp":"2014-09-02T10:22:12.910Z"}
+{"level":"info","message":"Settings schema empty","timestamp":"2014-09-02T10:22:12.910Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-02T10:23:24.722Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-02T10:23:24.735Z"}
+{"level":"info","message":"Settings default values for setting","timestamp":"2014-09-02T10:23:24.746Z"}
+{"level":"info","message":"Looks like the the Settings collection is empty","timestamp":"2014-09-02T10:23:24.746Z"}
+{"level":"info","message":"Mongoose disconnected","timestamp":"2014-09-02T10:24:13.921Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-02T10:24:17.184Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-02T10:24:17.198Z"}
+{"level":"info","message":"Settings default values for setting","timestamp":"2014-09-02T10:24:17.207Z"}
+{"level":"info","message":"Looks like the the Settings collection is empty","timestamp":"2014-09-02T10:24:17.207Z"}
+{"level":"info","message":"User collection empty so added default admin user","timestamp":"2014-09-02T10:24:17.587Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-02T10:26:42.749Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-02T10:26:42.762Z"}
+{"level":"info","message":"Set default values for setting","timestamp":"2014-09-02T10:26:42.771Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-02T10:34:48.172Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-02T10:34:48.187Z"}
+{"level":"info","message":"Set default values for setting","timestamp":"2014-09-02T10:34:48.199Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-02T10:36:01.635Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-02T10:36:01.648Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-02T10:38:34.744Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-02T10:38:34.757Z"}
+{"level":"info","message":"Set default values for setting","timestamp":"2014-09-02T10:38:34.769Z"}
+{"level":"info","message":"Settings collection empty so added default values","timestamp":"2014-09-02T10:38:34.780Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-02T10:41:47.226Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-02T10:41:47.242Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-02T10:42:32.117Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-02T10:42:32.130Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-02T10:45:10.641Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-02T10:45:10.655Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-02T10:45:33.089Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-02T10:45:33.103Z"}
+{"level":"info","message":"Mongoose disconnected","timestamp":"2014-09-02T10:45:33.838Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-02T10:45:37.158Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-02T10:45:37.171Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-02T10:46:02.027Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-02T10:46:02.041Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-02T10:46:42.646Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-02T10:46:42.660Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-02T10:47:10.186Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-02T10:47:10.200Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-02T10:47:33.126Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-02T10:47:33.139Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-02T10:47:51.118Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-02T10:47:51.132Z"}
+{"level":"info","message":"Mongoose disconnected","timestamp":"2014-09-02T11:15:32.267Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-03T10:05:36.474Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-03T10:05:36.488Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-03T11:06:16.028Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-03T11:06:16.046Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-03T11:14:15.403Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-03T11:14:15.419Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-03T11:16:10.513Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-03T11:16:10.532Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-03T11:56:50.637Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-03T11:56:50.650Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-03T11:57:14.535Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-03T11:57:14.548Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-03T11:59:22.454Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-03T11:59:22.468Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-03T12:00:00.594Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-03T12:00:00.609Z"}
+{"level":"info","message":"Mongoose disconnected","timestamp":"2014-09-03T12:03:25.154Z"}

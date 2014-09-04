@@ -21,42 +21,30 @@ SettingsSchema.statics = {
 
       // If find returns an error log it to winston
       if (err) {
-        winston.error(err);
+        winston.error('Could not find settings schema ' + err);
       }
       // Else check if settings is empty and then load default settings
       else if (settings.length === 0) {
-        var settings = mongoose.model('Settings');
-        settings.setDefaultValues();
-        winston.info('Settings schema empty so set default values');
+
+        var Settings = mongoose.model('Settings');
+
+        // Set default user info
+        var defaultSetting = new Settings({
+          serialport: 'No serial port set'
+        });
+
+        // Save default user to database
+        defaultSetting.save(function (err) {
+          if (error) {
+            wintson.error('Error saving default settings: ' + err);
+          } else {
+            winston.info('Settings collection empty so added default values');
+          }
+        });
+
+        winston.info('Set default values for setting');
       }
     });
-  },
-
-  /**
-   * Set default values for settings Schema.
-   * Separate static method so one can reset from outside seedIfEmpty
-   */
-  setDefaultValues: function () {
-    // Set default values for settings
-    var settings = mongoose.model('Settings');
-    settings.setSerialPort('No serial port set');
-  },
-
-  /**
-   * Set serial port to be used with the Arduino
-   * @param serialPort
-   */
-  setSerialPort: function(serialPort) {
-    console.log('setSerialPort: ' + serialPort);
-  },
-
-  /**
-   * Get all settings for app
-   * @param callback
-   */
-  getAllSettings: function(err, callback){
-    this.findOne({}, {}, { sort: { 'timestamp': -1 } })
-      .exec(callback);
   }
 
 };
