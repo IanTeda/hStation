@@ -45,6 +45,11 @@ SettingsSchema.statics = {
         winston.info('Set default values for setting');
       }
     });
+  },
+
+  getSettings: function (callback) {
+    this.findOne({}, {}, { sort: { 'timestamp': 1 } })
+      .exec(callback);
   }
 
 };

@@ -31,9 +31,11 @@ $fa-font-path: "/bower_components/font-awesome/fonts";
 // injector
 @import 'account/details/details.scss';
 @import 'account/login/login.scss';
+@import 'dewpoint/dewpoint.scss';
+@import 'humidity/humidity.scss';
 @import 'main/main.scss';
-@import 'sensors/sensors.scss';
-@import 'sensors/temperature/temperature.scss';
+@import 'pressure/pressure.scss';
 @import 'settings/log/log.scss';
+@import 'temperature/temperature.scss';
 @import 'footer/footer.scss';
 // endinjector

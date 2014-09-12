@@ -1,6 +1,6 @@
 'use strict';
 
 angular.module('hStationApp')
-  .controller('SensorsCtrl', function ($scope) {
+  .controller('HumidityCtrl', function ($scope) {
     $scope.message = 'Hello';
   });

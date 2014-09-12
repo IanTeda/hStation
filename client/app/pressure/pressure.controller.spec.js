@@ -1,16 +1,16 @@
 'use strict';
 
-describe('Controller: SensorsCtrl', function () {
+describe('Controller: PressureCtrl', function () {
 
   // load the controller's module
   beforeEach(module('hStationApp'));
 
-  var SensorsCtrl, scope;
+  var PressureCtrl, scope;
 
   // Initialize the controller and a mock scope
   beforeEach(inject(function ($controller, $rootScope) {
     scope = $rootScope.$new();
-    SensorsCtrl = $controller('SensorsCtrl', {
+    PressureCtrl = $controller('PressureCtrl', {
       $scope: scope
     });
   }));
