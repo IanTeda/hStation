@@ -715,3 +715,10 @@
 {"level":"info","message":"Added job 'pressure' to agenda queue","timestamp":"2014-09-13T10:27:28.640Z"}
 {"level":"info","message":"Added job 'temperature' to agenda queue","timestamp":"2014-09-13T10:27:28.640Z"}
 {"level":"info","message":"Added job 'dewpoint' to agenda queue","timestamp":"2014-09-13T10:27:28.640Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-13T10:29:18.023Z"}
+{"level":"info","message":"Communicating with the arduino on port /dev/tty.usbmodem1411","timestamp":"2014-09-13T10:29:18.027Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-13T10:29:18.048Z"}
+{"level":"info","message":"Added job 'humidity' to agenda queue","timestamp":"2014-09-13T10:29:18.066Z"}
+{"level":"info","message":"Added job 'pressure' to agenda queue","timestamp":"2014-09-13T10:29:18.066Z"}
+{"level":"info","message":"Added job 'temperature' to agenda queue","timestamp":"2014-09-13T10:29:18.066Z"}
+{"level":"info","message":"Added job 'dewpoint' to agenda queue","timestamp":"2014-09-13T10:29:18.066Z"}

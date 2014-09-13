@@ -10,6 +10,7 @@ var winston = require('./winston');
 var config = require('./environment');
 var agendas = require('./../api/agenda/agenda.model');
 
+// Agenda settings
 var agenda = new Agenda({
   db: {
     address: config.mongo.uri,
