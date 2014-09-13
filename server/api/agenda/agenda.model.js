@@ -3,6 +3,7 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 var winston = require('./../../config/winston');
+var config = require('./../../config/environment');
 
 var AgendaSchema = new Schema({
   sensor: String,
@@ -28,10 +29,10 @@ AgendaSchema.statics = {
         // Add default user to database
         var Agenda = mongoose.model('Agenda');
 
-        addAgenda(Agenda, 'humidity', 'every 10 minutes', 'HUMIDITY');
-        addAgenda(Agenda, 'pressure', 'every 10 minutes', 'PRESSURE');
-        addAgenda(Agenda, 'temperature', 'every 10 minutes', 'TEMPERATURE');
-        addAgenda(Agenda, 'dewpoint', 'every 10 minutes', 'DEWPOINT');
+        addAgenda(Agenda, 'Humidity', config.agenda.default.interval, 'HUMIDITY');
+        addAgenda(Agenda, 'Pressure', config.agenda.default.interval, 'PRESSURE');
+        addAgenda(Agenda, 'Temperature', config.agenda.default.interval, 'TEMPERATURE');
+        addAgenda(Agenda, 'Dew Point', config.agenda.default.interval, 'DEWPOINT');
       }
     });
   }
