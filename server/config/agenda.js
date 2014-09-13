@@ -35,8 +35,10 @@ agendas.find(function (err, jobs) {
 
         // Only add agenda job if it is active
         if (jobs[key].active) {
+
           agenda.define(jobs[key].sensor, function (job, done) {
-            console.log('send command: ' + obs[key].command);
+            console.log('send command: ' + jobs[key].command);
+            done();
           });
           agenda.schedule(jobs[key].interval, jobs[key].sensor, {time: new Date()});
 
@@ -44,6 +46,8 @@ agendas.find(function (err, jobs) {
         }
       }
     }
+
+    // Start the agenda jobs
     agenda.start();
   }
 

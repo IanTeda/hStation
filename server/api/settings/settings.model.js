@@ -35,7 +35,7 @@ SettingsSchema.statics = {
 
         // Save default user to database
         defaultSetting.save(function (err) {
-          if (error) {
+          if (err) {
             wintson.error('Error saving default settings: ' + err);
           } else {
             winston.info('Settings collection empty so added default values');
