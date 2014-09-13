@@ -22,6 +22,7 @@ require('./config/socketio')(socketio);
 require('./config/express')(app);
 require('./routes')(app);
 require('./config/serialport');
+require('./config/agenda');
 
 // Start server
 server.listen(config.port, config.ip, function () {

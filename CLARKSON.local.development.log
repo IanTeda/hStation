@@ -494,3 +494,224 @@
 {"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-11T12:10:29.663Z"}
 {"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-11T12:11:27.936Z"}
 {"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-11T12:11:27.949Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-12T21:49:42.168Z"}
+{"level":"error","message":"Unable to connect to serial port! Error: Cannot open /dev/tty.usbmodem1411","timestamp":"2014-09-12T21:49:42.172Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-12T21:49:42.206Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-12T21:50:33.674Z"}
+{"level":"error","message":"seraialport.js error! Error: Cannot open /dev/tty.usbmodem1411","timestamp":"2014-09-12T21:50:33.679Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-12T21:50:33.689Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-13T02:20:23.506Z"}
+{"level":"error","message":"seraialport.js error! Error: Cannot open /dev/tty.usbmodem1411","timestamp":"2014-09-13T02:20:23.510Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-13T02:20:23.531Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-13T03:10:38.884Z"}
+{"level":"error","message":"seraialport.js error! Error: Cannot open /dev/tty.usbmodem1411","timestamp":"2014-09-13T03:10:38.888Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-13T03:10:38.902Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-13T03:10:48.302Z"}
+{"level":"error","message":"seraialport.js error! Error: Cannot open /dev/tty.usbmodem1411","timestamp":"2014-09-13T03:10:48.306Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-13T03:10:48.318Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-13T03:12:03.944Z"}
+{"level":"error","message":"seraialport.js error! Error: Cannot open /dev/tty.usbmodem1411","timestamp":"2014-09-13T03:12:03.948Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-13T03:12:03.973Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-13T03:12:18.891Z"}
+{"level":"error","message":"seraialport.js error! Error: Cannot open /dev/tty.usbmodem1411","timestamp":"2014-09-13T03:12:18.896Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-13T03:12:18.907Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-13T03:20:01.458Z"}
+{"level":"error","message":"seraialport.js error! Error: Cannot open /dev/tty.usbmodem1411","timestamp":"2014-09-13T03:20:01.462Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-13T03:20:01.472Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-13T03:20:35.657Z"}
+{"level":"error","message":"seraialport.js error! Error: Cannot open /dev/tty.usbmodem1411","timestamp":"2014-09-13T03:20:35.661Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-13T03:20:35.673Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-13T03:21:27.195Z"}
+{"level":"error","message":"seraialport.js error! Error: Cannot open /dev/tty.usbmodem1411","timestamp":"2014-09-13T03:21:27.199Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-13T03:21:27.216Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-13T03:22:47.304Z"}
+{"level":"error","message":"seraialport.js error! Error: Cannot open /dev/tty.usbmodem1411","timestamp":"2014-09-13T03:22:47.308Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-13T03:22:47.319Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-13T03:23:50.884Z"}
+{"level":"error","message":"seraialport.js error! Error: Cannot open /dev/tty.usbmodem1411","timestamp":"2014-09-13T03:23:50.888Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-13T03:23:50.901Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-13T03:24:19.650Z"}
+{"level":"error","message":"seraialport.js error! Error: Cannot open /dev/tty.usbmodem1411","timestamp":"2014-09-13T03:24:19.654Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-13T03:24:19.666Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-13T03:26:04.539Z"}
+{"level":"error","message":"seraialport.js error! Error: Cannot open /dev/tty.usbmodem1411","timestamp":"2014-09-13T03:26:04.544Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-13T03:26:04.556Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-13T03:26:18.590Z"}
+{"level":"error","message":"seraialport.js error! Error: Cannot open /dev/tty.usbmodem1411","timestamp":"2014-09-13T03:26:18.594Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-13T03:26:18.604Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-13T03:38:11.291Z"}
+{"level":"error","message":"seraialport.js error! Error: Cannot open /dev/tty.usbmodem1411","timestamp":"2014-09-13T03:38:11.295Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-13T03:38:11.319Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-13T03:43:39.521Z"}
+{"level":"error","message":"seraialport.js error! Error: Cannot open /dev/tty.usbmodem1411","timestamp":"2014-09-13T03:43:39.525Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-13T03:43:39.545Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-13T03:45:24.686Z"}
+{"level":"error","message":"seraialport.js error! Error: Cannot open /dev/tty.usbmodem1411","timestamp":"2014-09-13T03:45:24.691Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-13T03:45:24.713Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-13T03:45:41.501Z"}
+{"level":"error","message":"seraialport.js error! Error: Cannot open /dev/tty.usbmodem1411","timestamp":"2014-09-13T03:45:41.510Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-13T03:45:41.541Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-13T03:46:01.188Z"}
+{"level":"error","message":"seraialport.js error! Error: Cannot open /dev/tty.usbmodem1411","timestamp":"2014-09-13T03:46:01.193Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-13T03:46:01.216Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-13T03:54:51.509Z"}
+{"level":"error","message":"seraialport.js error! Error: Cannot open /dev/tty.usbmodem1411","timestamp":"2014-09-13T03:54:51.513Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-13T03:54:51.534Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-13T03:54:56.186Z"}
+{"level":"error","message":"seraialport.js error! Error: Cannot open /dev/tty.usbmodem1411","timestamp":"2014-09-13T03:54:56.190Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-13T03:54:56.210Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-13T03:55:09.948Z"}
+{"level":"error","message":"seraialport.js error! Error: Cannot open /dev/tty.usbmodem1411","timestamp":"2014-09-13T03:55:09.952Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-13T03:55:09.977Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-13T03:55:28.768Z"}
+{"level":"error","message":"seraialport.js error! Error: Cannot open /dev/tty.usbmodem1411","timestamp":"2014-09-13T03:55:28.775Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-13T03:55:28.798Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-13T03:55:37.518Z"}
+{"level":"error","message":"seraialport.js error! Error: Cannot open /dev/tty.usbmodem1411","timestamp":"2014-09-13T03:55:37.521Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-13T03:55:37.538Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-13T03:56:04.142Z"}
+{"level":"error","message":"seraialport.js error! Error: Cannot open /dev/tty.usbmodem1411","timestamp":"2014-09-13T03:56:04.146Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-13T03:56:04.166Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-13T08:31:03.823Z"}
+{"level":"info","message":"Communicating with the arduino on port /dev/tty.usbmodem1411","timestamp":"2014-09-13T08:31:03.828Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-13T08:31:03.850Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-13T09:03:59.554Z"}
+{"level":"info","message":"Communicating with the arduino on port /dev/tty.usbmodem1411","timestamp":"2014-09-13T09:03:59.558Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-13T09:03:59.576Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-13T09:17:48.162Z"}
+{"level":"info","message":"Communicating with the arduino on port /dev/tty.usbmodem1411","timestamp":"2014-09-13T09:17:48.166Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-13T09:17:48.186Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-13T09:20:13.077Z"}
+{"level":"info","message":"Communicating with the arduino on port /dev/tty.usbmodem1411","timestamp":"2014-09-13T09:20:13.081Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-13T09:20:13.106Z"}
+{"level":"info","message":"Mongoose disconnected","timestamp":"2014-09-13T09:20:29.680Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-13T09:20:33.310Z"}
+{"level":"info","message":"Communicating with the arduino on port /dev/tty.usbmodem1411","timestamp":"2014-09-13T09:20:33.316Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-13T09:20:33.336Z"}
+{"level":"info","message":"Mongoose disconnected","timestamp":"2014-09-13T09:21:11.984Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-13T09:21:15.363Z"}
+{"level":"info","message":"Communicating with the arduino on port /dev/tty.usbmodem1411","timestamp":"2014-09-13T09:21:15.369Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-13T09:21:15.393Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-13T09:22:21.731Z"}
+{"level":"info","message":"Communicating with the arduino on port /dev/tty.usbmodem1411","timestamp":"2014-09-13T09:22:21.736Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-13T09:22:21.771Z"}
+{"level":"info","message":"Mongoose disconnected","timestamp":"2014-09-13T09:22:45.854Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-13T09:22:49.283Z"}
+{"level":"info","message":"Communicating with the arduino on port /dev/tty.usbmodem1411","timestamp":"2014-09-13T09:22:49.287Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-13T09:22:49.305Z"}
+{"level":"info","message":"Mongoose disconnected","timestamp":"2014-09-13T09:48:56.224Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-13T09:48:59.612Z"}
+{"level":"info","message":"Communicating with the arduino on port /dev/tty.usbmodem1411","timestamp":"2014-09-13T09:48:59.616Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-13T09:48:59.635Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-13T09:50:21.638Z"}
+{"level":"info","message":"Communicating with the arduino on port /dev/tty.usbmodem1411","timestamp":"2014-09-13T09:50:21.641Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-13T09:50:21.663Z"}
+{"level":"info","message":"agenda collection empty so added default document for dewpoint","timestamp":"2014-09-13T09:50:21.688Z"}
+{"level":"info","message":"agenda collection empty so added default document for pressure","timestamp":"2014-09-13T09:50:21.688Z"}
+{"level":"info","message":"agenda collection empty so added default document for humidity","timestamp":"2014-09-13T09:50:21.689Z"}
+{"level":"info","message":"agenda collection empty so added default document for temperature","timestamp":"2014-09-13T09:50:21.689Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-13T09:50:36.349Z"}
+{"level":"info","message":"Communicating with the arduino on port /dev/tty.usbmodem1411","timestamp":"2014-09-13T09:50:36.353Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-13T09:50:36.374Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-13T09:51:15.683Z"}
+{"level":"info","message":"Communicating with the arduino on port /dev/tty.usbmodem1411","timestamp":"2014-09-13T09:51:15.687Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-13T09:51:15.706Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-13T09:51:25.724Z"}
+{"level":"info","message":"Communicating with the arduino on port /dev/tty.usbmodem1411","timestamp":"2014-09-13T09:51:25.727Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-13T09:51:25.747Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-13T09:54:07.999Z"}
+{"level":"info","message":"Communicating with the arduino on port /dev/tty.usbmodem1411","timestamp":"2014-09-13T09:54:08.007Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-13T09:54:08.031Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-13T09:55:35.951Z"}
+{"level":"info","message":"Communicating with the arduino on port /dev/tty.usbmodem1411","timestamp":"2014-09-13T09:55:35.955Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-13T09:55:35.976Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-13T09:55:47.139Z"}
+{"level":"info","message":"Communicating with the arduino on port /dev/tty.usbmodem1411","timestamp":"2014-09-13T09:55:47.142Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-13T09:55:47.161Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-13T09:57:13.433Z"}
+{"level":"info","message":"Communicating with the arduino on port /dev/tty.usbmodem1411","timestamp":"2014-09-13T09:57:13.438Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-13T09:57:13.459Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-13T10:00:10.282Z"}
+{"level":"info","message":"Communicating with the arduino on port /dev/tty.usbmodem1411","timestamp":"2014-09-13T10:00:10.285Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-13T10:00:10.310Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-13T10:02:14.784Z"}
+{"level":"info","message":"Communicating with the arduino on port /dev/tty.usbmodem1411","timestamp":"2014-09-13T10:02:14.787Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-13T10:02:14.807Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-13T10:02:47.402Z"}
+{"level":"info","message":"Communicating with the arduino on port /dev/tty.usbmodem1411","timestamp":"2014-09-13T10:02:47.406Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-13T10:02:47.425Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-13T10:05:07.011Z"}
+{"level":"info","message":"Communicating with the arduino on port /dev/tty.usbmodem1411","timestamp":"2014-09-13T10:05:07.015Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-13T10:05:07.034Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-13T10:06:06.018Z"}
+{"level":"info","message":"Communicating with the arduino on port /dev/tty.usbmodem1411","timestamp":"2014-09-13T10:06:06.022Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-13T10:06:06.043Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-13T10:08:48.563Z"}
+{"level":"info","message":"Communicating with the arduino on port /dev/tty.usbmodem1411","timestamp":"2014-09-13T10:08:48.566Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-13T10:08:48.583Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-13T10:09:07.986Z"}
+{"level":"info","message":"Communicating with the arduino on port /dev/tty.usbmodem1411","timestamp":"2014-09-13T10:09:07.990Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-13T10:09:08.011Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-13T10:09:53.478Z"}
+{"level":"info","message":"Communicating with the arduino on port /dev/tty.usbmodem1411","timestamp":"2014-09-13T10:09:53.482Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-13T10:09:53.503Z"}
+{"level":"info","message":"Added job humidity to agenda que","timestamp":"2014-09-13T10:09:53.523Z"}
+{"level":"info","message":"Added job pressure to agenda que","timestamp":"2014-09-13T10:09:53.524Z"}
+{"level":"info","message":"Added job temperature to agenda que","timestamp":"2014-09-13T10:09:53.524Z"}
+{"level":"info","message":"Added job dewpoint to agenda que","timestamp":"2014-09-13T10:09:53.524Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-13T10:11:37.400Z"}
+{"level":"info","message":"Communicating with the arduino on port /dev/tty.usbmodem1411","timestamp":"2014-09-13T10:11:37.404Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-13T10:11:37.426Z"}
+{"level":"info","message":"Added job humidity to agenda que","timestamp":"2014-09-13T10:11:37.445Z"}
+{"level":"info","message":"Added job pressure to agenda que","timestamp":"2014-09-13T10:11:37.446Z"}
+{"level":"info","message":"Added job temperature to agenda que","timestamp":"2014-09-13T10:11:37.446Z"}
+{"level":"info","message":"Added job dewpoint to agenda que","timestamp":"2014-09-13T10:11:37.446Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-13T10:16:27.975Z"}
+{"level":"info","message":"Communicating with the arduino on port /dev/tty.usbmodem1411","timestamp":"2014-09-13T10:16:27.978Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-13T10:16:28.000Z"}
+{"level":"info","message":"Added job humidity to agenda que","timestamp":"2014-09-13T10:16:28.020Z"}
+{"level":"info","message":"Added job pressure to agenda que","timestamp":"2014-09-13T10:16:28.020Z"}
+{"level":"info","message":"Added job temperature to agenda que","timestamp":"2014-09-13T10:16:28.021Z"}
+{"level":"info","message":"Added job dewpoint to agenda que","timestamp":"2014-09-13T10:16:28.021Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-13T10:17:46.585Z"}
+{"level":"info","message":"Communicating with the arduino on port /dev/tty.usbmodem1411","timestamp":"2014-09-13T10:17:46.589Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-13T10:17:46.609Z"}
+{"level":"info","message":"Added job humidity to agenda que","timestamp":"2014-09-13T10:17:46.628Z"}
+{"level":"info","message":"Added job pressure to agenda que","timestamp":"2014-09-13T10:17:46.628Z"}
+{"level":"info","message":"Added job temperature to agenda que","timestamp":"2014-09-13T10:17:46.629Z"}
+{"level":"info","message":"Added job dewpoint to agenda que","timestamp":"2014-09-13T10:17:46.629Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-13T10:18:03.875Z"}
+{"level":"info","message":"Communicating with the arduino on port /dev/tty.usbmodem1411","timestamp":"2014-09-13T10:18:03.878Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-13T10:18:03.895Z"}
+{"level":"info","message":"Added job humidity to agenda que","timestamp":"2014-09-13T10:18:03.907Z"}
+{"level":"info","message":"Added job pressure to agenda que","timestamp":"2014-09-13T10:18:03.908Z"}
+{"level":"info","message":"Added job temperature to agenda que","timestamp":"2014-09-13T10:18:03.908Z"}
+{"level":"info","message":"Added job dewpoint to agenda que","timestamp":"2014-09-13T10:18:03.908Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-13T10:18:50.857Z"}
+{"level":"info","message":"Communicating with the arduino on port /dev/tty.usbmodem1411","timestamp":"2014-09-13T10:18:50.861Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-13T10:18:50.883Z"}
+{"level":"info","message":"Added job 'humidity' to agenda que","timestamp":"2014-09-13T10:18:50.901Z"}
+{"level":"info","message":"Added job 'pressure' to agenda que","timestamp":"2014-09-13T10:18:50.902Z"}
+{"level":"info","message":"Added job 'temperature' to agenda que","timestamp":"2014-09-13T10:18:50.902Z"}
+{"level":"info","message":"Added job 'dewpoint' to agenda que","timestamp":"2014-09-13T10:18:50.902Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-13T10:19:16.862Z"}
+{"level":"info","message":"Communicating with the arduino on port /dev/tty.usbmodem1411","timestamp":"2014-09-13T10:19:16.865Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-13T10:19:16.888Z"}
+{"level":"info","message":"Added job 'humidity' to agenda queue","timestamp":"2014-09-13T10:19:16.907Z"}
+{"level":"info","message":"Added job 'pressure' to agenda queue","timestamp":"2014-09-13T10:19:16.907Z"}
+{"level":"info","message":"Added job 'temperature' to agenda queue","timestamp":"2014-09-13T10:19:16.907Z"}
+{"level":"info","message":"Added job 'dewpoint' to agenda queue","timestamp":"2014-09-13T10:19:16.907Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-13T10:20:32.381Z"}
+{"level":"info","message":"Communicating with the arduino on port /dev/tty.usbmodem1411","timestamp":"2014-09-13T10:20:32.384Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-13T10:20:32.405Z"}
+{"level":"info","message":"Added job 'humidity' to agenda queue","timestamp":"2014-09-13T10:20:32.424Z"}
+{"level":"info","message":"Added job 'pressure' to agenda queue","timestamp":"2014-09-13T10:20:32.424Z"}
+{"level":"info","message":"Added job 'temperature' to agenda queue","timestamp":"2014-09-13T10:20:32.424Z"}
+{"level":"info","message":"Added job 'dewpoint' to agenda queue","timestamp":"2014-09-13T10:20:32.424Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-13T10:27:28.588Z"}
+{"level":"info","message":"Communicating with the arduino on port /dev/tty.usbmodem1411","timestamp":"2014-09-13T10:27:28.592Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-13T10:27:28.615Z"}
+{"level":"info","message":"Added job 'humidity' to agenda queue","timestamp":"2014-09-13T10:27:28.639Z"}
+{"level":"info","message":"Added job 'pressure' to agenda queue","timestamp":"2014-09-13T10:27:28.640Z"}
+{"level":"info","message":"Added job 'temperature' to agenda queue","timestamp":"2014-09-13T10:27:28.640Z"}
+{"level":"info","message":"Added job 'dewpoint' to agenda queue","timestamp":"2014-09-13T10:27:28.640Z"}

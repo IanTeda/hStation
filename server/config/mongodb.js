@@ -1,7 +1,8 @@
-/*
-  Database config and helper
- */
 'use strict';
+
+/**
+ Database config and helper
+ **/
 
 var mongoose = require('mongoose');
 var winston = require('./winston');
@@ -24,22 +25,26 @@ mongoose.connection.on('connected', function ()
   // Populate DB with sample data
   if(config.seedDB)
   {
+    // Seed databse
     require('./dbseed');
   }
 });
 
-// Database connection error
-mongoose.connection.on('error', function (err) {
+// On database connection error event
+mongoose.connection.on('error', function (err)
+{
   return winston.error('Mongoose connection error: ' + err);
 });
 
-// Database disconnected
-mongoose.connection.on('disconnected', function () {
+// On database disconnected event
+mongoose.connection.on('disconnected', function ()
+{
   return winston.info('Mongoose disconnected');
 });
 
-// Database disconnected because app terminated
-process.on('SIGINT', function () {
+// On databse sigint event
+process.on('SIGINT', function ()
+{
   return mongoose.connection.close(function () {
     winston.info('Mongoose disconnected through app termination');
     return process.exit(0);

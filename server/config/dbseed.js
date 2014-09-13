@@ -12,3 +12,7 @@ User.seedIfEmpty();
 // Add default settings if DB schema is empty
 var Settings = require('../api/settings/settings.model');
 Settings.seedIfEmpty();
+
+// Add default agenda if DB schema is empty
+var Agenda = require('../api/agenda/agenda.model');
+Agenda.seedIfEmpty();
