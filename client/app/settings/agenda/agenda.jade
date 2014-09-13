@@ -1,2 +1,28 @@
-.col-md-12
-    | This is the agenda view.
+header(ng-include='"components/navbar/navbar.html"')
+.container-fluid
+  .row
+    .col-sm-10.col-sm-offset-1
+      .page-header
+        .row
+          .col-md-6
+            h1 hStation - Agenda
+  .row
+    .panel.panel-default.col-sm-10.col-sm-offset-1
+      .panel-body
+        table#agenda.table.table-striped.table-condensed.table-responsive(table='app-log-table')
+          //-- Table header
+          thead
+            tr.h4
+              th.text-center.col_sensor(scope='col') Sensor
+              th.text-center.col_interval(scope='col') Interval
+              th.text-center.col_command(scope='col') Command
+              th.text-center.col_status(scope='col') Status
+          //-- Table body
+          tbody
+            tr(ng-repeat="agenda in agendas")
+              td.col_sensor {{ agenda.sensor }}
+              td.col_interval {{ agenda.interval }}
+              td.col_command {{ agenda.command }}
+              td.col_status {{ agenda.active }}
+
+footer.footer(ng-include='"components/footer/footer.html"')

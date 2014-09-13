@@ -37,9 +37,12 @@ nav.navbar.navbar-default.navbar-static-top(ng-controller='NavbarCtrl', role='na
 
         li.dropdown(ng-show='isLoggedIn()', ng-class='{active: isActive("/settings")}')
           a.dropdown-toggle(data-toggle='dropdown')
+            | Settings &nbsp;
             span.glyphicon.glyphicon-cog
           ul.dropdown-menu
             li
               a(ui-sref='settings') Settings
+            li
+              a(ui-sref='agenda') Agenda
             li
               a(ui-sref='log') Log

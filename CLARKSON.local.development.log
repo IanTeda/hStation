@@ -853,3 +853,55 @@
 {"level":"info","message":"Added job 'pressure' to agenda queue","timestamp":"2014-09-13T11:18:01.427Z"}
 {"level":"info","message":"Added job 'temperature' to agenda queue","timestamp":"2014-09-13T11:18:01.427Z"}
 {"level":"info","message":"Added job 'dewpoint' to agenda queue","timestamp":"2014-09-13T11:18:01.427Z"}
+{"level":"info","message":"Mongoose disconnected","timestamp":"2014-09-13T11:43:18.879Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-13T11:43:22.372Z"}
+{"level":"info","message":"Communicating with the arduino on port /dev/tty.usbmodem1411","timestamp":"2014-09-13T11:43:22.376Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-13T11:43:22.395Z"}
+{"level":"info","message":"Added job 'humidity' to agenda queue","timestamp":"2014-09-13T11:43:22.412Z"}
+{"level":"info","message":"Added job 'pressure' to agenda queue","timestamp":"2014-09-13T11:43:22.412Z"}
+{"level":"info","message":"Added job 'temperature' to agenda queue","timestamp":"2014-09-13T11:43:22.413Z"}
+{"level":"info","message":"Added job 'dewpoint' to agenda queue","timestamp":"2014-09-13T11:43:22.413Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-13T11:48:10.698Z"}
+{"level":"info","message":"Communicating with the arduino on port /dev/tty.usbmodem1411","timestamp":"2014-09-13T11:48:10.703Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-13T11:48:10.733Z"}
+{"level":"info","message":"Added job 'humidity' to agenda queue","timestamp":"2014-09-13T11:48:10.751Z"}
+{"level":"info","message":"Added job 'pressure' to agenda queue","timestamp":"2014-09-13T11:48:10.752Z"}
+{"level":"info","message":"Added job 'temperature' to agenda queue","timestamp":"2014-09-13T11:48:10.752Z"}
+{"level":"info","message":"Added job 'dewpoint' to agenda queue","timestamp":"2014-09-13T11:48:10.752Z"}
+{"level":"info","message":"Mongoose disconnected","timestamp":"2014-09-13T12:15:31.215Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-13T12:28:06.787Z"}
+{"level":"error","message":"seraialport.js error! Error: Cannot open /dev/tty.usbmodem1411","timestamp":"2014-09-13T12:28:06.791Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-13T12:28:06.810Z"}
+{"level":"info","message":"Set default values for setting","timestamp":"2014-09-13T12:28:06.843Z"}
+{"level":"info","message":"Agenda collection empty so added default document for Humidity","timestamp":"2014-09-13T12:28:07.444Z"}
+{"level":"info","message":"Agenda collection empty so added default document for Pressure","timestamp":"2014-09-13T12:28:07.445Z"}
+{"level":"info","message":"Agenda collection empty so added default document for Temperature","timestamp":"2014-09-13T12:28:07.445Z"}
+{"level":"info","message":"Agenda collection empty so added default document for Dewpoint","timestamp":"2014-09-13T12:28:07.448Z"}
+{"level":"info","message":"Settings collection empty so added default values","timestamp":"2014-09-13T12:28:07.449Z"}
+{"level":"info","message":"User collection empty so added default admin user","timestamp":"2014-09-13T12:28:07.457Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-13T12:29:51.682Z"}
+{"level":"error","message":"seraialport.js error! Error: Cannot open /dev/tty.usbmodem1411","timestamp":"2014-09-13T12:29:51.686Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-13T12:29:51.705Z"}
+{"level":"info","message":"Added job 'Humidity' to agenda queue","timestamp":"2014-09-13T12:29:51.723Z"}
+{"level":"info","message":"Added job 'Pressure' to agenda queue","timestamp":"2014-09-13T12:29:51.723Z"}
+{"level":"info","message":"Added job 'Temperature' to agenda queue","timestamp":"2014-09-13T12:29:51.723Z"}
+{"level":"info","message":"Added job 'Dewpoint' to agenda queue","timestamp":"2014-09-13T12:29:51.723Z"}
+{"level":"info","message":"Mongoose disconnected","timestamp":"2014-09-13T12:30:14.766Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-13T12:30:18.028Z"}
+{"level":"error","message":"seraialport.js error! Error: Cannot open /dev/tty.usbmodem1411","timestamp":"2014-09-13T12:30:18.032Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-13T12:30:18.051Z"}
+{"level":"info","message":"Set default values for setting","timestamp":"2014-09-13T12:30:18.077Z"}
+{"level":"info","message":"Agenda collection empty so added default document for Dew Point","timestamp":"2014-09-13T12:30:18.406Z"}
+{"level":"info","message":"Settings collection empty so added default values","timestamp":"2014-09-13T12:30:18.408Z"}
+{"level":"info","message":"Agenda collection empty so added default document for Humidity","timestamp":"2014-09-13T12:30:18.409Z"}
+{"level":"info","message":"Agenda collection empty so added default document for Pressure","timestamp":"2014-09-13T12:30:18.410Z"}
+{"level":"info","message":"Agenda collection empty so added default document for Temperature","timestamp":"2014-09-13T12:30:18.410Z"}
+{"level":"info","message":"User collection empty so added default admin user","timestamp":"2014-09-13T12:30:18.415Z"}
+{"level":"info","message":"Mongoose disconnected","timestamp":"2014-09-13T12:33:58.276Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-13T12:43:37.644Z"}
+{"level":"error","message":"seraialport.js error! Error: Cannot open /dev/tty.usbmodem1411","timestamp":"2014-09-13T12:43:37.648Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-13T12:43:37.667Z"}
+{"level":"info","message":"Added job 'Dew Point' to agenda queue","timestamp":"2014-09-13T12:43:37.685Z"}
+{"level":"info","message":"Added job 'Humidity' to agenda queue","timestamp":"2014-09-13T12:43:37.685Z"}
+{"level":"info","message":"Added job 'Pressure' to agenda queue","timestamp":"2014-09-13T12:43:37.685Z"}
+{"level":"info","message":"Added job 'Temperature' to agenda queue","timestamp":"2014-09-13T12:43:37.686Z"}

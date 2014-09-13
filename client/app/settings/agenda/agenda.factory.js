@@ -12,7 +12,7 @@
 angular.module('hStationApp')
   .factory('AgendaModel', function ($resource) {
 
-    return $resource('/api/agenda/:id', {
+    return $resource('/api/agendas/:id', {
         id: '@_id'
       }, {
         index : {
