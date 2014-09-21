@@ -6,6 +6,6 @@ var controller = require('./serialport.controller');
 var router = express.Router();
 
 router.get('/', controller.index);
-router.get('/test-and-connect', controller.testAndConnect);
+router.get('/search', controller.search);
 
 module.exports = router;

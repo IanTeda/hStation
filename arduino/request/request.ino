@@ -19,7 +19,7 @@ bool debug = false;
 
 // Command messages
 char* commandAll = {"ALL"};
-char* commandTemperatureDHT = {"DHT_TEMPERATURE"};
+char* commandTemperature = {"TEMPERATURE"};
 char* commandTemperatureBMP = {"BMP_TEMPERATURE"};
 char* commandHumidity = {"HUMIDITY"};
 char* commandPressure = {"PRESSURE"};
@@ -103,9 +103,9 @@ void loop()
         double reading = -111;
         sendReading(sensor, reading);
       }
-      else if (strcmp(commandTemperatureDHT, command) == 0) 
+      else if (strcmp(commandTemperature, command) == 0) 
       {
-        char* sensor = commandTemperatureDHT;
+        char* sensor = commandTemperature;
         double reading = -112;
         sendReading(sensor, reading);
       }

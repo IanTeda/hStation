@@ -6,10 +6,11 @@
 // Raspberry Pi serial port "/dev/ttyACM0"
 
 // Private variables
-var SerialPort = require("serialport").SerialPort;
+var serialport = require("serialport");
+var SerialPort = serialport.SerialPort;
+var com;
 var winston = require('./winston');
 var config = require('./environment');
-var port = config.serialport;
 var settings =
 {
   baudrate: 9600,
@@ -18,62 +19,78 @@ var settings =
   stopBits: 1,
   flowControl: false
 };
-var  message_queue = []; //long list of messages
 
-// Load new instance of serial port
-var serialPort = new SerialPort(port, settings, function (err)
-{
-  // If serial port for the Arduino is not available catch the error
-  if (err) {
-    winston.error("seraialport.js error! " + err);
-  }
-});
+serialport.list(function (err, ports) {
 
-/**
- * Open serial connection to Arduino and listen for events
- */
-serialPort.on("open", function (error) {
+  // Lets find which com port the Arduino is on
+  winston.info('Looking for Arduino port');
 
-  if (error) {
-    winston.error('Error opening connection to Arduino ' + error);
-  } else {
-    winston.info('Communicating with the arduino on port ' + port);
-  }
+  // Set the serial port to null before we start looking
+  var port = null;
 
-  serialPort.on('close', function (error) {
-    if (error) {
-      winston.error("Error closing serial connection " + error);
+  // Interate through ports looking for the Arduino
+  ports.forEach(function (p) {
+
+    // This should work on windows and maybe osx
+    if (p.manufacturer.indexOf('Arduino') !== -1) {
+      port = p.comName;
+      winston.info('Found Arduino on port ' + port);
+
+      // This will work on raspberry pi / linux
+    } else if (p.hasOwnProperty('pnpId')) {
+      // FTDI captures the duemilanove //
+      // Arduino captures the leonardo //
+      if (p.pnpId.search('FTDI') != -1 || p.pnpId.search('Arduino') != -1) {
+        port = p.comName;
+        winston.info('Found Arduino on port ' + port);
+      }
+    }
+  });
+
+  // Open the port found above
+  com = new SerialPort(port, settings, function (err) {
+    // If serial port for the Arduino is not available catch the error
+    if (err) {
+      winston.error("seraialport.js error! " + err);
+    }
+  });
+
+  // hook up open event
+  com.on("open", function (err) {
+
+    if (err) {
+      winston.error('seraialport.js: ' + err);
     } else {
-      winston.info("Serial port " + arduinoPort + " closed ");
+      winston.info('Communicating with the Arduino on port ' + port);
     }
-  });
 
-  serialPort.on('error', function (error) {
-    winston.error(error + " while communicating on port " + arduinoPort);
-  });
+    com.on('error', function (err) {
+      winston.error("Error seraialport.js:" + err);
+    });
 
-  serialPort.on('data', function (data) {
+    com.on('data', function (data) {
 
-    // Keep adding bytes to buffer
-    recievedDataBuffer += data.toString();
+      // Keep adding bytes to buffer
+      recievedDataBuffer += data.toString();
 
-    // If we have a stop byte and reset byte we have a message
-    if (recievedDataBuffer.indexOf(stopByte) >= 0 && recievedDataBuffer.indexOf(resetByte) >= 0) {
+      // If we have a stop byte and reset byte we have a message
+      if (recievedDataBuffer.indexOf(stopByte) >= 0 && recievedDataBuffer.indexOf(resetByte) >= 0) {
 
-      // Save the message between reset and stop bytes
-      var message = recievedDataBuffer.substring(recievedDataBuffer.indexOf(resetByte) + 1, recievedDataBuffer.indexOf(stopByte));
+        // Save the message between reset and stop bytes
+        var message = recievedDataBuffer.substring(recievedDataBuffer.indexOf(resetByte) + 1, recievedDataBuffer.indexOf(stopByte));
 
-      // Reset buffer
-      recievedDataBuffer = "";
-      readings.logReading(message);
-      //console.log("The Arduino said: " + message);
-      message = "";
-    }
+        // Reset buffer
+        recievedDataBuffer = "";
+        readings.logReading(message);
+        //console.log("The Arduino said: " + message);
+        message = "";
+      }
+    });
+
+
+    com.write('!TEMPERATURE#', function(err, results) {
+      console.log('err ' + err);
+      console.log('results ' + results);
+    });
   });
 });
-
-// Listen to serial port
-function listener(debug)
-{
-
-};
