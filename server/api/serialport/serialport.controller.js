@@ -20,7 +20,7 @@ exports.index = function (req, res) {
  * @param req
  * @param res
  */
-exports.search = function (req, res) {
+exports.searchAndSave = function (req, res) {
 
   // Return all the serial ports connected
   SerialPort.list(function (err, ports) {

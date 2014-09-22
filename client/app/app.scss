@@ -27,6 +27,14 @@ $fa-font-path: "/bower_components/font-awesome/fonts";
     }
 }
 
+.pink {
+    background-color: pink;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
 // Component styles are injected through grunt
 // injector
 @import 'account/details/details.scss';
@@ -37,6 +45,7 @@ $fa-font-path: "/bower_components/font-awesome/fonts";
 @import 'pressure/pressure.scss';
 @import 'settings/agenda/agenda.scss';
 @import 'settings/log/log.scss';
+@import 'settings/settings.scss';
 @import 'temperature/temperature.scss';
 @import 'footer/footer.scss';
 // endinjector

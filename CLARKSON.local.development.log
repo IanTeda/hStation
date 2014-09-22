@@ -1348,3 +1348,46 @@
 {"level":"info","message":"Added job 'Humidity' to agenda queue","timestamp":"2014-09-21T10:15:19.883Z"}
 {"level":"info","message":"Added job 'Pressure' to agenda queue","timestamp":"2014-09-21T10:15:19.883Z"}
 {"level":"info","message":"Added job 'Temperature' to agenda queue","timestamp":"2014-09-21T10:15:19.884Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-21T10:17:00.531Z"}
+{"level":"info","message":"Looking for Arduino port","timestamp":"2014-09-21T10:17:00.535Z"}
+{"level":"info","message":"Found Arduino on port /dev/cu.usbmodem1411","timestamp":"2014-09-21T10:17:00.535Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-21T10:17:00.555Z"}
+{"level":"info","message":"Added job 'Dew Point' to agenda queue","timestamp":"2014-09-21T10:17:00.573Z"}
+{"level":"info","message":"Added job 'Humidity' to agenda queue","timestamp":"2014-09-21T10:17:00.573Z"}
+{"level":"info","message":"Added job 'Pressure' to agenda queue","timestamp":"2014-09-21T10:17:00.574Z"}
+{"level":"info","message":"Added job 'Temperature' to agenda queue","timestamp":"2014-09-21T10:17:00.574Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-22T09:28:52.290Z"}
+{"level":"info","message":"Looking for Arduino port","timestamp":"2014-09-22T09:28:52.293Z"}
+{"level":"error","message":"seraialport.js error! Error: Invalid port specified: null","timestamp":"2014-09-22T09:28:52.294Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-22T09:28:52.314Z"}
+{"level":"info","message":"Added job 'Dew Point' to agenda queue","timestamp":"2014-09-22T09:28:52.335Z"}
+{"level":"info","message":"Added job 'Humidity' to agenda queue","timestamp":"2014-09-22T09:28:52.335Z"}
+{"level":"info","message":"Added job 'Pressure' to agenda queue","timestamp":"2014-09-22T09:28:52.336Z"}
+{"level":"info","message":"Added job 'Temperature' to agenda queue","timestamp":"2014-09-22T09:28:52.336Z"}
+{"level":"info","message":"Mongoose disconnected","timestamp":"2014-09-22T10:41:00.865Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-22T10:41:04.686Z"}
+{"level":"info","message":"Looking for Arduino port","timestamp":"2014-09-22T10:41:04.689Z"}
+{"level":"error","message":"seraialport.js error! Error: Invalid port specified: null","timestamp":"2014-09-22T10:41:04.690Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-22T10:41:04.712Z"}
+{"level":"info","message":"Added job 'Dew Point' to agenda queue","timestamp":"2014-09-22T10:41:04.729Z"}
+{"level":"info","message":"Added job 'Humidity' to agenda queue","timestamp":"2014-09-22T10:41:04.729Z"}
+{"level":"info","message":"Added job 'Pressure' to agenda queue","timestamp":"2014-09-22T10:41:04.729Z"}
+{"level":"info","message":"Added job 'Temperature' to agenda queue","timestamp":"2014-09-22T10:41:04.730Z"}
+{"level":"info","message":"Mongoose disconnected","timestamp":"2014-09-22T10:42:24.918Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-22T10:42:28.352Z"}
+{"level":"info","message":"Looking for Arduino port","timestamp":"2014-09-22T10:42:28.355Z"}
+{"level":"error","message":"seraialport.js error! Error: Invalid port specified: null","timestamp":"2014-09-22T10:42:28.356Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-22T10:42:28.374Z"}
+{"level":"info","message":"Added job 'Dew Point' to agenda queue","timestamp":"2014-09-22T10:42:28.387Z"}
+{"level":"info","message":"Added job 'Humidity' to agenda queue","timestamp":"2014-09-22T10:42:28.387Z"}
+{"level":"info","message":"Added job 'Pressure' to agenda queue","timestamp":"2014-09-22T10:42:28.387Z"}
+{"level":"info","message":"Added job 'Temperature' to agenda queue","timestamp":"2014-09-22T10:42:28.387Z"}
+{"level":"info","message":"Mongoose disconnected","timestamp":"2014-09-22T10:53:46.497Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-09-22T10:53:49.912Z"}
+{"level":"info","message":"Looking for Arduino port","timestamp":"2014-09-22T10:53:49.915Z"}
+{"level":"error","message":"seraialport.js error! Error: Invalid port specified: null","timestamp":"2014-09-22T10:53:49.916Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-09-22T10:53:49.936Z"}
+{"level":"info","message":"Added job 'Dew Point' to agenda queue","timestamp":"2014-09-22T10:53:49.954Z"}
+{"level":"info","message":"Added job 'Humidity' to agenda queue","timestamp":"2014-09-22T10:53:49.954Z"}
+{"level":"info","message":"Added job 'Pressure' to agenda queue","timestamp":"2014-09-22T10:53:49.954Z"}
+{"level":"info","message":"Added job 'Temperature' to agenda queue","timestamp":"2014-09-22T10:53:49.955Z"}

@@ -6,17 +6,20 @@ header(ng-include='"components/navbar/navbar.html"')
       small Change how hStation Works
 
   .row
-    .col-sm-10
+    .col-sm-11
       form.form-horizontal(role='form')
         .form-group
           label.col-sm-2.control-label(for='serialPort') Arduino Serial Port:
-          .col-sm-5
+          .col-sm-4
             select.form-control(ng-model='settings[0].serialport',
               ng-options='serialport.comName as serialport.comName + " (" + serialport.manufacturer + ")"  for serialport in serialports',
               ng-change='serialportSelected()')
               option(value='') Select Serial Port
-          .col-sm-4
-              button.btn.btn-default.col-sm-5(ng-click='connectArduino()') Connect Arduino
 
+        .form-group
+          label.col-sm-2.control-label(for='serialPort') Auto Detect Port:
+          .col-sm-4
+            toaster-container(toaster-options="{'position-class': 'toast-bottom-center'}")
+            button.btn.btn-info.col-sm-12(ng-click='autoDetectArduino()') Auto Detect Arduino
 
 footer.footer(ng-include='"components/footer/footer.html"')

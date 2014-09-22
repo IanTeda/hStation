@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('hStationApp')
-  .controller('SettingsCtrl', function ($scope, $http, socket, SettingsService) {
+  .controller('SettingsCtrl', function ($scope, $http, socket, SettingsService, toaster) {
 
     $scope.settings = [];
 
@@ -24,6 +24,11 @@ angular.module('hStationApp')
       // Update settings document
       SettingsService.update($scope.settings[0]);
 
+    };
+
+    $scope.autoDetectArduino = function() {
+      toaster.pop('error', "Autodect", "No port found", 3000);
+      console.log('autoDetectArduino');
     };
 
   });
