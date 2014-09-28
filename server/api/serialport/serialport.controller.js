@@ -48,24 +48,7 @@ exports.searchAndSave = function (req, res) {
     // If the Arduino is not found set the port to not found
     if (!port) {
       port = 'Not Found';
-
-    // Else save the found port to the database
-    } else {
-
-      // Get the first setting in the databse, update serial port and save
-      Settings.findOne({}, {}, { sort: { 'created_at': -1 } }, function (err, setting) {
-        setting.serialport = port;
-        setting.save(function (err) {
-          if (err) {
-            winston.error('serialport.controller.js error2: ' + err);
-          }
-          else {
-            winston.info('Saved found serial port to database');
-          }
-        });
-      });
-    }
-    ;
+    };
 
     // Create JSON object to return from API call
     var json = {

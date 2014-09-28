@@ -15,11 +15,14 @@ header(ng-include='"components/navbar/navbar.html"')
               ng-options='serialport.comName as serialport.comName + " (" + serialport.manufacturer + ")"  for serialport in serialports',
               ng-change='serialportSelected()')
               option(value='') Select Serial Port
+          .col-sm-2
+            button.btn.btn-default(ng-click='refreshSerialPorts()')
+              span.glyphicon.glyphicon-refresh
 
         .form-group
           label.col-sm-2.control-label(for='serialPort') Auto Detect Port:
           .col-sm-4
-            toaster-container(toaster-options="{'position-class': 'toast-bottom-center'}")
+            toaster-container
             button.btn.btn-info.col-sm-12(ng-click='autoDetectArduino()') Auto Detect Arduino
 
 footer.footer(ng-include='"components/footer/footer.html"')
