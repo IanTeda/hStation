@@ -38,6 +38,7 @@ agendas.find(function (err, jobs) {
 
           agenda.define(jobs[key].sensor, function (job, done) {
             console.log('send command: ' + jobs[key].command);
+            //sendCommand(jobs[key].command)
             done();
           });
           agenda.schedule(jobs[key].interval, jobs[key].sensor, {time: new Date()});
@@ -52,3 +53,7 @@ agendas.find(function (err, jobs) {
   }
 
 });
+
+function sendCommand(command){
+  console.log('sendCommand ' + command);
+};

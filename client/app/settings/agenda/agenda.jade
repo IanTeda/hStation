@@ -1,11 +1,10 @@
 header(ng-include='"components/navbar/navbar.html"')
 .container-fluid
-  .row
-    .col-sm-10.col-sm-offset-1
-      .page-header
-        .row
-          .col-md-6
-            h1 hStation - Agenda
+  .page-header
+    h1
+      | Agenda &nbsp;
+      small Change how often sensors are polled
+
   .row
     .panel.panel-default.col-sm-10.col-sm-offset-1
       .panel-body
@@ -23,6 +22,6 @@ header(ng-include='"components/navbar/navbar.html"')
               td.col_sensor {{ agenda.sensor }}
               td.col_interval {{ agenda.interval }}
               td.col_command {{ agenda.command }}
-              td.col_status {{ agenda.active }}
+              td.col_status {{(agenda.active ? 'Active' : 'Inactive')}}
 
 footer.footer(ng-include='"components/footer/footer.html"')

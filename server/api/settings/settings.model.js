@@ -50,6 +50,7 @@ SettingsSchema.statics = {
   getSettings: function (callback) {
     this.findOne({}, {}, { sort: { 'timestamp': 1 } })
       .exec(callback);
+    //console.log('getSettings: ' + callback);
   }
 
 };

@@ -29,7 +29,7 @@ exports.update = function(req, res) {
     var updated = _.merge(settings, req.body);
     updated.save(function (err) {
       if (err) { return handleError(res, err); }
-      winston.info('Update settings');
+      winston.info('hStation settings updated');
       return res.json(200, settings);
     });
   });
