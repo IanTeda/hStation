@@ -2,12 +2,23 @@
 
 var _ = require('lodash');
 var Agenda = require('./agenda.model');
+var agenda = require('agenda');
+var config = require('./../../config/environment');
+
+
+// Agenda settings
+var jobs = new agenda({
+  db: {
+    address: config.mongo.uri,
+    collection: 'agenda-jobs'
+  }
+});
 
 // Get list of agendas
 exports.index = function(req, res) {
-  Agenda.find(function (err, agendas) {
+  jobs.jobs({}, function(err, jobs) {
     if(err) { return handleError(res, err); }
-    return res.json(200, agendas);
+    return res.json(200, jobs);
   });
 };
 

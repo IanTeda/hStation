@@ -1629,3 +1629,154 @@
 {"level":"info","message":"Added job 'Temperature' to agenda queue","timestamp":"2014-09-28T11:07:02.850Z"}
 {"level":"info","message":"Added job 'Dew Point' to agenda queue","timestamp":"2014-09-28T11:07:02.850Z"}
 {"level":"error","message":"seraialport.js error! Error: Cannot open No serial port set","timestamp":"2014-09-28T11:07:02.864Z"}
+{"level":"info","message":"hStation settings updated","timestamp":"2014-09-28T11:07:59.071Z"}
+{"level":"info","message":"Mongoose disconnected","timestamp":"2014-09-28T11:10:56.245Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-10-08T09:15:10.217Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-10-08T09:15:10.245Z"}
+{"level":"info","message":"Added job 'Humidity' to agenda queue","timestamp":"2014-10-08T09:15:10.273Z"}
+{"level":"info","message":"Added job 'Pressure' to agenda queue","timestamp":"2014-10-08T09:15:10.274Z"}
+{"level":"info","message":"Added job 'Temperature' to agenda queue","timestamp":"2014-10-08T09:15:10.274Z"}
+{"level":"info","message":"Added job 'Dew Point' to agenda queue","timestamp":"2014-10-08T09:15:10.275Z"}
+{"level":"error","message":"seraialport.js error! Error: Cannot open /dev/cu.usbmodem1411","timestamp":"2014-10-08T09:15:10.435Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-10-08T09:27:59.316Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-10-08T09:27:59.338Z"}
+{"level":"info","message":"Added job 'Humidity' to agenda queue","timestamp":"2014-10-08T09:27:59.356Z"}
+{"level":"info","message":"Added job 'Pressure' to agenda queue","timestamp":"2014-10-08T09:27:59.357Z"}
+{"level":"info","message":"Added job 'Temperature' to agenda queue","timestamp":"2014-10-08T09:27:59.357Z"}
+{"level":"info","message":"Added job 'Dew Point' to agenda queue","timestamp":"2014-10-08T09:27:59.357Z"}
+{"level":"error","message":"seraialport.js error! Error: Cannot open /dev/cu.usbmodem1411","timestamp":"2014-10-08T09:27:59.371Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-10-08T09:28:42.993Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-10-08T09:28:43.016Z"}
+{"level":"info","message":"Added job 'Humidity' to agenda queue","timestamp":"2014-10-08T09:28:43.035Z"}
+{"level":"info","message":"Added job 'Pressure' to agenda queue","timestamp":"2014-10-08T09:28:43.035Z"}
+{"level":"info","message":"Added job 'Temperature' to agenda queue","timestamp":"2014-10-08T09:28:43.036Z"}
+{"level":"info","message":"Added job 'Dew Point' to agenda queue","timestamp":"2014-10-08T09:28:43.036Z"}
+{"level":"error","message":"seraialport.js error! Error: Cannot open /dev/cu.usbmodem1411","timestamp":"2014-10-08T09:28:43.058Z"}
+{"level":"info","message":"Mongoose disconnected","timestamp":"2014-10-08T09:39:23.044Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-10-08T09:39:26.460Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-10-08T09:39:26.487Z"}
+{"level":"info","message":"Added job 'Humidity' to agenda queue","timestamp":"2014-10-08T09:39:26.505Z"}
+{"level":"info","message":"Added job 'Pressure' to agenda queue","timestamp":"2014-10-08T09:39:26.506Z"}
+{"level":"info","message":"Added job 'Temperature' to agenda queue","timestamp":"2014-10-08T09:39:26.506Z"}
+{"level":"info","message":"Added job 'Dew Point' to agenda queue","timestamp":"2014-10-08T09:39:26.506Z"}
+{"level":"error","message":"seraialport.js error! Error: Cannot open /dev/cu.usbmodem1411","timestamp":"2014-10-08T09:39:26.520Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-10-08T09:40:16.278Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-10-08T09:40:16.301Z"}
+{"level":"info","message":"Added job 'Humidity' to agenda queue","timestamp":"2014-10-08T09:40:16.322Z"}
+{"level":"info","message":"Added job 'Pressure' to agenda queue","timestamp":"2014-10-08T09:40:16.322Z"}
+{"level":"info","message":"Added job 'Temperature' to agenda queue","timestamp":"2014-10-08T09:40:16.323Z"}
+{"level":"info","message":"Added job 'Dew Point' to agenda queue","timestamp":"2014-10-08T09:40:16.323Z"}
+{"level":"error","message":"seraialport.js error! Error: Cannot open /dev/cu.usbmodem1411","timestamp":"2014-10-08T09:40:16.337Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-10-08T09:46:25.969Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-10-08T09:46:25.992Z"}
+{"level":"info","message":"Added job 'Humidity' to agenda queue","timestamp":"2014-10-08T09:46:26.014Z"}
+{"level":"info","message":"Added job 'Pressure' to agenda queue","timestamp":"2014-10-08T09:46:26.014Z"}
+{"level":"info","message":"Added job 'Temperature' to agenda queue","timestamp":"2014-10-08T09:46:26.014Z"}
+{"level":"info","message":"Added job 'Dew Point' to agenda queue","timestamp":"2014-10-08T09:46:26.015Z"}
+{"level":"error","message":"seraialport.js error! Error: Cannot open /dev/cu.usbmodem1411","timestamp":"2014-10-08T09:46:26.032Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-10-08T09:48:25.978Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-10-08T09:48:26.002Z"}
+{"level":"info","message":"Added job 'Humidity' to agenda queue","timestamp":"2014-10-08T09:48:26.021Z"}
+{"level":"info","message":"Added job 'Pressure' to agenda queue","timestamp":"2014-10-08T09:48:26.022Z"}
+{"level":"info","message":"Added job 'Temperature' to agenda queue","timestamp":"2014-10-08T09:48:26.022Z"}
+{"level":"info","message":"Added job 'Dew Point' to agenda queue","timestamp":"2014-10-08T09:48:26.022Z"}
+{"level":"error","message":"seraialport.js error! Error: Cannot open /dev/cu.usbmodem1411","timestamp":"2014-10-08T09:48:26.036Z"}
+{"level":"info","message":"Mongoose disconnected","timestamp":"2014-10-08T09:49:56.363Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-10-08T09:49:59.717Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-10-08T09:49:59.745Z"}
+{"level":"info","message":"Set default values for setting","timestamp":"2014-10-08T09:49:59.766Z"}
+{"level":"info","message":"User collection empty so added default admin user","timestamp":"2014-10-08T09:50:00.333Z"}
+{"level":"info","message":"Settings collection empty so added default values","timestamp":"2014-10-08T09:50:00.334Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-10-08T09:51:42.950Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-10-08T09:51:42.972Z"}
+{"level":"error","message":"seraialport.js error! Error: Cannot open No serial port set","timestamp":"2014-10-08T09:51:42.992Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-10-08T09:51:54.745Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-10-08T09:51:54.781Z"}
+{"level":"error","message":"seraialport.js error! Error: Cannot open No serial port set","timestamp":"2014-10-08T09:51:54.811Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-10-08T09:53:26.064Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-10-08T09:53:26.089Z"}
+{"level":"error","message":"seraialport.js error! Error: Cannot open No serial port set","timestamp":"2014-10-08T09:53:26.114Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-10-08T09:53:50.997Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-10-08T09:53:51.021Z"}
+{"level":"error","message":"seraialport.js error! Error: Cannot open No serial port set","timestamp":"2014-10-08T09:53:51.039Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-10-08T09:55:18.965Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-10-08T09:55:18.989Z"}
+{"level":"error","message":"seraialport.js error! Error: Cannot open No serial port set","timestamp":"2014-10-08T09:55:19.015Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-10-08T09:57:00.321Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-10-08T09:57:00.345Z"}
+{"level":"error","message":"seraialport.js error! Error: Cannot open No serial port set","timestamp":"2014-10-08T09:57:00.369Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-10-08T09:57:33.031Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-10-08T09:57:33.063Z"}
+{"level":"error","message":"seraialport.js error! Error: Cannot open No serial port set","timestamp":"2014-10-08T09:57:33.084Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-10-08T09:59:59.254Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-10-08T09:59:59.279Z"}
+{"level":"error","message":"seraialport.js error! Error: Cannot open No serial port set","timestamp":"2014-10-08T09:59:59.304Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-10-08T10:00:32.049Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-10-08T10:00:32.072Z"}
+{"level":"error","message":"seraialport.js error! Error: Cannot open No serial port set","timestamp":"2014-10-08T10:00:32.094Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-10-08T10:01:14.319Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-10-08T10:01:14.346Z"}
+{"level":"error","message":"seraialport.js error! Error: Cannot open No serial port set","timestamp":"2014-10-08T10:01:14.366Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-10-08T10:01:50.536Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-10-08T10:01:50.557Z"}
+{"level":"error","message":"seraialport.js error! Error: Cannot open No serial port set","timestamp":"2014-10-08T10:01:50.579Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-10-08T10:02:03.697Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-10-08T10:02:03.722Z"}
+{"level":"error","message":"seraialport.js error! Error: Cannot open No serial port set","timestamp":"2014-10-08T10:02:03.740Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-10-08T10:02:12.235Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-10-08T10:02:12.259Z"}
+{"level":"error","message":"seraialport.js error! Error: Cannot open No serial port set","timestamp":"2014-10-08T10:02:12.284Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-10-08T10:02:20.284Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-10-08T10:02:20.309Z"}
+{"level":"error","message":"seraialport.js error! Error: Cannot open No serial port set","timestamp":"2014-10-08T10:02:20.334Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-10-08T10:02:32.641Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-10-08T10:02:32.668Z"}
+{"level":"error","message":"seraialport.js error! Error: Cannot open No serial port set","timestamp":"2014-10-08T10:02:32.689Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-10-08T10:06:26.717Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-10-08T10:06:26.741Z"}
+{"level":"error","message":"seraialport.js error! Error: Cannot open No serial port set","timestamp":"2014-10-08T10:06:26.766Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-10-08T10:07:13.806Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-10-08T10:07:13.830Z"}
+{"level":"error","message":"seraialport.js error! Error: Cannot open No serial port set","timestamp":"2014-10-08T10:07:13.856Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-10-08T10:07:31.303Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-10-08T10:07:31.325Z"}
+{"level":"error","message":"seraialport.js error! Error: Cannot open No serial port set","timestamp":"2014-10-08T10:07:31.346Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-10-08T10:08:01.899Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-10-08T10:08:01.927Z"}
+{"level":"error","message":"seraialport.js error! Error: Cannot open No serial port set","timestamp":"2014-10-08T10:08:01.953Z"}
+{"level":"info","message":"Mongoose disconnected","timestamp":"2014-10-08T10:09:55.841Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-10-08T10:09:59.214Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-10-08T10:09:59.238Z"}
+{"level":"error","message":"seraialport.js error! Error: Cannot open No serial port set","timestamp":"2014-10-08T10:09:59.263Z"}
+{"level":"info","message":"Mongoose disconnected","timestamp":"2014-10-08T10:10:04.603Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-10-08T10:10:07.992Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-10-08T10:10:08.015Z"}
+{"level":"error","message":"seraialport.js error! Error: Cannot open No serial port set","timestamp":"2014-10-08T10:10:08.041Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-10-08T10:10:19.227Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-10-08T10:10:19.252Z"}
+{"level":"error","message":"seraialport.js error! Error: Cannot open No serial port set","timestamp":"2014-10-08T10:10:19.272Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-10-08T10:10:38.252Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-10-08T10:10:38.278Z"}
+{"level":"error","message":"seraialport.js error! Error: Cannot open No serial port set","timestamp":"2014-10-08T10:10:38.296Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-10-08T10:10:45.380Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-10-08T10:10:45.404Z"}
+{"level":"error","message":"seraialport.js error! Error: Cannot open No serial port set","timestamp":"2014-10-08T10:10:45.423Z"}
+{"level":"info","message":"Mongoose disconnected","timestamp":"2014-10-08T10:10:53.128Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-10-08T10:10:56.488Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-10-08T10:10:56.512Z"}
+{"level":"error","message":"seraialport.js error! Error: Cannot open No serial port set","timestamp":"2014-10-08T10:10:56.532Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-10-08T10:25:05.661Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-10-08T10:25:05.688Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-10-08T10:25:20.330Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-10-08T10:25:20.357Z"}
+{"level":"error","message":"seraialport.js error! Error: Cannot open No serial port set","timestamp":"2014-10-08T10:25:20.385Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-10-08T10:26:37.163Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-10-08T10:26:37.192Z"}
+{"level":"info","message":"Set default values for setting","timestamp":"2014-10-08T10:26:37.220Z"}
+{"level":"info","message":"Agenda jobs where empty, so I added default agenda","timestamp":"2014-10-08T10:26:37.637Z"}
+{"level":"info","message":"Settings collection empty so added default values","timestamp":"2014-10-08T10:26:37.645Z"}
+{"level":"info","message":"User collection empty so added default admin user","timestamp":"2014-10-08T10:26:37.651Z"}
+{"level":"info","message":"Mongoose disconnected","timestamp":"2014-10-08T10:26:47.895Z"}
+{"level":"info","message":"Express server listening on 9000, in development mode","timestamp":"2014-10-08T10:26:51.480Z"}
+{"level":"info","message":"Mongoose connection open to mongodb://localhost/hstation-dev","timestamp":"2014-10-08T10:26:51.506Z"}
+{"level":"error","message":"seraialport.js error! Error: Cannot open No serial port set","timestamp":"2014-10-08T10:26:51.531Z"}
