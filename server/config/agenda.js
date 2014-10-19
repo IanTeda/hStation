@@ -18,6 +18,11 @@ var agenda = new Agenda({
   }
 });
 
+// Agenda event to catch errors
+agenda.on('fail', function(err, job) {
+  winston.error("Job " + job.name + " failed with error: %s", err.message);
+});
+
 // Load agendas from the database
 agendas.find(function (err, jobs) {
 
@@ -29,31 +34,30 @@ agendas.find(function (err, jobs) {
   // Else there must be no errors so process jobs queue
   else {
 
-    // Iterate over jobs array
+    // Remove all jobs in the database before adding to avoid mutliple jobs
+    agenda.purge(function(err, numRemoved) {
+      winston.info('Purged jobs in Agenda que');
+    });
+
+    // Iterate over jobs array adding as we go
     for (var key in jobs) {
       if (jobs.hasOwnProperty(key)) {
 
         // Only add agenda job if it is active
         if (jobs[key].active) {
 
-          agenda.define(jobs[key].sensor, function (job, done) {
-            console.log('send command: ' + jobs[key].command);
-            //sendCommand(jobs[key].command)
-            done();
+          // Define agenda job
+          agenda.define(jobs[key].name, function (job, done) {
+            console.log('send command: ' + jobs[key].name);
+            done;
           });
-          agenda.schedule(jobs[key].interval, jobs[key].sensor, {time: new Date()});
+          agenda.schedule(jobs[key].interval, jobs[key].name, {time: new Date()});
 
-          winston.info('Added job \'' + jobs[key].sensor + '\' to agenda queue');
+          winston.info('Added job \'' + jobs[key].name + '\' to agenda queue ' + jobs[key].interval);
         }
       }
     }
-
-    // Start the agenda jobs
     agenda.start();
-  }
+  };
 
 });
-
-function sendCommand(command){
-  console.log('sendCommand ' + command);
-};

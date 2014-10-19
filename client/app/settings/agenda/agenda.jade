@@ -19,7 +19,7 @@ header(ng-include='"components/navbar/navbar.html"')
           //-- Table body
           tbody
             tr(ng-repeat="agenda in agendas")
-              td.col_sensor {{ agenda.sensor }}
+              td.col_sensor {{ agenda.name }}
               td.col_interval {{ agenda.interval }}
               td.col_command {{ agenda.command }}
               td.col_status {{(agenda.active ? 'Active' : 'Inactive')}}

@@ -6,7 +6,7 @@ var winston = require('./../../config/winston');
 var config = require('./../../config/environment');
 
 var AgendaSchema = new Schema({
-  sensor: String,
+  name: String,
   interval: String,
   command: String,
   active: Boolean
@@ -38,9 +38,9 @@ AgendaSchema.statics = {
   }
 };
 
-function addAgenda(Agenda, sensor, interval, command) {
+function addAgenda(Agenda, name, interval, command) {
   var agenda = new Agenda({
-    sensor: sensor,
+    name: name,
     interval: interval,
     command: command,
     active: true
@@ -51,7 +51,7 @@ function addAgenda(Agenda, sensor, interval, command) {
       wintson.error('agenda.model.js error: ' + err);
     }
     else {
-      winston.info('Agenda collection empty so added default document for ' + sensor);
+      winston.info('Agenda collection empty so added default document for ' + name);
     }
   });
 }

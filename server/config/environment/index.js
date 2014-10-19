@@ -39,7 +39,8 @@ var all = {
         safe: true
       }
     }
-  }
+  },
+
 
 };
 
