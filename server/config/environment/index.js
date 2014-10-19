@@ -41,6 +41,33 @@ var all = {
     }
   },
 
+  // Default model values generated during first server start
+  model_defaults : {
+    settings : {
+      serialport : 'No serial port set'
+    }
+  },
+
+  // Configuration for sensors when run in all environments
+  sensors: {
+    temperature : {
+      agenda_job_name : 'get temperature',
+      command : 'TEMPERATURE'
+    },
+    pressure : {
+      agenda_job_name : 'get pressure',
+      command : 'PRESSURE'
+    },
+    humidity : {
+      agenda_job_name : 'get humidity',
+      command : 'HUMIDITY'
+    },
+    dewpoint : {
+      agenda_job_name : 'get dewpoint',
+      command : 'DEWPOINT'
+    }
+  }
+
 
 };
 

@@ -5,6 +5,19 @@ angular.module('hStationApp')
 
     $scope.settings = [];
 
+    // Cron string and select display
+    $scope.sensor_crons = [
+      {cron: '*/1 * * * *', every: 'every 1 minute'},
+      {cron: '*/10 * * * *', every: 'every 10 minutes'},
+      {cron: '*/15 * * * *', every: 'every 15 minutes'},
+      {cron: '*/30 * * * *', every: 'every 30 minutes'},
+      {cron: '* */1 * * *', every: 'every 1 hour'},
+      {cron: '* */3 * * *', every: 'every 3 hours'},
+      {cron: '* */6 * * *', every: 'every 6 hours'},
+      {cron: '* */12 * * *', every: 'every 12 hours'},
+      {cron: '* */24 * * *', every: 'every 24 hours'}
+    ];
+
     // Use service to retrieve all settings, which is only one in this case
     SettingsService.index( function(settings) {
       $scope.settings = settings;
@@ -22,7 +35,12 @@ angular.module('hStationApp')
     $scope.serialportSelected = function() {
       // Update settings document
       SettingsService.update($scope.settings[0]);
+    };
 
+    // When take reading select is changed update setting document
+    $scope.takeReadingsSelected = function() {
+      // Update settings document
+      SettingsService.update($scope.settings[0]);
     };
 
     $scope.refreshSerialPorts = function() {

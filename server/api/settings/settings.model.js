@@ -1,13 +1,17 @@
 'use strict';
 
-var mongoose = require('mongoose'),
-    winston = require ('./../../config/winston'),
-    Schema = mongoose.Schema;
+var mongoose = require('mongoose');
+var winston = require('./../../config/winston');
+var config = require('./../../config/environment')
+var Schema = mongoose.Schema;
 
 var SettingsSchema = new Schema({
   serialport : {
     type: String,
     default: "Default serial port"
+  },
+  sensor_cron : {
+    type: String,
   }
 });
 
@@ -30,7 +34,8 @@ SettingsSchema.statics = {
 
         // Set default user info
         var defaultSetting = new Settings({
-          serialport: 'No serial port set'
+          serialport : config.model_defaults.settings.serialport,
+          sensor_cron : config.model_defaults.settings.sensor_cron
         });
 
         // Save default user to database

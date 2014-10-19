@@ -8,56 +8,40 @@
 var Agenda = require('agenda');
 var winston = require('./winston');
 var config = require('./environment');
-var agendas = require('./../api/agenda/agenda.model');
+var Settings = require('./../api/settings/settings.model');
 
 // Agenda settings
 var agenda = new Agenda({
   db: {
     address: config.mongo.uri,
-    collection: 'agenda-jobs'
+    collection: 'agenda'
   }
 });
 
 // Agenda event to catch errors
 agenda.on('fail', function(err, job) {
-  winston.error("Job " + job.name + " failed with error: %s", err.message);
+  winston.error('agenda.js error: ' + err);
 });
 
-// Load agendas from the database
-agendas.find(function (err, jobs) {
-
-  // Check to see if we returned an error
-  if (err) {
-    winston('angeda.js error: ' + err);
-  }
-
-  // Else there must be no errors so process jobs queue
-  else {
-
-    // Remove all jobs in the database before adding to avoid mutliple jobs
-    agenda.purge(function(err, numRemoved) {
-      winston.info('Purged jobs in Agenda que');
-    });
-
-    // Iterate over jobs array adding as we go
-    for (var key in jobs) {
-      if (jobs.hasOwnProperty(key)) {
-
-        // Only add agenda job if it is active
-        if (jobs[key].active) {
-
-          // Define agenda job
-          agenda.define(jobs[key].name, function (job, done) {
-            console.log('send command: ' + jobs[key].name);
-            done;
-          });
-          agenda.schedule(jobs[key].interval, jobs[key].name, {time: new Date()});
-
-          winston.info('Added job \'' + jobs[key].name + '\' to agenda queue ' + jobs[key].interval);
-        }
-      }
-    }
-    agenda.start();
-  };
-
+// Remove all jobs to avoid starting mutliple jobs
+agenda.purge(function(err, numRemoved) {
+  winston.info('Purged jobs in Agenda que');
 });
+
+// Define agenda jobs
+require('./jobs/sensors')(agenda);
+
+// Get the settings document and then scedule sensor readings
+Settings.findOne({}, {}, { sort: { 'timestamp': 1 } }, function(err, settinga){
+
+  // Schedule sensor readings
+  agenda.every(settinga.sensor_cron, [
+    config.sensors.humidity.agenda_job_name,
+    config.sensors.temperature.agenda_job_name,
+    config.sensors.pressure.agenda_job_name,
+    config.sensors.dewpoint.agenda_job_name
+  ]);
+})
+
+// Start agenda scheduler
+agenda.start();

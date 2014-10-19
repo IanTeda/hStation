@@ -22,7 +22,23 @@ header(ng-include='"components/navbar/navbar.html"')
         .form-group
           label.col-sm-2.control-label(for='serialPort') Auto Detect Port:
           .col-sm-4
-            toaster-container
             button.btn.btn-info.col-sm-12(ng-click='autoDetectArduino()') Auto Detect Arduino
 
+        hr
+
+        .form-group
+          label.col-sm-2.control-label(for='sensor_cron') Take Readings:
+          .col-sm-4
+            select.form-control(ng-model='settings[0].sensor_cron',
+              ng-options='sensor.cron as sensor.every for sensor in sensor_crons',
+              ng-change='takeReadingsSelected()')
+              option(value='') Select interval
+
+        .form-group
+          label.col-sm-2.control-label Sensor Reading Controls:
+          .col-sm-4
+            button.btn.btn-success.col-sm-5(ng-click='startReadings()') Start
+            button.btn.btn-danger.col-sm-5.col-sm-offset-2(ng-click='stopReadings()') Stop
+
+toaster-container //- Container div for toast popups
 footer.footer(ng-include='"components/footer/footer.html"')

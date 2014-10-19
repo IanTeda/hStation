@@ -7,11 +7,18 @@ module.exports = {
   mongo: {
     uri: 'mongodb://localhost/hstation-dev'
   },
-  serialport: '/dev/tty.usbmodem1411', // Serial com port for the mac
-  agenda : {
-    default : {
-      interval: 'every 1 minute'
+
+  // Default model values generated during first server start
+  model_defaults : {
+    settings : {
+      sensor_cron : '*/1 * * * *'
     }
   },
-  seedDB: true
+
+  // Configuration for sensors when run in development environment
+  sensors : {
+    default_interval : 'every 1 minute'
+  },
+
+  seedDB : true
 };

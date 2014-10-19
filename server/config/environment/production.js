@@ -20,10 +20,11 @@ module.exports = {
             process.env.OPENSHIFT_MONGODB_DB_URL+process.env.OPENSHIFT_APP_NAME ||
             'mongodb://localhost/hstation'
   },
-  serialport: '/dev/ttyACM0', //Serial com port for the rasberry pi
-  agenda : {
-    default : {
-      interval: 'every 10 minutes'
+
+  // Default model values generated during first server start
+  model_defaults : {
+    settings : {
+      sensor_cron : '10 * * * *'
     }
   }
 };
