@@ -16,6 +16,7 @@ var router = express.Router();
 
 // We only want to get and update the single setting document
 router.get('/', controller.index);
+router.get('/restart_sensor_cron', controller.restart_sensor_cron);
 router.put('/:id', controller.update);
 
 module.exports = router;
