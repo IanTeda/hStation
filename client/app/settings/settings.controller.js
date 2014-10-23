@@ -41,6 +41,7 @@ angular.module('hStationApp')
     $scope.takeReadingsSelected = function() {
       // Update settings document
       SettingsService.update($scope.settings[0]);
+      $http.get('/api/settings/restart_sensor_cron');
     };
 
     $scope.refreshSerialPorts = function() {
@@ -71,7 +72,7 @@ angular.module('hStationApp')
           } else {
 
             // Toast we found the Arduino
-            toaster.pop('info', "Arduino found", 'Found on port ' + port.com, 3000);
+            toaster.pop('info', "Arduino found", port.com, 3000);
 
             // Update scope for serial port with the Arduino
             $scope.settings[0].serialport = port.com;

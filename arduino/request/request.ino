@@ -20,9 +20,10 @@ bool debug = false;
 // Command messages
 char* commandAll = {"ALL"};
 char* commandTemperature = {"TEMPERATURE"};
-char* commandTemperatureBMP = {"BMP_TEMPERATURE"};
 char* commandHumidity = {"HUMIDITY"};
 char* commandPressure = {"PRESSURE"};
+char* commandDewPoint = {"DEWPOINT"};
+
 
 /**
   Arduino setup functtion
@@ -107,6 +108,24 @@ void loop()
       {
         char* sensor = commandTemperature;
         double reading = -112;
+        sendReading(sensor, reading);
+      }
+      else if (strcmp(commandHumidity, command) == 0) 
+      {
+        char* sensor = commandHumidity;
+        double reading = -12312;
+        sendReading(sensor, reading);
+      }
+      else if (strcmp(commandPressure, command) == 0) 
+      {
+        char* sensor = commandPressure;
+        double reading = -678;
+        sendReading(sensor, reading);
+      }
+      else if (strcmp(commandDewPoint, command) == 0) 
+      {
+        char* sensor = commandDewPoint;
+        double reading = -134;
         sendReading(sensor, reading);
       }
     }

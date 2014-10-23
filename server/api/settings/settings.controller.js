@@ -3,6 +3,8 @@
 var _ = require('lodash');
 var Settings = require('./settings.model');
 var winston = require('./../../config/winston');
+var agenda = require('./../../config/agenda');
+var config = require('./../../config/environment');
 
 /**
  * Get list of all settings, which is 1
@@ -34,6 +36,31 @@ exports.update = function(req, res) {
     });
   });
 };
+
+exports.restart_sensor_cron = function(req, res){
+
+  // Get the settings document and then scedule sensor readings
+  Settings.findOne({}, {}, { sort: { 'timestamp': 1 } }, function(err, settings){
+
+    // Only start jobs if settings exist
+    if (settings){
+
+      // Schedule sensor readings
+      agenda.every(settings.sensor_cron, [
+        config.sensors.humidity.agenda_job_name,
+        config.sensors.temperature.agenda_job_name,
+        config.sensors.pressure.agenda_job_name,
+        config.sensors.dewpoint.agenda_job_name
+      ]);
+
+      return res.send(201, 'Restarted sensor cron to ' + settings.sensor_cron);
+
+    // Else there must be an error so return 500
+    } else {
+      return res.send(500);
+    }
+  });
+}
 
 function handleError(res, err) {
   return res.send(500, err);

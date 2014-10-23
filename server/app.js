@@ -11,8 +11,8 @@ var express = require('express');
 var config = require('./config/environment');
 var winston = require('./config/winston');
 
-//Start mongodb instance
-var mongo = require('./config/mongodb');
+// Require mongodb
+require('./config/mongodb');
 
 // Setup server
 var app = express();
@@ -21,7 +21,6 @@ var socketio = require('socket.io').listen(server);
 require('./config/socketio')(socketio);
 require('./config/express')(app);
 require('./routes')(app);
-require('./config/serialport');
 require('./config/agenda');
 
 // Start server

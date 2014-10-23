@@ -44,7 +44,19 @@ var all = {
   // Default model values generated during first server start
   model_defaults : {
     settings : {
-      serialport : 'No serial port set'
+      serialport          : 'No serial port set',
+      sensor_cron_running : false
+    }
+  },
+
+  serialport : {
+    // Default settings for communicating with the Arduino
+    options : {
+      baudrate: 9600,
+      dataBits: 8,
+      parity: 'none',
+      stopBits: 1,
+      flowControl: false
     }
   },
 
@@ -52,19 +64,19 @@ var all = {
   sensors: {
     temperature : {
       agenda_job_name : 'get temperature',
-      command : 'TEMPERATURE'
+      command         : 'TEMPERATURE'
     },
     pressure : {
       agenda_job_name : 'get pressure',
-      command : 'PRESSURE'
+      command         : 'PRESSURE'
     },
     humidity : {
       agenda_job_name : 'get humidity',
-      command : 'HUMIDITY'
+      command         : 'HUMIDITY'
     },
     dewpoint : {
       agenda_job_name : 'get dewpoint',
-      command : 'DEWPOINT'
+      command         : 'DEWPOINT'
     }
   }
 

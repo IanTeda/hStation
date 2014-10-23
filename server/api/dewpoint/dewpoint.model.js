@@ -18,9 +18,10 @@ var DewPointSchema = new Schema({
 DewPointSchema.statics = {
   createReading: function (reading, callback) {
 
-    // Round timestamp to nearest 10 minutes
-    var coeff = 1000 * 60 * 10; //10 minutes
-    var timestamp = new Date(Math.round(date.getTime() / coeff) * coeff);
+    // Round out timestamp to nearest minute
+    var coeff = 1000 * 60 // 1 Minute
+    var timestamp = Date.now();
+    timestamp = Math.round(timestamp / coeff) * coeff;
 
     // New instance to be saved
     var data = new this();
@@ -31,8 +32,6 @@ DewPointSchema.statics = {
       if (error) {
         winston.error('Error adding dew point reading: ' + error);
         error = callback;
-      } else {
-        winston.info('Added new dew point reading of ' + reading + ' @ ' + timestamp.toString());
       }
     });
   },

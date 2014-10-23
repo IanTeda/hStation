@@ -32,16 +32,22 @@ agenda.purge(function(err, numRemoved) {
 require('./jobs/sensors')(agenda);
 
 // Get the settings document and then scedule sensor readings
-Settings.findOne({}, {}, { sort: { 'timestamp': 1 } }, function(err, settinga){
+Settings.findOne({}, {}, { sort: { 'timestamp': 1 } }, function(err, settings){
 
-  // Schedule sensor readings
-  agenda.every(settinga.sensor_cron, [
-    config.sensors.humidity.agenda_job_name,
-    config.sensors.temperature.agenda_job_name,
-    config.sensors.pressure.agenda_job_name,
-    config.sensors.dewpoint.agenda_job_name
-  ]);
-})
+  // Only start jobs if settings exist
+  if (settings){
+    // Schedule sensor readings
+    agenda.every(settings.sensor_cron, [
+      config.sensors.humidity.agenda_job_name,
+      config.sensors.temperature.agenda_job_name,
+      config.sensors.pressure.agenda_job_name,
+      config.sensors.dewpoint.agenda_job_name
+    ]);
+  };
+
+});
 
 // Start agenda scheduler
 agenda.start();
+
+module.exports = agenda;

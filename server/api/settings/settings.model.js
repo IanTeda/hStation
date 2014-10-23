@@ -6,13 +6,9 @@ var config = require('./../../config/environment')
 var Schema = mongoose.Schema;
 
 var SettingsSchema = new Schema({
-  serialport : {
-    type: String,
-    default: "Default serial port"
-  },
-  sensor_cron : {
-    type: String,
-  }
+  serialport          : String,
+  sensor_cron         : String,
+  sensor_cron_running : Boolean
 });
 
 SettingsSchema.statics = {
@@ -35,7 +31,8 @@ SettingsSchema.statics = {
         // Set default user info
         var defaultSetting = new Settings({
           serialport : config.model_defaults.settings.serialport,
-          sensor_cron : config.model_defaults.settings.sensor_cron
+          sensor_cron : config.model_defaults.settings.sensor_cron,
+          sensor_cron_running : config.model_defaults.settings.sensor_cron_running,
         });
 
         // Save default user to database

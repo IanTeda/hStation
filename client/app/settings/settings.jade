@@ -9,36 +9,30 @@ header(ng-include='"components/navbar/navbar.html"')
     .col-sm-11
       form.form-horizontal(role='form')
         .form-group
-          label.col-sm-2.control-label(for='serialPort') Arduino Serial Port:
-          .col-sm-4
+          label.col-md-2.control-label(for='serialPort') Arduino Serial Port:
+          .col-md-4
             select.form-control(ng-model='settings[0].serialport',
               ng-options='serialport.comName as serialport.comName + " (" + serialport.manufacturer + ")"  for serialport in serialports',
               ng-change='serialportSelected()')
               option(value='') Select Serial Port
-          .col-sm-2
+          .col-md-2
             button.btn.btn-default(ng-click='refreshSerialPorts()')
               span.glyphicon.glyphicon-refresh
 
         .form-group
-          label.col-sm-2.control-label(for='serialPort') Auto Detect Port:
-          .col-sm-4
+          label.col-md-2.control-label(for='serialPort') Auto Detect Port:
+          .col-md-4
             button.btn.btn-info.col-sm-12(ng-click='autoDetectArduino()') Auto Detect Arduino
 
         hr
 
         .form-group
-          label.col-sm-2.control-label(for='sensor_cron') Take Readings:
-          .col-sm-4
+          label.col-md-2.control-label(for='sensor_cron') Take Readings:
+          .col-md-4
             select.form-control(ng-model='settings[0].sensor_cron',
               ng-options='sensor.cron as sensor.every for sensor in sensor_crons',
               ng-change='takeReadingsSelected()')
               option(value='') Select interval
-
-        .form-group
-          label.col-sm-2.control-label Sensor Reading Controls:
-          .col-sm-4
-            button.btn.btn-success.col-sm-5(ng-click='startReadings()') Start
-            button.btn.btn-danger.col-sm-5.col-sm-offset-2(ng-click='stopReadings()') Stop
 
 toaster-container //- Container div for toast popups
 footer.footer(ng-include='"components/footer/footer.html"')
