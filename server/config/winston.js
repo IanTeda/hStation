@@ -39,9 +39,6 @@ var wintson = new (winston.Logger)({
     new (winston.transports.Console)({
       colorize: true
     }),
-    new (winston.transports.File)({
-      filename: require('os').hostname() + '.' + process.env.NODE_ENV + '.log'
-    }),
     new (winston.transports.MongoDB)({
       dbUri: envConfig.mongo.uri,
       collection: 'log'
