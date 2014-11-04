@@ -71,6 +71,7 @@ TemperatureSchema.statics = {
           // Initialise variables to 0 for calculation
           var count = 0;
           var difference = 0;
+          var overtime = 0;
 
           // Interate over returned array to calculate movement
           for (var key in readings) {
@@ -83,6 +84,9 @@ TemperatureSchema.statics = {
 
                 // Calculate the difference and add to the last calculation so we can average them out
                 difference = difference + (readings[key - 1].reading - readings[key].reading);
+
+                // Calculate the time difference and add to the last calculation
+                overtime = overtime + (readings[key - 1].timestamp - readings[key].timestamp);
               }
             }
           };
@@ -97,16 +101,19 @@ TemperatureSchema.statics = {
           if (movement < 0){
             trend.push({
               movement: movement,
+              overtime: overtime,
               trend: -1
             });
           } else if (movement > 0){
             trend.push({
               movement: movement,
+              overtime: overtime,
               trend: 1
             });
           } else {
             trend.push({
               movement: movement,
+              overtime: overtime,
               trend: 0
             });
           }
