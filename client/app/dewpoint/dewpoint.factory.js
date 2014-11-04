@@ -10,9 +10,9 @@
  */
 
 angular.module('hStationApp')
-  .factory('DewPointModel', function ($resource) {
+  .factory('DewpointModel', function ($resource) {
 
-    return $resource('/api/dewpoint/:id', {
+    return $resource('/api/dewpoints/:id', {
         id: '@_id'
       }, {
         index : {

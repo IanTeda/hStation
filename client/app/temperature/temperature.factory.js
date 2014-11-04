@@ -12,7 +12,7 @@
 angular.module('hStationApp')
   .factory('TemperatureModel', function ($resource) {
 
-    return $resource('/api/temperature/:id', {
+    return $resource('/api/temperatures/:id', {
         id: '@_id'
       }, {
         index : {

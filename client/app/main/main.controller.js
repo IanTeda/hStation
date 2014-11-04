@@ -1,9 +1,9 @@
 'use strict';
 
 angular.module('hStationApp')
-  .controller('MainCtrl', function ($scope, $http, socket) {
+  .controller('MainCtrl', function ($scope, $http, DewpointService, HumidityService, PressureService, TemperatureService, socket) {
 
-    console.log('MainCtrl');
+    //console.log('MainCtrl');
 
     $scope.awesomeThings = [];
 
@@ -12,11 +12,35 @@ angular.module('hStationApp')
       socket.syncUpdates('thing', $scope.awesomeThings);
     });
 
-    // Set latest temp to scope
-    $scope.latestTemperature = {reading: -100.00, timestamp: Date.now()};
-    $scope.latestDewPoint = {reading: -100.00, timestamp: Date.now()};
-    $scope.latestHumidity = {reading: -100.00, timestamp: Date.now()};
-    $scope.latestPressure = {reading: -1000.00, timestamp: Date.now()};
+    // Initialise latest readings
+    $scope.latestTemperature = {reading: -10000.00, timestamp: Date.now()};
+    $scope.latestDewPoint = {reading: -10000.00, timestamp: Date.now()};
+    $scope.latestHumidity = {reading: -10000.00, timestamp: Date.now()};
+    $scope.latestPressure = {reading: -100000.00, timestamp: Date.now()};
+
+    // Use service to retrieve all settings, which is only one in this case
+    DewpointService.latest( function(latest) {
+      $scope.latestDewPoint = latest;
+      console.log('DewpointService.latest: ' + JSON.stringify(latest));
+    });
+
+    // Use service to retrieve all settings, which is only one in this case
+    HumidityService.latest( function(latest) {
+      $scope.latestHumidity = latest;
+      console.log('HumidityService.latest: ' + JSON.stringify(latest));
+    });
+
+    // Use service to retrieve all settings, which is only one in this case
+    PressureService.latest( function(latest) {
+      $scope.latestPressure = latest
+      console.log('PressureService.latest: ' + JSON.stringify(latest));
+    });
+
+    // Use service to retrieve all settings, which is only one in this case
+    TemperatureService.latest( function(latest) {
+      $scope.latestTemperature = latest
+      console.log('TemperatureService.latest: ' + JSON.stringify(latest));
+    });
 
     $scope.addThing = function() {
       if($scope.newThing === '') {
@@ -25,6 +49,8 @@ angular.module('hStationApp')
       $http.post('/api/things', { name: $scope.newThing });
       $scope.newThing = '';
     };
+
+
 
     $scope.deleteThing = function(thing) {
       $http.delete('/api/things/' + thing._id);

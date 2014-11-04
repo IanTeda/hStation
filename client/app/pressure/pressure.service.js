@@ -65,6 +65,27 @@ angular.module('hStationApp')
       },
 
       /**
+       * Get the latest document from the model
+       * @param pressure_id
+       * @param callback
+       * @returns {*}
+       */
+      latest: function (callback) {
+        var cb = callback || angular.noop;
+
+        // 0 will return the latest document
+        var pressure_id = '0';
+
+        return PressureModel.show({ id: pressure_id },
+          function (pressure) {
+            return cb(pressure);
+          },
+          function (err) {
+            return cb(err);
+          }).$promise;
+      },
+
+      /**
        * Update a particular document from the model
        * @param temperature
        * @param callback

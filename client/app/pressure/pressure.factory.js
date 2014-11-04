@@ -12,7 +12,7 @@
 angular.module('hStationApp')
   .factory('PressureModel', function ($resource) {
 
-    return $resource('/api/pressure/:id', {
+    return $resource('/api/pressures/:id', {
         id: '@_id'
       }, {
         index : {

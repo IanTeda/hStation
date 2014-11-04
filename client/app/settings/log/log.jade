@@ -23,7 +23,7 @@ header(ng-include='"components/navbar/navbar.html"')
               th.text-center.col_message(scope='col') Message
           //-- Table body
           tbody
-            tr(ng-repeat="log in logs.file | filter:search")
+            tr(ng-repeat="log in logs.file")
               td.col_level.text-center(ng-class='"log-{{ log.level }}"') {{ log.level }}
               td.col_date_time.text-right {{ log.timestamp | date:'EEE, dd MMM yyyy @ HH:mm:ss'}}
               td.col_message {{ log.message }}

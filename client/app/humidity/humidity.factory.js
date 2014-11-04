@@ -12,7 +12,7 @@
 angular.module('hStationApp')
   .factory('HumidityModel', function ($resource) {
 
-    return $resource('/api/humidity/:id', {
+    return $resource('/api/humiditys/:id', {
         id: '@_id'
       }, {
         index : {
