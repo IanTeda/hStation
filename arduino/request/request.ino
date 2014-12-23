@@ -2,6 +2,8 @@
 
 // Reset byte used to recover from deadlocks
 char resetByte = '!';
+// Reset byte used to recover from deadlocks
+char semicolonByte = ';';
 // Serial comms means one byte at a time, so we need to known when to assemble the command
 char stopByte = '#';
 // Lock byte
@@ -18,12 +20,7 @@ bool locked = false;
 bool debug = false;
 
 // Command messages
-char* commandAll = {"ALL"};
-char* commandTemperature = {"TEMPERATURE"};
-char* commandHumidity = {"HUMIDITY"};
-char* commandPressure = {"PRESSURE"};
-char* commandDewPoint = {"DEWPOINT"};
-
+char* commandSensors = {"SENSORS"};
 
 /**
   Arduino setup functtion
@@ -98,35 +95,9 @@ void loop()
     {
       command[charCount] = '\0';
       charCount = 0;
-      if (strcmp(commandAll, command) == 0) 
+      if (strcmp(commandSensors, command) == 0) 
       {
-        char* sensor = commandAll;
-        double reading = -111;
-        sendReading(sensor, reading);
-      }
-      else if (strcmp(commandTemperature, command) == 0) 
-      {
-        char* sensor = commandTemperature;
-        double reading = -112;
-        sendReading(sensor, reading);
-      }
-      else if (strcmp(commandHumidity, command) == 0) 
-      {
-        char* sensor = commandHumidity;
-        double reading = -12312;
-        sendReading(sensor, reading);
-      }
-      else if (strcmp(commandPressure, command) == 0) 
-      {
-        char* sensor = commandPressure;
-        double reading = -678;
-        sendReading(sensor, reading);
-      }
-      else if (strcmp(commandDewPoint, command) == 0) 
-      {
-        char* sensor = commandDewPoint;
-        double reading = -134;
-        sendReading(sensor, reading);
+        sendReadings();
       }
     }
   }
@@ -136,16 +107,37 @@ void loop()
  *  SEND A MESSAGE OVER SERIAL
  * Serial is one by one byte so we need to add a start and stop byte so the other end knows when th stop adding to the buffer
  **/
-void sendReading(char* sensor, double reading)
+void sendReadings()
 {
-  Serial.print(resetByte);
-  Serial.print(sensor);
-  Serial.print(':');
-  Serial.print(reading);
-  Serial.println(stopByte);
   
-  // Pause for 1 second before sending the next message
-  delay(1*1000);
+  // Intitalise variables
+  double dewpoint    = -1000;
+  double humidity    = -1001;
+  double pressure    = -1002;
+  double temperature = -1003;
+  
+  Serial.print(resetByte);
+  
+  Serial.print("dewpoint");
+  Serial.print(':');
+  Serial.print(dewpoint);
+  Serial.print(semicolonByte);
+  
+  Serial.print("humidity");
+  Serial.print(':');
+  Serial.print(humidity);
+  Serial.print(semicolonByte);
+  
+  Serial.print("pressure");
+  Serial.print(':');
+  Serial.print(pressure);
+  Serial.print(semicolonByte);
+  
+  Serial.print("temperature");
+  Serial.print(':');
+  Serial.print(temperature);
+  Serial.print(semicolonByte);
+  Serial.println(stopByte);
 }
 
 /**

@@ -6,8 +6,8 @@ var mongoose = require('mongoose'),
 
 var DewPointSchema = new Schema({
   timestamp: {
-    type: Date,
-    default: 0
+    type : Schema.ObjectId,
+    ref : 'TimeStamp'
   },
   reading: {
     type: Number,

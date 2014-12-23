@@ -18,6 +18,7 @@ function onConnect(socket) {
   });
 
   // Insert sockets below
+  require('../api/sensor/sensor.socket').register(socket);
   require('../api/settings/settings.socket').register(socket);
   require('../api/pressure/pressure.socket').register(socket);
   require('../api/humidity/humidity.socket').register(socket);
