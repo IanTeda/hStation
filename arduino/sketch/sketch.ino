@@ -12,6 +12,7 @@
 */
 
 #define DHT22_PIN 2 // Arduino pin for DHT22 sesnor
+#define MAX_COMMAND_LENGTH 255 // Max incoming serial buffer length 
 
 // Assign variables to sensors
 dht DHT; // DHT is dht
@@ -35,6 +36,19 @@ double SI_UltraViolet = -1;
 float SI_InfraRed = -1;
 
 /*
+* VARIABLES FOR CALL RESPONSE
+*/
+char resetByte = '!'; // Reset byte used to recover from deadlocks
+char stopByte = '#'; // Serial comms means one byte at a time, so we need to known when to assemble the command
+char lockByte = '@'; // Lock byte
+int incomingByte = 0; // Set initial incomming buffer to zero
+int charCount = 0; // Set initial character count for incoming buffer to zero
+char command[MAX_COMMAND_LENGTH + 1]; // // Set max command length and leave space for stop
+bool locked = false; // Set inital value of lock to false
+bool debug = false; // Set debug value for console/serial prints
+
+
+/*
    SETUP THE ARDUINO LOOP
    Standard function automatically called at startup
 */
@@ -54,6 +68,85 @@ void setup(void)
    Arduino loop function, called once 'setup' is complete
 */
 void loop(void) 
+{
+  // Check to see if we have a serial connection
+  if (Serial.available() > 0) 
+  {
+    readSerial();
+  }
+}
+
+/*
+   ESTABLISH SERIAL CONNECTION
+   Hand shake serial connection
+   TODO: Don't think I need this one
+*/
+void establishContact(void) 
+{
+  while (Serial.available() <= 0) 
+  {
+    Serial.println("hello");   // send a starting message
+    delay(300);
+  }
+}
+
+void readSerial()
+{
+  // Add incoming bytes from serial port to buffer
+  incomingByte = Serial.read();
+
+  if (debug)
+  {
+    Serial.println("incomingByte: " + incomingByte);
+  }
+    
+  // Check to see if we have a reset byte coming in
+  if ((char)incomingByte == resetByte) 
+  {
+    // Reset incoming buffer
+    locked = false;
+    charCount = 0;
+    return;
+  }
+
+  // Check to see if the serial connection is locked
+  if (locked) 
+  {
+    // Send locked serial byte
+    //sendMessage((char*) lockByte);
+    return;
+  }
+
+  // Check if we have an incoming byte in the buffer that isn't a stop byte
+  if ((char)incomingByte != stopByte) 
+  {
+    // Check if we have reached our max serial command length
+    if (charCount > MAX_COMMAND_LENGTH - 1) 
+    {
+        
+      // Send locked byte and set locked to true
+      //sendMessage((char*) lockByte);
+      locked = true;
+      return;
+    }
+    else 
+    {
+      command[charCount] = (char)incomingByte;
+      charCount++;
+    }
+  }
+  else 
+  {
+    command[charCount] = '\0';
+    charCount = 0;
+    if (strcmp(commandRequest, command) == 0) 
+    {
+      sendReadings();
+    }
+  }
+}
+
+void sendReadings()
 {
   getDht22SensorReadings();
   getBmpSensorReadings();
@@ -77,21 +170,9 @@ void loop(void)
   Serial.print("; Infra Red : ");
   Serial.println(SI_InfraRed);
   
-  delay(1000);
-}
-
-/*
-   ESTABLISH SERIAL CONNECTION
-   Hand shake serial connection
-   TODO: Don't think I need this one
-*/
-void establishContact(void) 
-{
-  while (Serial.available() <= 0) 
-  {
-    Serial.println("hello");   // send a starting message
-    delay(300);
-  }
+  Serial.flush(); // Wait for TX to complete before progressing
+  
+  //delay(1000); 
 }
 
 /**
