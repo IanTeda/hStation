@@ -47,6 +47,9 @@ char command[MAX_COMMAND_LENGTH + 1]; // // Set max command length and leave spa
 bool locked = false; // Set inital value of lock to false
 bool debug = false; // Set debug value for console/serial prints
 
+// Command messages
+char* commandRequest = {"REQUEST"};
+
 
 /*
    SETUP THE ARDUINO LOOP

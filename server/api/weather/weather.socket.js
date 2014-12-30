@@ -4,21 +4,21 @@
 
 'use strict';
 
-var Pressure = require('./pressure.model');
+var Weather = require('./weather.model');
 
 exports.register = function(socket) {
-  Pressure.schema.post('save', function (doc) {
+  Weather.schema.post('save', function (doc) {
     onSave(socket, doc);
   });
-  Pressure.schema.post('remove', function (doc) {
+  Weather.schema.post('remove', function (doc) {
     onRemove(socket, doc);
   });
 }
 
 function onSave(socket, doc, cb) {
-  socket.emit('pressure:save', doc);
+  socket.emit('weather:save', doc);
 }
 
 function onRemove(socket, doc, cb) {
-  socket.emit('pressure:remove', doc);
+  socket.emit('weather:remove', doc);
 }

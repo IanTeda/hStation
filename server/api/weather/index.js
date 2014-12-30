@@ -1,7 +1,7 @@
 'use strict';
 
 var express = require('express');
-var controller = require('./humidity.controller');
+var controller = require('./weather.controller');
 
 var router = express.Router();
 
