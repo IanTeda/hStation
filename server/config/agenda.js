@@ -29,7 +29,7 @@ agenda.purge(function(err, numRemoved) {
 });
 
 // Define agenda jobs
-require('./jobs/sensors')(agenda);
+require('./jobs/weather')(agenda);
 
 // Get the settings document and then scedule sensor readings
 Settings.findOne({}, {}, { sort: { 'timestamp': 1 } }, function(err, settings){
@@ -38,10 +38,7 @@ Settings.findOne({}, {}, { sort: { 'timestamp': 1 } }, function(err, settings){
   if (settings){
     // Schedule sensor readings
     agenda.every(settings.sensor_cron, [
-      config.sensors.humidity.agenda_job_name,
-      config.sensors.temperature.agenda_job_name,
-      config.sensors.pressure.agenda_job_name,
-      config.sensors.dewpoint.agenda_job_name
+      config.sensors.weather.agenda_job_name
     ]);
   };
 

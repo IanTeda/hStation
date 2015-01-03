@@ -14,4 +14,4 @@ var Settings = require('../api/settings/settings.model');
 Settings.seedIfEmpty();
 
 var Weather = require('../api/weather/weather.model');
-Weather.seedIfEmpty();
+//Weather.seedIfEmpty();

@@ -55,10 +55,10 @@ WeatherSchema.statics = {
 
   /**
    * Create a reading in the database
-   * @param sensors
+   * @param weather
    * @param callback
    */
-  create: function (sensors, callback) {
+  create: function (weather, callback) {
 
     // Round out timestamp to nearest minute
     var coeff = 1000 * 60 // 1 Minute
@@ -69,7 +69,7 @@ WeatherSchema.statics = {
     var data = new this();
 
     data.timestamp = timestamp;
-    data.sensors = sensors;
+    data.weather = weather;
     data.save(function (error) {
       if (error) {
         winston.error('Error adding weather station reading: ' + error);

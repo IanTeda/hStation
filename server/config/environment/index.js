@@ -62,21 +62,9 @@ var all = {
 
   // Configuration for sensors when run in all environments
   sensors: {
-    temperature : {
-      agenda_job_name : 'get temperature',
-      command         : 'TEMPERATURE'
-    },
-    pressure : {
-      agenda_job_name : 'get pressure',
-      command         : 'PRESSURE'
-    },
-    humidity : {
-      agenda_job_name : 'get humidity',
-      command         : 'HUMIDITY'
-    },
-    dewpoint : {
-      agenda_job_name : 'get dewpoint',
-      command         : 'DEWPOINT'
+    weather : {
+      agenda_job_name : 'get weather',
+      command         : 'WEATHER'
     }
   }
 

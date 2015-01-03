@@ -48,7 +48,7 @@ bool locked = false; // Set inital value of lock to false
 bool debug = false; // Set debug value for console/serial prints
 
 // Command messages
-char* commandRequest = {"REQUEST"};
+char* WEATHER = {"WEATHER"};
 
 
 /*
@@ -142,7 +142,7 @@ void readSerial()
   {
     command[charCount] = '\0';
     charCount = 0;
-    if (strcmp(commandRequest, command) == 0) 
+    if (strcmp(WEATHER, command) == 0) 
     {
       sendReadings();
     }
