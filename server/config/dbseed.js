@@ -12,3 +12,6 @@ User.seedIfEmpty();
 // Add default settings if DB schema is empty
 var Settings = require('../api/settings/settings.model');
 Settings.seedIfEmpty();
+
+var Weather = require('../api/weather/weather.model');
+Weather.seedIfEmpty();
