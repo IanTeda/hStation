@@ -1,18 +1,18 @@
 'use strict';
 
-describe('Service: pressure', function () {
+describe('Service: weather', function () {
 
   // load the service's module
   beforeEach(module('hStationApp'));
 
   // instantiate service
-  var pressure;
-  beforeEach(inject(function (_humidity_) {
-    pressure = _humidity_;
+  var weather;
+  beforeEach(inject(function (_weather_) {
+    weather = _weather_;
   }));
 
   it('should do something', function () {
-    expect(!!humidity).toBe(true);
+    expect(!!weather).toBe(true);
   });
 
 });

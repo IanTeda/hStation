@@ -10,7 +10,7 @@
  */
 
 angular.module('hStationApp')
-  .service('PressureService', function Temperature(PressureModel) {
+  .service('WeatherService', function Temperature(WeatherModel) {
     // AngularJS will instantiate a singleton by calling "new" on this function
 
     return {
@@ -21,8 +21,8 @@ angular.module('hStationApp')
        * @returns {$promise|*}
        */
       index: function (callback) {
-        return PressureModel.index(function (pressures) {
-          return callback(pressures);
+        return WeatherModel.index(function (documents) {
+          return callback(documents);
         }, function (err) {
           return callback(err);
         }).$promise;
@@ -34,12 +34,12 @@ angular.module('hStationApp')
        * @param callback
        * @returns {*}
        */
-      create: function (pressure, callback) {
+      create: function (document, callback) {
         var cb = callback || angular.noop;
 
-        return PressureModel.create(pressure,
-          function (pressure) {
-            return cb(pressure);
+        return WeatherModel.create(document,
+          function (document) {
+            return cb(document);
           },
           function (err) {
             return cb(err);
@@ -52,12 +52,12 @@ angular.module('hStationApp')
        * @param callback
        * @returns {*}
        */
-      show: function (pressure_id, callback) {
+      show: function (document_id, callback) {
         var cb = callback || angular.noop;
 
-        return PressureModel.show({ id: pressure_id },
-          function (pressure) {
-            return cb(pressure);
+        return WeatherModel.show({ id: document_id },
+          function (document) {
+            return cb(document);
           },
           function (err) {
             return cb(err);
@@ -74,11 +74,11 @@ angular.module('hStationApp')
         var cb = callback || angular.noop;
 
         // 0 will return the latest document
-        var pressure_id = '0';
+        var document_id = '0';
 
-        return PressureModel.show({ id: pressure_id },
-          function (pressure) {
-            return cb(pressure);
+        return WeatherModel.show({ id: document_id },
+          function (document) {
+            return cb(document);
           },
           function (err) {
             return cb(err);
@@ -91,12 +91,12 @@ angular.module('hStationApp')
        * @param callback
        * @returns {$promise|*}
        */
-      update: function (pressure, callback) {
+      update: function (document, callback) {
         var cb = callback || angular.noop;
 
-        return PressureModel.update({id: pressure._id}, pressure,
-          function (pressure) {
-            return cb(pressure);
+        return WeatherModel.update({id: document._id}, document,
+          function (document) {
+            return cb(document);
           },
           function (err) {
             return cb(err);
@@ -109,12 +109,12 @@ angular.module('hStationApp')
        * @param callback
        * @returns {*}
        */
-      delete: function (pressure, callback) {
+      delete: function (document, callback) {
         var cb = callback || angular.noop;
 
-        return PressureModel.delete({id: pressure._id},
-          function (pressure) {
-            return cb(pressure);
+        return WeatherModel.delete({id: document._id},
+          function (document) {
+            return cb(document);
           },
           function (err) {
             return cb(err);
