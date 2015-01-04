@@ -20,5 +20,7 @@ module.exports = {
     default_interval : 'every 1 minute'
   },
 
-  seedDB : true
+  seedDB: true,
+
+  debug: true
 };

@@ -10,18 +10,19 @@ var winston = require('./../winston');
 var config = require('./../environment');
 var Serialport = require("serialport").SerialPort;
 var Settings = require('./../../api/settings/settings.model');
+var Weather = require('./../../api/weather/weather.model');
 
 // Static variables from environmental config. Makes things more readable
 var JOB = config.sensors.weather.agenda_job_name;
 
-var COMMAND = config.sensors.weather.command;
+var CALL = config.sensors.weather.command;
 
 module.exports = function(agenda) {
 
   agenda.define(JOB, function(job, done) {
 
     // Request reading from Arduino
-    requestReading(COMMAND);
+    requestReading(CALL);
 
     // Done with Agenda Job
     done();
@@ -29,7 +30,9 @@ module.exports = function(agenda) {
 
 };
 
-function requestReading(command) {
+function requestReading(call) {
+
+  //console.log('requestReading');
 
   // Intialise recievedDataBuffer to empty;
   var recievedDataBuffer = '';
@@ -82,7 +85,7 @@ function requestReading(command) {
           if (recievedDataBuffer.indexOf(stopByte) >= 0 && recievedDataBuffer.indexOf(resetByte) >= 0) {
 
             // Get the message between reset and stop bytes
-            var message = recievedDataBuffer.substring(recievedDataBuffer.indexOf(resetByte) + 1, recievedDataBuffer.indexOf(stopByte));
+            var response = recievedDataBuffer.substring(recievedDataBuffer.indexOf(resetByte) + 1, recievedDataBuffer.indexOf(stopByte));
 
             // Now we have the message reset buffer
             recievedDataBuffer = "";
@@ -90,44 +93,26 @@ function requestReading(command) {
             //console.log("The Arduino said: " + message);
 
             // Add received reading to database
-            addToDatabase(message);
+            Weather.createReading(response);
 
             // Now we have processed the message rest the message
-            message = "";
+            response = "";
           }
         });
 
         // Add reset and stop bytes to command
-        command = resetByte + command + stopByte;
+        call = resetByte + call + stopByte;
 
         // Write to serial port
-        serialport.write(command, function (err) {
+        serialport.write(call, function (err) {
 
           // Catch any errors trying to write to serial port
           if (err) {
             // Log error to winston
-            winston.error('sensor.js: ' + err);
+            winston.error('weather.js: ' + err);
           };
         });
       };
     });
   });
-};
-
-function addToDatabase(message) {
-
-  var Weather = require('./../../api/weather/weahter.model');
-
-  // Strip out white spaces from buffer
-  message = message.replace(/ /g, '');
-
-  // Match string by colon and assign
-  var sensor = message.match(/[^:]+/g)[0];
-  var reading = message.match(/[^:]+/g)[1];
-
-  // Add reading to relevant model
-  if (sensor == COMMAND){
-    Weather.createReading(reading);
-  }
-
 };

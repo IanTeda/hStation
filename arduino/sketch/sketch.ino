@@ -156,22 +156,24 @@ void sendReadings()
   getTslSensorReading();
   getSiSensorReading();
   
-  Serial.print("Temperature: ");  
+  Serial.print("!");
+  Serial.print("temperature: ");  
   Serial.print(DHT_Temperature);
-  Serial.print("; Humidity: ");
+  Serial.print(", humidity: ");
   Serial.print(DHT_Humidity);
-  Serial.print("; Dew Point : ");
+  Serial.print(", dewPoint: ");
   Serial.print(DHT_DewPoint);
-  Serial.print("; BMP Temperature: ");
-  Serial.print(BMP_Temperature);
-  Serial.print("; Pressure : ");
+  //Serial.print(", BMP Temperature: ");
+  //Serial.print(BMP_Temperature);
+  Serial.print(", pressure: ");
   Serial.print(BMP_Pressure);
-  Serial.print("; LUX : ");
+  Serial.print(", lux: ");
   Serial.print(TSL_Lux);
-  Serial.print("; Ultra Violet : ");
+  Serial.print(", ultraViolet: ");
   Serial.print(SI_UltraViolet);
-  Serial.print("; Infra Red : ");
-  Serial.println(SI_InfraRed);
+  Serial.print(", infraRed: ");
+  Serial.print(SI_InfraRed);
+  Serial.println("#");
   
   Serial.flush(); // Wait for TX to complete before progressing
   

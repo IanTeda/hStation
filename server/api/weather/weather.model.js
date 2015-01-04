@@ -5,10 +5,6 @@ var mongoose = require('mongoose'),
     Schema = mongoose.Schema;
 
 var WeatherSchema = new Schema({
-  timestamp: {
-    type: Date,
-    default: 0
-  },
   carbonMonoxide: {
     type: Number,
     default: -2
@@ -49,6 +45,10 @@ var WeatherSchema = new Schema({
     type: Number,
     default: -2
   },
+  timestamp: {
+    type: Date,
+    default: 0
+  }
 });
 
 WeatherSchema.statics = {
@@ -58,19 +58,68 @@ WeatherSchema.statics = {
    * @param weather
    * @param callback
    */
-  create: function (weather, callback) {
+  createReading: function (weather, callback) {
+
+    // Reference new document instance to be saved
+    var document = new this();
+
+    // Strip out white spaces from weather string
+    weather = weather.replace(/ /g, '');
+
+    // Reference new array of sensor readings. Matched between ','
+    var sensors = weather.match(/[^,]+/g);
+
+    // Interate over sensor array
+    for (var i=0; i < sensors.length; i++) {
+
+      // Determine key and value for each array iteration
+      var key = sensors[i].match(/[^:]+/g)[0];
+      var value = sensors[i].match(/[^:]+/g)[1];
+
+      // Add to new document based on key
+      if(key === 'carbonMonoxide'){
+        document.carbonMonoxide = value;
+      }
+      else if(key === 'dewPoint'){
+        document.dewPoint = value;
+      }
+      else if(key === 'dust'){
+        document.dust = value;
+      }
+      else if(key === 'humidity'){
+        document.humidity = value;
+      }
+      else if(key === 'infraRed'){
+        document.infraRed = value;
+      }
+      else if(key === 'lux'){
+        document.lux = value;
+      }
+      else if(key === 'methane'){
+        document.methane = value;
+      }
+      else if(key === 'pressure'){
+        document.pressure = value;
+      }
+      else if(key === 'temperature'){
+        document.temperature = value;
+      }
+      else if(key === 'ultraViolet'){
+        document.ultraViolet = value;
+      }
+
+    }
 
     // Round out timestamp to nearest minute
     var coeff = 1000 * 60 // 1 Minute
     var timestamp = Date.now();
     timestamp = Math.round(timestamp / coeff) * coeff;
 
-    // New instance to be saved
-    var data = new this();
+    // Add timestamp to new document
+    document.timestamp = timestamp;
 
-    data.timestamp = timestamp;
-    data.weather = weather;
-    data.save(function (error) {
+    // Save new doucment
+    document.save(function (error) {
       if (error) {
         winston.error('Error adding weather station reading: ' + error);
         error = callback;

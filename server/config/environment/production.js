@@ -26,5 +26,7 @@ module.exports = {
     settings : {
       sensor_cron : '10 * * * *'
     }
-  }
+  },
+
+  debug: false
 };
