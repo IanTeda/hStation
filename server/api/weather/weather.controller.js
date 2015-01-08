@@ -11,6 +11,15 @@ exports.index = function(req, res) {
   });
 };
 
+// Get a latest weather
+exports.latest = function(req, res) {
+  Weather.latest(function (err, weather) {
+    if(err) { return handleError(res, err); }
+    if(!weather) { return res.send(404); }
+    return res.json(weather);
+  });
+};
+
 // Get a single weather
 exports.show = function(req, res) {
   Weather.findById(req.params.id, function (err, weather) {

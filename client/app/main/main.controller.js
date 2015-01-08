@@ -20,11 +20,8 @@ angular.module('hStationApp')
       ultraViolet: -1
     };
 
-    console.log('WeatherService.latest: ' + JSON.stringify(latest));
-
     // Use service to retrieve all settings, which is only one in this case
-    //WeatherService.latest( function(latest) {
-      //$scope.latestWeather = latest;
-      //console.log('WeatherService.latest: ' + JSON.stringify(latest));
-    //});
+    WeatherService.latest( function(latest) {
+      $scope.latestWeather = latest;
+    });
   });

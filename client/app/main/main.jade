@@ -4,27 +4,63 @@ header(ng-include='"components/navbar/navbar.html"')
   .row(ng-init="getLatestReadings()")
     .col-md-3.col-sm-6
       .panel.panel-default
-        .panel-heading Temperature
+        .panel-heading Carbon Monoxide
         .panel-body.text-center
-          h1.reading {{latestTemperature.reading}}
-          .small {{latestTemperature.timestamp | date:'HH:mm EEE, dd MMM yyyy Z'}}
+          h1.reading {{latestWeather.carbonMonoxide}}
+          .small {{latestWeather.timestamp | date:'HH:mm EEE, dd MMM yyyy Z'}}
     .col-md-3.col-sm-6
       .panel.panel-default
         .panel-heading Dew Point
         .panel-body.text-center
-          h1.reading {{latestDewPoint.reading}}
-          .small {{latestDewPoint.timestamp | date:'HH:mm EEE, dd MMM yyyy Z'}}
+          h1.reading {{latestWeather.dewPoint | number:2}}
+          .small {{latestWeather.timestamp | date:'HH:mm EEE, dd MMM yyyy Z'}}
+    .col-md-3.col-sm-6
+      .panel.panel-default
+        .panel-heading Dust
+        .panel-body.text-center
+          h1.reading {{latestWeather.dust}}
+          .small {{latestWeather.timestamp | date:'HH:mm EEE, dd MMM yyyy Z'}}
     .col-md-3.col-sm-6
       .panel.panel-default
         .panel-heading Humidity
         .panel-body.text-center
-          h1.reading {{latestHumidity.reading}}
-          .small {{latestHumidity.timestamp | date:'HH:mm EEE, dd MMM yyyy Z'}}
+          h1.reading {{latestWeather.humidity | number:2}}
+          .small {{latestWeather.timestamp | date:'HH:mm EEE, dd MMM yyyy Z'}}
     .col-md-3.col-sm-6
       .panel.panel-default
-        .panel-heading Pressure
+        .panel-heading Infra Red
         .panel-body.text-center
-          h1.reading {{latestPressure.reading | number:1}}
-          .small {{latestPressure.timestamp | date:'HH:mm EEE, dd MMM yyyy Z'}}
+          h1.reading {{latestWeather.infraRed | number:0}}
+          .small {{latestWeather.timestamp | date:'HH:mm EEE, dd MMM yyyy Z'}}
+    .col-md-3.col-sm-6
+      .panel.panel-default
+        .panel-heading Light
+        .panel-body.text-center
+          h1.reading {{latestWeather.lux | number:0}}
+          .small {{latestWeather.timestamp | date:'HH:mm EEE, dd MMM yyyy Z'}}
+    .col-md-3.col-sm-6
+      .panel.panel-default
+        .panel-heading Methane
+        .panel-body.text-center
+          h1.reading {{latestWeather.methane | number:0}}
+          .small {{latestWeather.timestamp | date:'HH:mm EEE, dd MMM yyyy Z'}}
+    .col-md-3.col-sm-6
+      .panel.panel-default
+        .panel-heading Barometric Pressure
+        .panel-body.text-center
+          h1.reading {{latestWeather.pressure | number:0}}
+          .small {{latestWeather.timestamp | date:'HH:mm EEE, dd MMM yyyy Z'}}
+    .col-md-3.col-sm-6
+      .panel.panel-default
+        .panel-heading Temperature
+        .panel-body.text-center
+          h1.reading {{latestWeather.temperature | number:0}}
+          .small {{latestWeather.timestamp | date:'HH:mm EEE, dd MMM yyyy Z'}}
+    .col-md-3.col-sm-6
+      .panel.panel-default
+        .panel-heading Ultra Violet
+        .panel-body.text-center
+          h1.reading {{latestWeather.ultraViolet | number:0}}
+          .small {{latestWeather.timestamp | date:'HH:mm EEE, dd MMM yyyy Z'}}
 
 footer.footer(ng-include='"components/footer/footer.html"')
