@@ -4,69 +4,71 @@ header(ng-include='"components/navbar/navbar.html"')
   .row(ng-init="getLatestReadings()")
     .col-md-3.col-sm-6
       .panel.panel-default
-        .panel-heading Carbon Monoxide
+        .panel-heading
+          a.btn-block(href='/weather/carbon-monoxide') Carbon Monoxide
         .panel-body.text-center
           h1.reading {{latestWeather.carbonMonoxide}}
           .small {{latestWeather.timestamp | date:'HH:mm EEE, dd MMM yyyy Z'}}
     .col-md-3.col-sm-6
       .panel.panel-default
-        .panel-heading Dew Point
+        .panel-heading
+          a.btn-block(href='/weather/dew-point') Dew Point
         .panel-body.text-center
-<<<<<<< HEAD
-          h1.reading {{latestWeather.dewPoint}}
-=======
           h1.reading {{latestWeather.dewPoint | number:2}}
->>>>>>> FETCH_HEAD
           .small {{latestWeather.timestamp | date:'HH:mm EEE, dd MMM yyyy Z'}}
     .col-md-3.col-sm-6
       .panel.panel-default
-        .panel-heading Dust
+        .panel-heading
+          a.btn-block(href='/weather/dust') Dust
         .panel-body.text-center
           h1.reading {{latestWeather.dust}}
           .small {{latestWeather.timestamp | date:'HH:mm EEE, dd MMM yyyy Z'}}
     .col-md-3.col-sm-6
       .panel.panel-default
-        .panel-heading Humidity
+        .panel-heading
+          a.btn-block(href='/weather/humidity') Humidity
         .panel-body.text-center
-<<<<<<< HEAD
-          h1.reading {{latestWeather.humidity | number:0}}
-=======
           h1.reading {{latestWeather.humidity | number:2}}
->>>>>>> FETCH_HEAD
           .small {{latestWeather.timestamp | date:'HH:mm EEE, dd MMM yyyy Z'}}
     .col-md-3.col-sm-6
       .panel.panel-default
-        .panel-heading Infra Red
+        .panel-heading
+          a.btn-block(href='/weather/infra-red') Infra Red
         .panel-body.text-center
           h1.reading {{latestWeather.infraRed | number:0}}
           .small {{latestWeather.timestamp | date:'HH:mm EEE, dd MMM yyyy Z'}}
     .col-md-3.col-sm-6
       .panel.panel-default
-        .panel-heading Light
+        .panel-heading
+          a.btn-block(href='/weather/lux') Lux
         .panel-body.text-center
           h1.reading {{latestWeather.lux | number:0}}
           .small {{latestWeather.timestamp | date:'HH:mm EEE, dd MMM yyyy Z'}}
     .col-md-3.col-sm-6
       .panel.panel-default
-        .panel-heading Methane
+        .panel-heading
+          a.btn-block(href='/weather/methane') Methane
         .panel-body.text-center
           h1.reading {{latestWeather.methane | number:0}}
           .small {{latestWeather.timestamp | date:'HH:mm EEE, dd MMM yyyy Z'}}
     .col-md-3.col-sm-6
       .panel.panel-default
-        .panel-heading Barometric Pressure
+        .panel-heading
+          a.btn-block(href='/weather/barometric-pressure') Barometric Pressure
         .panel-body.text-center
           h1.reading {{latestWeather.pressure | number:0}}
           .small {{latestWeather.timestamp | date:'HH:mm EEE, dd MMM yyyy Z'}}
     .col-md-3.col-sm-6
       .panel.panel-default
-        .panel-heading Temperature
+        .panel-heading
+          a.btn-block(href='/weather/temperature') Temperature
         .panel-body.text-center
           h1.reading {{latestWeather.temperature | number:0}}
           .small {{latestWeather.timestamp | date:'HH:mm EEE, dd MMM yyyy Z'}}
     .col-md-3.col-sm-6
       .panel.panel-default
-        .panel-heading Ultra Violet
+        .panel-heading
+          a.btn-block(href='/weather/ultra-violet') Ultra Violet
         .panel-body.text-center
           h1.reading {{latestWeather.ultraViolet | number:0}}
           .small {{latestWeather.timestamp | date:'HH:mm EEE, dd MMM yyyy Z'}}

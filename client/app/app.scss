@@ -35,6 +35,12 @@ $fa-font-path: "/bower_components/font-awesome/fonts";
     background-color: yellow;
 }
 
+.panel-heading {
+    background-color: pink;
+}
+
+@import 'yeti.scss';
+
 // Component styles are injected through grunt
 // injector
 @import 'account/details/details.scss';
@@ -53,5 +59,6 @@ $fa-font-path: "/bower_components/font-awesome/fonts";
 @import 'weather/temperature/temperature.scss';
 @import 'weather/ultra-violet/ultra-violet.scss';
 @import 'weather/weather.scss';
+@import 'yeti.scss';
 @import 'footer/footer.scss';
 // endinjector
