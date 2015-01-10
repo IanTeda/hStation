@@ -17,7 +17,11 @@
     "angular-socket-io": "~0.6.0",
     "angular-ui-router": "~0.2.10",
     "AngularJS-Toaster": "~0.4.7",
+<<<<<<< HEAD
     "angular-chart.js": "~0.3.9"
+=======
+    "chartjs": "~1.0.1"
+>>>>>>> FETCH_HEAD
   },
   "devDependencies": {
     "angular-mocks": ">=1.2.*",

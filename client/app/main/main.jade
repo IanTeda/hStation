@@ -12,7 +12,11 @@ header(ng-include='"components/navbar/navbar.html"')
       .panel.panel-default
         .panel-heading Dew Point
         .panel-body.text-center
+<<<<<<< HEAD
           h1.reading {{latestWeather.dewPoint}}
+=======
+          h1.reading {{latestWeather.dewPoint | number:2}}
+>>>>>>> FETCH_HEAD
           .small {{latestWeather.timestamp | date:'HH:mm EEE, dd MMM yyyy Z'}}
     .col-md-3.col-sm-6
       .panel.panel-default
@@ -24,7 +28,11 @@ header(ng-include='"components/navbar/navbar.html"')
       .panel.panel-default
         .panel-heading Humidity
         .panel-body.text-center
+<<<<<<< HEAD
           h1.reading {{latestWeather.humidity | number:0}}
+=======
+          h1.reading {{latestWeather.humidity | number:2}}
+>>>>>>> FETCH_HEAD
           .small {{latestWeather.timestamp | date:'HH:mm EEE, dd MMM yyyy Z'}}
     .col-md-3.col-sm-6
       .panel.panel-default
