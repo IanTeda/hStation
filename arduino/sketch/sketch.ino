@@ -165,7 +165,7 @@ void sendReadings()
   Serial.print(DHT_DewPoint);
   //Serial.print(", BMP Temperature: ");
   //Serial.print(BMP_Temperature);
-  Serial.print(", pressure: ");
+  Serial.print(", barometricPressure: ");
   Serial.print(BMP_Pressure);
   Serial.print(", lux: ");
   Serial.print(TSL_Lux);

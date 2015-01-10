@@ -14,6 +14,7 @@
     <!-- build:css(client) app/vendor.css -->
       <!-- bower:css -->
       <link rel="stylesheet" href="bower_components/AngularJS-Toaster/toaster.css" />
+      <link rel="stylesheet" href="bower_components/angular-chart.js/dist/angular-chart.css" />
       <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css({.tmp,client}) app/app.css -->
@@ -48,6 +49,8 @@
       <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
       <script src="bower_components/angular-animate/angular-animate.js"></script>
       <script src="bower_components/AngularJS-Toaster/toaster.js"></script>
+      <script src="bower_components/Chart.js/Chart.min.js"></script>
+      <script src="bower_components/angular-chart.js/dist/angular-chart.js"></script>
       <!-- endbower -->
     <!-- endbuild -->
 
@@ -64,9 +67,30 @@
           <script src="app/settings/settings.js"></script>
           <script src="app/settings/settings.model.js"></script>
           <script src="app/settings/settings.service.js"></script>
+          <script src="app/weather/barometric-pressure/barometric-pressure.controller.js"></script>
+          <script src="app/weather/barometric-pressure/barometric-pressure.js"></script>
+          <script src="app/weather/carbon-monoxide/carbon-monoxide.controller.js"></script>
+          <script src="app/weather/carbon-monoxide/carbon-monoxide.js"></script>
+          <script src="app/weather/dew-point/dew-point.controller.js"></script>
+          <script src="app/weather/dew-point/dew-point.js"></script>
+          <script src="app/weather/dust/dust.controller.js"></script>
+          <script src="app/weather/dust/dust.js"></script>
+          <script src="app/weather/humidity/humidity.controller.js"></script>
+          <script src="app/weather/humidity/humidity.js"></script>
+          <script src="app/weather/infra-red/infra-red.controller.js"></script>
+          <script src="app/weather/infra-red/infra-red.js"></script>
+          <script src="app/weather/lux/lux.controller.js"></script>
+          <script src="app/weather/lux/lux.js"></script>
+          <script src="app/weather/methane/methane.controller.js"></script>
+          <script src="app/weather/methane/methane.js"></script>
+          <script src="app/weather/temperature/temperature.controller.js"></script>
+          <script src="app/weather/temperature/temperature.js"></script>
+          <script src="app/weather/ultra-violet/ultra-violet.controller.js"></script>
+          <script src="app/weather/ultra-violet/ultra-violet.js"></script>
           <script src="app/weather/weather.controller.js"></script>
           <script src="app/weather/weather.factory.js"></script>
           <script src="app/weather/weather.js"></script>
+          <script src="app/weather/weather.latest.factory.js"></script>
           <script src="app/weather/weather.service.js"></script>
           <script src="components/auth/auth.service.js"></script>
           <script src="components/auth/user.service.js"></script>

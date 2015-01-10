@@ -4,27 +4,55 @@ angular.module('hStationApp')
   .controller('NavbarCtrl', function ($scope, $location, Auth) {
     $scope.menu = [
       {
-        'title': 'Latest',
+        'title': 'Dashboard',
         'link': '/'
+      },{
+        'title': 'Weather',
+        'link': '/weather'
       }
+
     ];
 
     $scope.menuReadings = [
       {
-        'title': 'Temperature',
-        'link': '/readings/temperature'
-      },
-      {
-        'title': 'Humidity',
-        'link': '/readings/humidity'
+        'title': 'Carbon Monoxide',
+        'link': '/weather/carbon-monoxide'
       },
       {
         'title': 'Dew Point',
-        'link': '/readings/dew-point'
+        'link': '/weather/dew-point'
       },
       {
-        'title': 'Pressure',
-        'link': '/readings/pressure'
+        'title': 'Dust',
+        'link': '/weather/dust'
+      },
+      {
+        'title': 'Humidity',
+        'link': '/weather/humidity'
+      },
+      {
+        'title': 'Infra Red',
+        'link': '/weather/infra-red'
+      },
+      {
+        'title': 'Lux',
+        'link': '/weather/lux'
+      },
+      {
+        'title': 'Methane',
+        'link': '/weather/methane'
+      },
+      {
+        'title': 'Barometric Pressure',
+        'link': '/weather/barometric-pressure'
+      },
+      {
+        'title': 'Temperature',
+        'link': '/weather/temperature'
+      },
+      {
+        'title': 'Ultra Violet',
+        'link': '/weather/ultra-violet'
       }
     ];
 

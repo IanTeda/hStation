@@ -33,7 +33,7 @@ var WeatherSchema = new Schema({
     type: Number,
     default: -2
   },
-  pressure: {
+  barometricPressure: {
     type: Number,
     default: -2
   },
@@ -98,8 +98,8 @@ WeatherSchema.statics = {
       else if(key === 'methane'){
         document.methane = value;
       }
-      else if(key === 'pressure'){
-        document.pressure = value;
+      else if(key === 'barometricPressure'){
+        document.barometricPressure = value;
       }
       else if(key === 'temperature'){
         document.temperature = value;
@@ -134,23 +134,6 @@ WeatherSchema.statics = {
   latest: function (callback) {
     this.findOne({}, {}, { sort: { 'timestamp': -1 } })
       .exec(callback);
-  },
-
-  /**
-   * Check if weather collection is empty, if so add default settings
-   */
-  seedIfEmpty: function (callback) {
-    // Check if User collection is empty
-    this.find(function (err, weather) {
-      // Else check if settings is empty and then load default settings
-      if (weather.length === 0) {
-        console.log('Weather sead if empty');
-
-      } else {
-        winston.error('Could not find weather schema');
-      }
-
-    });
   }
 
 }

@@ -42,6 +42,16 @@ $fa-font-path: "/bower_components/font-awesome/fonts";
 @import 'main/main.scss';
 @import 'settings/log/log.scss';
 @import 'settings/settings.scss';
+@import 'weather/barometric-pressure/barometric-pressure.scss';
+@import 'weather/carbon-monoxide/carbon-monoxide.scss';
+@import 'weather/dew-point/dew-point.scss';
+@import 'weather/dust/dust.scss';
+@import 'weather/humidity/humidity.scss';
+@import 'weather/infra-red/infra-red.scss';
+@import 'weather/lux/lux.scss';
+@import 'weather/methane/methane.scss';
+@import 'weather/temperature/temperature.scss';
+@import 'weather/ultra-violet/ultra-violet.scss';
 @import 'weather/weather.scss';
 @import 'footer/footer.scss';
 // endinjector
