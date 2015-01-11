@@ -63,9 +63,6 @@ WeatherSchema.statics = {
     // Reference new document instance to be saved
     var document = new this();
 
-    // Strip out white spaces from weather string
-    weather = weather.replace(/ /g, '');
-
     // Reference new array of sensor readings. Matched between ','
     var sensors = weather.match(/[^,]+/g);
 
@@ -75,6 +72,8 @@ WeatherSchema.statics = {
       // Determine key and value for each array iteration
       var key = sensors[i].match(/[^:]+/g)[0];
       var value = sensors[i].match(/[^:]+/g)[1];
+
+      console.log('key: ' + key + " | Value: " + value);
 
       // Add to new document based on key
       if(key === 'carbonMonoxide'){

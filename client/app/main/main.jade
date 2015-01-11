@@ -56,14 +56,14 @@ header(ng-include='"components/navbar/navbar.html"')
         .panel-heading
           a.btn-block(href='/weather/barometric-pressure') Barometric Pressure
         .panel-body.text-center
-          h1.reading {{latestWeather.pressure | number:0}}
+          h1.reading {{latestWeather.barometricPressure | number:0}}
           .small {{latestWeather.timestamp | date:'HH:mm EEE, dd MMM yyyy Z'}}
     .col-md-3.col-sm-6
       .panel.panel-default
         .panel-heading
           a.btn-block(href='/weather/temperature') Temperature
         .panel-body.text-center
-          h1.reading {{latestWeather.temperature | number:0}}
+          h1.reading {{latestWeather.temperature | number:1}}
           .small {{latestWeather.timestamp | date:'HH:mm EEE, dd MMM yyyy Z'}}
     .col-md-3.col-sm-6
       .panel.panel-default

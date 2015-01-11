@@ -157,6 +157,7 @@ void sendReadings()
   getSiSensorReading();
   
   Serial.print("!");
+  Serial.print("WEATHER >");
   Serial.print("temperature: ");  
   Serial.print(DHT_Temperature);
   Serial.print(", humidity: ");
