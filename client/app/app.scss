@@ -4,43 +4,6 @@ $fa-font-path: "/bower_components/font-awesome/fonts";
 @import 'bootstrap-sass-official/vendor/assets/stylesheets/bootstrap';
 @import 'font-awesome/scss/font-awesome';
 
-/**
- * App-wide Styles
- */
-.browsehappy {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
-}
-
-// Add a little more padding to the container
-.container-fluid {
-    padding-left: 24px;
-    padding-right: 24px;
-}
-
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-    .container {
-        max-width: 730px;
-    }
-}
-
-.pink {
-    background-color: pink;
-}
-
-.yellow {
-    background-color: yellow;
-}
-
-.panel-heading {
-    background-color: pink;
-}
-
-@import 'yeti.scss';
-
 // Component styles are injected through grunt
 // injector
 @import 'account/details/details.scss';
@@ -62,3 +25,42 @@ $fa-font-path: "/bower_components/font-awesome/fonts";
 @import 'yeti.scss';
 @import 'footer/footer.scss';
 // endinjector
+
+// Import Angluar Chart JS style sheet
+@import 'bower_components/dist/angular-chart.css';
+
+/**
+ * App-wide Styles
+ */
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+
+.pink {
+    background-color: pink;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+// Add a little more padding to the container
+.container-fluid {
+    margin-left: 48px;
+    margin-right: 48px;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+    .container {
+        max-width: 730px;
+    }
+    .container-fluid {
+        margin-left: 24px;
+        margin-right: 24px;
+    }
+}

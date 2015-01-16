@@ -1,6 +1,22 @@
 header(ng-include='"components/navbar/navbar.html"')
 
 .container-fluid
-  | This is the temperature view.
+  .row
+    .col-md-3.well
+      .page-header
+        h1 Temperature
+      p.text-justify
+        | A temperature is a comparative objective measure of hot and cold. It is measured, typically by a thermometer, through the bulk behavior of a thermometric material, detection of heat radiation, or by particle velocity or kinetic energy. It may be calibrated in any of various temperature scales, Celsius, Fahrenheit, Kelvin, etc.
+
+    .col-md-9
+      .row
+        .col-md-12.yellow
+          | Temperature stats
+      .row
+        .col-md-12.pink
+          | Graph
+      .row
+        .col-md-12.yellow
+          | table
 
 footer.footer(ng-include='"components/footer/footer.html"')

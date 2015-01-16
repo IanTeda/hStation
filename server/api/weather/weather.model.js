@@ -73,7 +73,7 @@ WeatherSchema.statics = {
       var key = sensors[i].match(/[^:]+/g)[0];
       var value = sensors[i].match(/[^:]+/g)[1];
 
-      console.log('key: ' + key + " | Value: " + value);
+      //console.log('key: ' + key + " | Value: " + value);
 
       // Add to new document based on key
       if(key === 'carbonMonoxide'){
@@ -133,6 +133,36 @@ WeatherSchema.statics = {
   latest: function (callback) {
     this.findOne({}, {}, { sort: { 'timestamp': -1 } })
       .exec(callback);
+  },
+
+  /**
+   * Get all readings from a given day
+   * @param date
+   * @param callback
+   */
+  day: function (date, callback) {
+
+    // Number of milliseconds in a day, less one millisecond
+    var ONE_DAY = 24*60*60*1000 - 1;
+
+    // Set time for date to midnight (just in case a part way through the day is passed)
+    var start = new Date(date).setHours(0,0,0,0);
+
+    // Set finish millisecond as just before midnight (one+day)
+    var finish = midnight + ONE_DAY;
+
+    console.log("weather.controller.js > start " + start.toString() + " | finish " + finish.toString());
+
+    // Find documents in the given day
+    //this.find({
+      //timestamp : {
+       // $gte: start,
+        //$lt: finish
+      //} function (err, weather) {
+
+        //}
+    //})
+
   }
 
 }

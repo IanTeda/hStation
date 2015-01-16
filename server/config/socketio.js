@@ -18,6 +18,7 @@ function onConnect(socket) {
   });
 
   // Insert sockets below
+  require('../api/wikipedia/wikipedia.socket').register(socket);
   require('../api/weather/weather.socket').register(socket);
   require('../api/settings/settings.socket').register(socket);
 }

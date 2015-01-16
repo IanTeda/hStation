@@ -4,6 +4,7 @@
 #include <Adafruit_BMP085_U.h> // Pressure
 #include <dht.h> // Humidity
 #include <Adafruit_SI1145.h> // IR
+#include <SoftwareSerial.h> // SoftwareSerial is used to communicate with the XBee
 
 /*
    WEATHER STATION SKETCH
@@ -16,6 +17,9 @@
 
 // Assign variables to sensors
 dht DHT; // DHT is dht
+
+// Arduino RX, TX (XBee Dout, Din)
+SoftwareSerial XBee(2, 3);
 
 /**
 * ADAFRUIT UNIFIED SENSOR LIBRARY
@@ -45,7 +49,7 @@ int incomingByte = 0; // Set initial incomming buffer to zero
 int charCount = 0; // Set initial character count for incoming buffer to zero
 char command[MAX_COMMAND_LENGTH + 1]; // // Set max command length and leave space for stop
 bool locked = false; // Set inital value of lock to false
-bool debug = false; // Set debug value for console/serial prints
+bool debug = true; // Set debug value for console/serial prints
 
 // Command messages
 char* WEATHER = {"WEATHER"};
@@ -57,13 +61,9 @@ char* WEATHER = {"WEATHER"};
 */
 void setup(void) 
 {
-  Serial.begin(9600); // Start serial port at 9600 bps:
-  
-  while (!Serial) { /* wait for serial port to connect. Needed for Leonardo only */ } 
-  
-  // TODO: Don't think I need this
-  //establishContact();  // Send handshake to let the other end know we are here
-  
+  // Initialize XBee Software Serial port. Make sure the baud
+  // rate matches your XBee setting (9600 is default).
+  XBee.begin(9600);   
 }
 
 /*
@@ -72,37 +72,20 @@ void setup(void)
 */
 void loop(void) 
 {
-  // Check to see if we have a serial connection
-  if (Serial.available() > 0) 
+  // In loop() we continously check to see if a command has been
+  //  received.
+  if (XBee.available())
   {
-    readSerial();
+    readXBee();
   }
 }
 
-/*
-   ESTABLISH SERIAL CONNECTION
-   Hand shake serial connection
-   TODO: Don't think I need this one
-*/
-void establishContact(void) 
+void readXBee()
 {
-  while (Serial.available() <= 0) 
-  {
-    Serial.println("hello");   // send a starting message
-    delay(300);
-  }
-}
-
-void readSerial()
-{
-  // Add incoming bytes from serial port to buffer
-  incomingByte = Serial.read();
-
-  if (debug)
-  {
-    Serial.println("incomingByte: " + incomingByte);
-  }
-    
+  incomingByte = XBee.read();
+  
+  //XBee.println(F("Arduino XBee Remote Control!"));
+  
   // Check to see if we have a reset byte coming in
   if ((char)incomingByte == resetByte) 
   {
@@ -144,9 +127,11 @@ void readSerial()
     charCount = 0;
     if (strcmp(WEATHER, command) == 0) 
     {
-      sendReadings();
+      //sendReadings();
+      XBee.println("Setting weather ");
     }
   }
+  
 }
 
 void sendReadings()
@@ -156,27 +141,27 @@ void sendReadings()
   getTslSensorReading();
   getSiSensorReading();
   
-  Serial.print("!");
-  Serial.print("WEATHER >");
-  Serial.print("temperature: ");  
-  Serial.print(DHT_Temperature);
-  Serial.print(", humidity: ");
-  Serial.print(DHT_Humidity);
-  Serial.print(", dewPoint: ");
-  Serial.print(DHT_DewPoint);
-  //Serial.print(", BMP Temperature: ");
-  //Serial.print(BMP_Temperature);
-  Serial.print(", barometricPressure: ");
-  Serial.print(BMP_Pressure);
-  Serial.print(", lux: ");
-  Serial.print(TSL_Lux);
-  Serial.print(", ultraViolet: ");
-  Serial.print(SI_UltraViolet);
-  Serial.print(", infraRed: ");
-  Serial.print(SI_InfraRed);
-  Serial.println("#");
+  XBee.print("!");
+  XBee.print("WEATHER >");
+  XBee.print("temperature: ");  
+  XBee.print(DHT_Temperature);
+  XBee.print(", humidity: ");
+  XBee.print(DHT_Humidity);
+  XBee.print(", dewPoint: ");
+  XBee.print(DHT_DewPoint);
+  //XBee.print(", BMP Temperature: ");
+  //XBee.print(BMP_Temperature);
+  XBee.print(", barometricPressure: ");
+  XBee.print(BMP_Pressure);
+  XBee.print(", lux: ");
+  XBee.print(TSL_Lux);
+  XBee.print(", ultraViolet: ");
+  XBee.print(SI_UltraViolet);
+  XBee.print(", infraRed: ");
+  XBee.print(SI_InfraRed);
+  XBee.println("#");
   
-  Serial.flush(); // Wait for TX to complete before progressing
+  //Serial.flush(); // Wait for TX to complete before progressing
   
   //delay(1000); 
 }
