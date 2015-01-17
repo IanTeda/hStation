@@ -20,11 +20,18 @@ exports.latest = function(req, res) {
   });
 };
 
+// Get a latest weather
+exports.last24hrs = function(req, res) {
+  Weather.last24hrs(function (err, weather) {
+    if(err) { return handleError(res, err); }
+    if(!weather) { return res.send(404); }
+    return res.json(weather);
+  });
+};
+
 // Get weather for a given day
 exports.day = function(req, res) {
-  var date = new Date("January 11, 2015 0:0:00");
-  
-  Weather.day(date, function (err, weather) {
+  Weather.day(req.params.date, function (err, weather) {
     if(err) { return handleError(res, err); }
     if(!weather) { return res.send(404); }
     return res.json(200, weather);

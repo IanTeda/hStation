@@ -151,16 +151,38 @@ WeatherSchema.statics = {
     // Set finish millisecond as just before midnight (one+day)
     var finish = start + ONE_DAY;
 
-    //console.log("weather.controller.js > start " + start.toString() + " | finish " + finish.toString());
-
-    // Find documents in the given day
+    // Find documents in the given timestamps
     this.find({
       timestamp : {
         $gte: start,
         $lt: finish
       }
     }).exec(callback)
+  },
 
+  /**
+   * Get all readings from a given day
+   * @param date
+   * @param callback
+   */
+  last24hrs: function (callback) {
+
+    // Number of milliseconds in a day
+    var TWENTY_FOUR_HRS = 24*60*60*1000;
+
+    // Set finish date/time to now
+    var finish = new Date().now;
+
+    // Set start 24 hours of milliseconds less then now
+    var start = finish - TWENTY_FOUR_HRS;
+
+    // Find documents between the given time stamps
+    this.find({
+      timestamp : {
+        $gte: start,
+        $lt: finish
+      }
+    }).exec(callback)
   }
 
 }
