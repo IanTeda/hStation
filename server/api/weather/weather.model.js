@@ -149,19 +149,17 @@ WeatherSchema.statics = {
     var start = new Date(date).setHours(0,0,0,0);
 
     // Set finish millisecond as just before midnight (one+day)
-    var finish = midnight + ONE_DAY;
+    var finish = start + ONE_DAY;
 
-    console.log("weather.controller.js > start " + start.toString() + " | finish " + finish.toString());
+    //console.log("weather.controller.js > start " + start.toString() + " | finish " + finish.toString());
 
     // Find documents in the given day
-    //this.find({
-      //timestamp : {
-       // $gte: start,
-        //$lt: finish
-      //} function (err, weather) {
-
-        //}
-    //})
+    this.find({
+      timestamp : {
+        $gte: start,
+        $lt: finish
+      }
+    }).exec(callback)
 
   }
 
