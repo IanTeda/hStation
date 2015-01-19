@@ -31,8 +31,8 @@ angular.module('hStationApp')
         'link': '/weather/humidity'
       },
       {
-        'title': 'Infra Red',
-        'link': '/weather/infra-red'
+        'title': 'Infrared',
+        'link': '/weather/infrared'
       },
       {
         'title': 'Lux',
@@ -51,8 +51,8 @@ angular.module('hStationApp')
         'link': '/weather/temperature'
       },
       {
-        'title': 'Ultra Violet',
-        'link': '/weather/ultra-violet'
+        'title': 'Ultraviolet',
+        'link': '/weather/ultraviolet'
       }
     ];
 

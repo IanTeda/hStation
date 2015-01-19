@@ -1,16 +1,16 @@
 'use strict';
 
-describe('Controller: InfraRedCtrl', function () {
+describe('Controller: InfraredCtrl', function () {
 
   // load the controller's module
   beforeEach(module('hStationApp'));
 
-  var InfraRedCtrl, scope;
+  var InfraredCtrl, scope;
 
   // Initialize the controller and a mock scope
   beforeEach(inject(function ($controller, $rootScope) {
     scope = $rootScope.$new();
-    InfraRedCtrl = $controller('InfraRedCtrl', {
+    InfraredCtrl = $controller('InfraredCtrl', {
       $scope: scope
     });
   }));

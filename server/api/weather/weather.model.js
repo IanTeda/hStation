@@ -21,7 +21,7 @@ var WeatherSchema = new Schema({
     type: Number,
     default: -2
   },
-  infraRed: {
+  infrared: {
     type: Number,
     default: -2
   },
@@ -41,7 +41,7 @@ var WeatherSchema = new Schema({
     type: Number,
     default: -201
   },
-  ultraViolet: {
+  ultraviolet: {
     type: Number,
     default: -2
   },
@@ -88,8 +88,8 @@ WeatherSchema.statics = {
       else if(key === 'humidity'){
         document.humidity = value;
       }
-      else if(key === 'infraRed'){
-        document.infraRed = value;
+      else if(key === 'infrared'){
+        document.infrared = value;
       }
       else if(key === 'lux'){
         document.lux = value;
@@ -103,8 +103,8 @@ WeatherSchema.statics = {
       else if(key === 'temperature'){
         document.temperature = value;
       }
-      else if(key === 'ultraViolet'){
-        document.ultraViolet = value;
+      else if(key === 'ultraviolet'){
+        document.ultraviolet = value;
       }
 
     }
@@ -171,7 +171,8 @@ WeatherSchema.statics = {
     var TWENTY_FOUR_HRS = 24*60*60*1000;
 
     // Set finish date/time to now
-    var finish = new Date().now;
+    //var finish = new Date().now;
+    var finish = new Date('January 12, 2015 0:0:00'); // Use for development
 
     // Set start 24 hours of milliseconds less then now
     var start = finish - TWENTY_FOUR_HRS;

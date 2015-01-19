@@ -155,9 +155,9 @@ void sendReadings()
   XBee.print(BMP_Pressure);
   XBee.print(", lux: ");
   XBee.print(TSL_Lux);
-  XBee.print(", ultraViolet: ");
+  XBee.print(", ultraviolet: ");
   XBee.print(SI_UltraViolet);
-  XBee.print(", infraRed: ");
+  XBee.print(", infrared: ");
   XBee.print(SI_InfraRed);
   XBee.println("#");
   

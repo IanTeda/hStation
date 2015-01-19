@@ -33,9 +33,9 @@ header(ng-include='"components/navbar/navbar.html"')
     .col-md-3.col-sm-6
       .panel.panel-default
         .panel-heading
-          a.btn-block(href='/weather/infra-red') Infra Red
+          a.btn-block(href='/weather/infrared') Infrared
         .panel-body.text-center
-          h1.reading {{latestWeather.infraRed | number:0}}
+          h1.reading {{latestWeather.infrared | number:0}}
           .small {{latestWeather.timestamp | date:'HH:mm EEE, dd MMM yyyy Z'}}
     .col-md-3.col-sm-6
       .panel.panel-default
@@ -68,9 +68,9 @@ header(ng-include='"components/navbar/navbar.html"')
     .col-md-3.col-sm-6
       .panel.panel-default
         .panel-heading
-          a.btn-block(href='/weather/ultra-violet') Ultra Violet
+          a.btn-block(href='/weather/ultraviolet') Ultraviolet
         .panel-body.text-center
-          h1.reading {{latestWeather.ultraViolet | number:0}}
+          h1.reading {{latestWeather.ultraviolet | number:0}}
           .small {{latestWeather.timestamp | date:'HH:mm EEE, dd MMM yyyy Z'}}
 
 footer.footer(ng-include='"components/footer/footer.html"')

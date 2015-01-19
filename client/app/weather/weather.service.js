@@ -10,7 +10,7 @@
  */
 
 angular.module('hStationApp')
-  .service('WeatherService', function Temperature(WeatherModel, WeatherLatestModel) {
+  .service('WeatherService', function Temperature(WeatherModel, WeatherLatestModel, WeatherLast24HrsModel) {
     // AngularJS will instantiate a singleton by calling "new" on this function
 
     return {
@@ -72,6 +72,20 @@ angular.module('hStationApp')
        */
       latest: function (callback) {
         return WeatherLatestModel.index(function (document) {
+          return callback(document);
+        }, function (err) {
+          return callback(err);
+        }).$promise;
+      },
+
+      /**
+       * Get the last 24 hours of documents from the model
+       * @param pressure_id
+       * @param callback
+       * @returns {*}
+       */
+      last24hrs: function (callback) {
+        return WeatherLast24HrsModel.index(function (document) {
           return callback(document);
         }, function (err) {
           return callback(err);

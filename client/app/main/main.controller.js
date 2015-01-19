@@ -12,12 +12,12 @@ angular.module('hStationApp')
       dewPoint: -1,
       dust: -1,
       humidity: -1,
-      infraRed: -1,
+      infrared: -1,
       lux: -1,
       methane: -1,
       pressure: -1,
       temperature: -101,
-      ultraViolet: -1
+      ultraviolet: -1
     };
 
     // Use service to retrieve all settings, which is only one in this case

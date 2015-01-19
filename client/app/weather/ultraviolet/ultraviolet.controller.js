@@ -1,6 +1,6 @@
 'use strict';
 
 angular.module('hStationApp')
-  .controller('UltraVioletCtrl', function ($scope) {
+  .controller('UltravioletCtrl', function ($scope) {
     $scope.message = 'Hello';
   });

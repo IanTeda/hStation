@@ -22,10 +22,10 @@ exports.latest = function(req, res) {
 
 // Get a latest weather
 exports.last24hrs = function(req, res) {
-  Weather.last24hrs(function (err, weather) {
+  Weather.last24hrs(function (err, weathers) {
     if(err) { return handleError(res, err); }
-    if(!weather) { return res.send(404); }
-    return res.json(weather);
+    if(!weathers) { return res.send(404); }
+    return res.json(200, weathers);
   });
 };
 

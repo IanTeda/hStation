@@ -1,16 +1,16 @@
 'use strict';
 
-describe('Controller: UltraVioletCtrl', function () {
+describe('Controller: UltravioletCtrl', function () {
 
   // load the controller's module
   beforeEach(module('hStationApp'));
 
-  var UltraVioletCtrl, scope;
+  var UltravioletCtrl, scope;
 
   // Initialize the controller and a mock scope
   beforeEach(inject(function ($controller, $rootScope) {
     scope = $rootScope.$new();
-    UltraVioletCtrl = $controller('UltraVioletCtrl', {
+    UltravioletCtrl = $controller('UltravioletCtrl', {
       $scope: scope
     });
   }));
