@@ -2,14 +2,11 @@
     width: 150px;
 }
 
-.table-container {
-    max-height: 650px;
-    width: 100%;
-    margin: 0;
-    overflow-y: auto;
+occupy-wrapper {
+
 }
 
-.table-scrollable {
-    margin: 0;
-    padding: 0;
+// Best way to do this at the moment
+.occupy-height {
+    height: 600px;
 }

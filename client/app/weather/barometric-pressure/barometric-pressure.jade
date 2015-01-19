@@ -17,8 +17,8 @@ header(ng-include='"components/navbar/navbar.html"')
           | Graph
           canvas#line.chart.chart-line(data='data', labels='labels', legend='true', series='series', click='onClick')
 
-        .col-md-3.table-container
-          table.table.table-striped.table-hover.table-bordered.table-condensed.table-scrollable
+        .col-md-3.occupy-wrapper
+          table.table.table-striped.table-hover.table-bordered.table-condensed.occupy-height(fixed-header='')
             thead
               tr
                 th.col-date.text-center Date
