@@ -7,7 +7,7 @@ var router = express.Router();
 
 router.get('/', controller.index);
 router.get('/latest', controller.latest);
-router.get('/last24hrs', controller.last24hrs);
+router.get('/last24hrs/:sensor', controller.last24hrs);
 router.get('/day', controller.day);
 router.get('/:id', controller.show);
 router.post('/', controller.create);

@@ -165,7 +165,7 @@ WeatherSchema.statics = {
    * @param date
    * @param callback
    */
-  last24hrs: function (callback) {
+  last24hrs: function (sensor, callback) {
 
     // Number of milliseconds in a day
     var TWENTY_FOUR_HRS = 24*60*60*1000;
@@ -178,12 +178,32 @@ WeatherSchema.statics = {
     var start = finish - TWENTY_FOUR_HRS;
 
     // Find documents between the given time stamps
-    this.find({
+    var query = this.find({
       timestamp : {
         $gte: start,
         $lt: finish
       }
-    }).exec(callback)
+    });
+
+    // Switch what sensor to return
+    switch(sensor){
+      case 'carbonMonoxide':
+      case 'dewPoint':
+      case 'dust':
+      case 'humidity':
+      case 'infrared':
+      case 'lux':
+      case 'methane':
+      case 'barometricPressure':
+      case 'temperature':
+      case 'ultraviolet':
+        query.select('timestamp ' + sensor);
+        query.exec(callback);
+        break;
+      case 'all':
+      default:
+        query.exec(callback);
+    }
   }
 
 }

@@ -12,7 +12,8 @@
 angular.module('hStationApp')
   .factory('WeatherLast24HrsModel', function ($resource) {
 
-    return $resource('/api/weathers/last24hrs', {
+    return $resource('/api/weathers/last24hrs/:sensor', {
+        sensor: 'sensor'
       }, {
         index : {
           method: 'GET',

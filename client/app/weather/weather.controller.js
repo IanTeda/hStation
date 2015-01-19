@@ -3,9 +3,8 @@
 angular.module('hStationApp')
   .controller('WeatherCtrl', function ($scope, WeatherService) {
 
-    $scope.last24hrs ={};
-
-    WeatherService.last24hrs( function(last24hrs) {
+    // Load the last 24 hours of all sensors
+    WeatherService.last24hrs('all', function(last24hrs) {
       $scope.last24hrs = last24hrs;
     });
 

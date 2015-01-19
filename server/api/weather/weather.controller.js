@@ -22,7 +22,7 @@ exports.latest = function(req, res) {
 
 // Get a latest weather
 exports.last24hrs = function(req, res) {
-  Weather.last24hrs(function (err, weathers) {
+  Weather.last24hrs(req.params.sensor, function (err, weathers) {
     if(err) { return handleError(res, err); }
     if(!weathers) { return res.send(404); }
     return res.json(200, weathers);

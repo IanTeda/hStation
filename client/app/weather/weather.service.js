@@ -84,8 +84,8 @@ angular.module('hStationApp')
        * @param callback
        * @returns {*}
        */
-      last24hrs: function (callback) {
-        return WeatherLast24HrsModel.index(function (document) {
+      last24hrs: function (sensor, callback) {
+        return WeatherLast24HrsModel.index({sensor: sensor}, function (document) {
           return callback(document);
         }, function (err) {
           return callback(err);
