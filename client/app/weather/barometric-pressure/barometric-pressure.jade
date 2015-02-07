@@ -4,28 +4,20 @@ header(ng-include='"components/navbar/navbar.html"')
   .row
     .col-md-3.well
       .page-header
-        h1 Weather
-      p.text-justify
-        | Weather is the state of the atmosphere, to the degree that it is hot or cold, wet or dry, calm or stormy, clear or cloudy.[1] Weather, seen from an anthropological perspective, is something all humans in the world constantly experience through their senses, at least while being outside. There are socially and scientifically constructed understandings of what weather is, what makes it change, what effects it has on humans in different situations etc.[2] Therefore weather is something people often communicate about. Turning back to the meteorological perspective, most weather phenomena occur in the troposphere,[3][4] just below the stratosphere. Weather generally refers to day-to-day temperature and precipitation activity, whereas climate is the term for the statistics of atmospheric conditions over longer periods of time.[5] When used without qualification, "weather" is generally understood to mean the weather of Earth.
+        h1 Barometric Pressure
+      table.table.table-striped.table-hover.table-bordered.table-condensed.occupy-height(fixed-header='')
+        thead
+          tr
+            th.col-date.text-center Date
+            th.col-barometric-pressure.text-center Barometric Pressure
+        tbody
+          tr(ng-repeat="reading in last24hrs")
+            td.col-date.text-right {{reading.timestamp | date:'EEE, dd-MMM-yyyy HH:mm'}}
+            td.col-barometric-pressure.text-right {{reading.barometricPressure | number:1}} hPa
 
     .col-md-9
-      .row
-        .col-md-12
-          | Weather stats
-      .row
-        .col-md-9
-          | Graph
-          canvas#line.chart.chart-line(data='data', labels='labels', legend='true', series='series', click='onClick')
-
-        .col-md-3.occupy-wrapper
-          table.table.table-striped.table-hover.table-bordered.table-condensed.occupy-height(fixed-header='')
-            thead
-              tr
-                th.col-date.text-center Date
-                th.col-barometric-pressure.text-center Barometric Pressure
-            tbody
-              tr(ng-repeat="reading in last24hrs")
-                td.col-date.text-right {{reading.timestamp | date:'EEE, dd-MMM-yyyy HH:mm'}}
-                td.col-barometric-pressure.text-right {{reading.barometricPressure | number:1}} hPa
+        | Graph
+        //canvas#line.chart.chart-line(data='data', labels='labels')
+        nvd3-line-chart(data='data', showxaxis='true', showyaxis='true', tooltips='true', interactive='true')
 
 footer.footer(ng-include='"components/footer/footer.html"')

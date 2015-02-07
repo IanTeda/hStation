@@ -8,8 +8,8 @@ angular.module('hStationApp', [
   'ui.router',
   'ui.bootstrap',
   'toaster',
-  'chart.js',
-  'anguFixedHeaderTable'
+  'anguFixedHeaderTable',
+  'nvd3ChartDirectives'
 ])
   .config(function ($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
     $urlRouterProvider
