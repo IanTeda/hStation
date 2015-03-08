@@ -16,8 +16,8 @@ header(ng-include='"components/navbar/navbar.html"')
             td.col-barometric-pressure.text-right {{reading.barometricPressure | number:1}} hPa
 
     .col-md-9
-        | Graph
-        //canvas#line.chart.chart-line(data='data', labels='labels')
-        nvd3-line-chart(data='data', showxaxis='true', showyaxis='true', tooltips='true', interactive='true')
+      | Graph
+      nvd3-line-chart(data='data', showxaxis='true', showyaxis='true', tooltips='true', interactive='true', margin="{left:50,top:50,bottom:50,right:50}", isArea='true', xAxisTickFormat="xAxisTickFormat()", height="400", clipEdge="false")
+      svg
 
 footer.footer(ng-include='"components/footer/footer.html"')

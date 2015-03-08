@@ -4,7 +4,7 @@ header(ng-include='"components/navbar/navbar.html"')
   .row
     .col-md-3.well
       .page-header
-        h1 Weather
+        h1 Temperature
       p.text-justify
         | Weather is the state of the atmosphere, to the degree that it is hot or cold, wet or dry, calm or stormy, clear or cloudy.[1] Weather, seen from an anthropological perspective, is something all humans in the world constantly experience through their senses, at least while being outside. There are socially and scientifically constructed understandings of what weather is, what makes it change, what effects it has on humans in different situations etc.[2] Therefore weather is something people often communicate about. Turning back to the meteorological perspective, most weather phenomena occur in the troposphere,[3][4] just below the stratosphere. Weather generally refers to day-to-day temperature and precipitation activity, whereas climate is the term for the statistics of atmospheric conditions over longer periods of time.[5] When used without qualification, "weather" is generally understood to mean the weather of Earth.
 
@@ -13,36 +13,8 @@ header(ng-include='"components/navbar/navbar.html"')
         .col-md-12
           | Weather stats
       .row
-        .col-md-9
-          | Graph
-          canvas#line.chart.chart-line(data='data', labels='labels', legend='true', series='series', click='onClick')
-
-        .col-md-3
-          | 11 Jan 2014
-          .well
-            table.table.table-striped.table-hover
-              thead
-                tr
-                  th Date
-                  th Temperature
-              tbody
-                tr
-                  td 13:45
-                  td 23oC
-                tr
-                  td 13:45
-                  td 23oC
-                tr
-                  td Mon 11-01-2014 13:45
-                  td 23oC
-                tr
-                  td 11 Jan 2014 @ 13:45
-                  td 23oC
-                tr
-                  td 11 Jan 2014 @ 13:45
-                  td 23oC
-                tr
-                  td 11 Jan 2014 @ 13:45
-                  td 23oC
+        .col-md-12
+          nvd3-line-chart(data='data', showxaxis='true', showyaxis='true', tooltips='true', interactive='true', margin="{left:50,top:50,bottom:50,right:50}", isArea='false', xAxisTickFormat="xAxisTickFormat()", height="400", clipEdge="false")
+          svg
 
 footer.footer(ng-include='"components/footer/footer.html"')

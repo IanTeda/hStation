@@ -46,8 +46,9 @@ var WeatherSchema = new Schema({
     default: -2
   },
   timestamp: {
-    type: Date,
-    default: 0
+    type: [ Date ],
+    default: 0,
+    index: true
   }
 });
 
