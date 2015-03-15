@@ -3,6 +3,22 @@
 angular.module('hStationApp')
   .controller('SettingsCtrl', function ($scope, $http, socket, SettingsService, toaster) {
 
+    $scope.sideBarMenu = [
+      {
+        'title': 'Application',
+        'link': '/settings/app',
+        'state': 'settings.app'
+      },{
+        'title': 'Serial Port',
+        'link': '/serialport',
+        'state': 'settings.serialport'
+      },{
+        'title': 'Log',
+        'link': '/settings/log',
+        'state': 'settings.log'
+      }
+    ];
+
     $scope.settings = [];
 
     // Cron string and select display

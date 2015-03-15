@@ -16,7 +16,7 @@ angular.module('hStationApp')
           var x = new Date(documents[key].timestamp);
           var y = documents[key].temperature;
 
-          points[key] = new Array();
+          points[key] = [];
           points[key].push(x);
           points[key].push(y);
 
@@ -32,7 +32,7 @@ angular.module('hStationApp')
           "color": "blue",
           "values": points
         }
-      ]
+      ];
 
     });
 
@@ -40,7 +40,7 @@ angular.module('hStationApp')
     $scope.xAxisTickFormat = function () {
       return function (d) {
         return d3.time.format('%H:%M')(new Date(d));
-      }
-    }
+      };
+    };
 
   });

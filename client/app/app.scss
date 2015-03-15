@@ -9,8 +9,11 @@ $fa-font-path: "/bower_components/font-awesome/fonts";
 @import 'account/details/details.scss';
 @import 'account/login/login.scss';
 @import 'main/main.scss';
+@import 'settings/app/app.scss';
 @import 'settings/log/log.scss';
+@import 'settings/serialport/serialport.scss';
 @import 'settings/settings.scss';
+@import 'settings/sidebar/sidebar.scss';
 @import 'weather/barometric-pressure/barometric-pressure.scss';
 @import 'weather/carbon-monoxide/carbon-monoxide.scss';
 @import 'weather/dew-point/dew-point.scss';
@@ -22,8 +25,8 @@ $fa-font-path: "/bower_components/font-awesome/fonts";
 @import 'weather/temperature/temperature.scss';
 @import 'weather/ultraviolet/ultraviolet.scss';
 @import 'weather/weather.scss';
-@import 'yeti.scss';
 @import 'footer/footer.scss';
+@import 'navbar/navbar.scss';
 // endinjector
 
 /**
@@ -36,6 +39,22 @@ $fa-font-path: "/bower_components/font-awesome/fonts";
     padding: 0.2em 0;
 }
 
+/*
+ * Main content
+ */
+
+.main {
+  padding: 20px;
+}
+@media (min-width: 768px) {
+  .main {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+}
+.main .page-header {
+  margin-top: 0;
+}
 
 .pink {
     background-color: pink;
@@ -43,21 +62,4 @@ $fa-font-path: "/bower_components/font-awesome/fonts";
 
 .yellow {
     background-color: yellow;
-}
-
-// Add a little more padding to the container
-.container-fluid {
-    margin-left: 48px;
-    margin-right: 48px;
-}
-
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-    .container {
-        max-width: 730px;
-    }
-    .container-fluid {
-        margin-left: 24px;
-        margin-right: 24px;
-    }
 }

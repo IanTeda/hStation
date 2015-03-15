@@ -7,10 +7,6 @@ angular.module('hStationApp')
         url: '/settings',
         templateUrl: 'app/settings/settings.html',
         controller: 'SettingsCtrl',
-      })
-      .state('log', {
-        url: '/settings/log',
-        templateUrl: 'app/settings/log/log.html',
-        controller: 'LogCtrl',
+        abstract: true
       });
   });

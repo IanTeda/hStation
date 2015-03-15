@@ -1,38 +1,11 @@
 header(ng-include='"components/navbar/navbar.html"')
+
 .container-fluid
-  .page-header
-    h1
-      | Settings &nbsp;
-      small Change how hStation Works
-
   .row
-    .col-sm-11
-      form.form-horizontal(role='form')
-        .form-group
-          label.col-md-2.control-label(for='serialPort') Arduino Serial Port:
-          .col-md-4
-            select.form-control(ng-model='settings[0].serialport',
-              ng-options='serialport.comName as serialport.comName + " (" + serialport.manufacturer + ")"  for serialport in serialports',
-              ng-change='serialportSelected()')
-              option(value='') Select Serial Port
-          .col-md-2
-            button.btn.btn-default(ng-click='refreshSerialPorts()')
-              span.glyphicon.glyphicon-refresh
+    .col-sm-3.col-md-2.sidebar
+      div(ui-view='sidebar')
 
-        .form-group
-          label.col-md-2.control-label(for='serialPort') Auto Detect Port:
-          .col-md-4
-            button.btn.btn-info.col-sm-12(ng-click='autoDetectArduino()') Auto Detect Arduino
+    .col-sm-9.col-sm-offset-3.col-md-10.col-md-offset-2.main
+      div(ui-view='main')
 
-        hr
-
-        .form-group
-          label.col-md-2.control-label(for='sensor_cron') Take Readings:
-          .col-md-4
-            select.form-control(ng-model='settings[0].sensor_cron',
-              ng-options='sensor.cron as sensor.every for sensor in sensor_crons',
-              ng-change='takeReadingsSelected()')
-              option(value='') Select interval
-
-toaster-container //- Container div for toast popups
 footer.footer(ng-include='"components/footer/footer.html"')

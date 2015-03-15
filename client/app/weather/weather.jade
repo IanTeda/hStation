@@ -1,6 +1,6 @@
 header(ng-include='"components/navbar/navbar.html"')
 
-.container-fluid
+.container-fluid.main
   .row
     .col-md-3.well
       .page-header
@@ -14,7 +14,7 @@ header(ng-include='"components/navbar/navbar.html"')
           | Weather stats
       .row
         .col-md-12
-          table.table.table-striped.table-hover
+          table.table.table-striped.table-hover.table-bordered.table-condensed.occupy-height(fixed-header='')
             thead
               tr
                 th.col-date.text-center Date

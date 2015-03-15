@@ -1,6 +1,16 @@
 header(ng-include='"components/navbar/navbar.html"')
 
 .container-fluid
-  | This is the dew-point view.
+  .row
+    .col-md-9.col-md-push-3
+      nvd3-line-chart(data='data', showxaxis='true', showyaxis='true', tooltips='true', interactive='true', margin="{left:50,top:50,bottom:50,right:50}", isArea='false', xAxisTickFormat="xAxisTickFormat()", height="400", clipEdge="false")
+      svg
+
+    .col-md-3.col-md-pull-9
+      .page-header
+        h1 Dew Point
+      p Max
+      p Min
+      p Average
 
 footer.footer(ng-include='"components/footer/footer.html"')

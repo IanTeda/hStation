@@ -1,0 +1,18 @@
+header(ng-include='"components/navbar/navbar.html"')
+
+div.container-fluid
+  div.row
+    div.col-sm-3.col-md-2.sidebar
+      ul.nav.nav-sidebar
+        li.active
+          a(href='#') Application
+            span.sr-only (current)
+        li
+          a(href='#') Serial Port
+        li
+          a(href='#') Users
+
+    div.col-sm-9.main
+      p main
+
+footer.footer(ng-include='"components/footer/footer.html"')
