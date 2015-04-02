@@ -1,6 +1,8 @@
-header(ng-include='"components/navbar/navbar.html"')
-
-.container-fluid
-  | This is the methane view.
-
-footer.footer(ng-include='"components/footer/footer.html"')
+header.page-header
+  h1 Carbon Monoxide
+    form.form-inline.pull-right(role='form')
+      .form-group
+        input.form-control(type='text', data-ng-model='query', placeholder='Search log', size='40')
+.row
+  .col-md-12
+    | This is the methane view.

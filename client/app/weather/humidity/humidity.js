@@ -3,9 +3,12 @@
 angular.module('hStationApp')
   .config(function ($stateProvider) {
     $stateProvider
-      .state('humidity', {
-        url: '/weather/humidity',
-        templateUrl: 'app/weather/humidity/humidity.html',
-        controller: 'HumidityCtrl'
+      .state('weather.humidity', {
+        views: {
+          'main': {
+            templateUrl: 'app/weather/humidity/humidity.html',
+            controller: 'HumidityCtrl'
+          }
+        }
       });
   });

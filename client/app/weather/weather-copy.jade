@@ -1,0 +1,43 @@
+header(ng-include='"components/navbar/navbar.html"')
+
+.container-fluid.main
+  .row
+    .col-sm-3.col-md-2.sidebar
+      ul.nav.nav-sidebar
+        li(ng-repeat='item in sideBarMenu', ng-class='{active: $state.includes(item.state)}')
+          a(ui-sref='{{item.state}}') {{item.title}}
+
+    .col-md-9
+      .row
+        .col-md-12
+          | Weather stats
+      .row
+        .col-md-12
+          table.table.table-striped.table-hover.table-bordered.table-condensed.occupy-height(fixed-header='')
+            thead
+              tr
+                th.col-date.text-center Date
+                th.col-temperature.text-center Temperature
+                th.col-barometric-pressure.text-center Barometric Pressure
+                th.col-humidity.text-center Humidity
+                th.col-dew-point.text-center Dew Point
+                th.col-lux.text-center Lux
+                th.col-infrared.text-center Infrared
+                th.col-ultraviolet.text-center Ultraviolet
+                th.col-methane.text-center Methane
+                th.col-carbon-monoxide.text-center Carbon Monoxide
+            tbody
+              tr(ng-repeat="weather in last24hrs")
+                td.col-date.text-right {{weather.timestamp | date:'HH:mm'}}
+                td.col-temperature.text-right {{weather.temperature | number:1}} &deg;C
+                td.col-barometric-pressure.text-right {{weather.barometricPressure | number:0}} hPa
+                td.col-humidty.text-right {{weather.humidity | number:2}} &#37;
+                td.col-dew-point.text-right {{weather.dewPoint | number:1}}
+                td.col-lux.text-right {{weather.lux | number:0}} lux
+                td.col-infrared.text-right {{weather.infrared | number:0}} nm
+                td.col-ultraviolet.text-right {{weather.ultraviolet | number:0}} nm
+                td.col-methane.text-right {{weather.methane | number:0}}
+                td.col-carbon-monoxide.text-right {{weather.carbonMonoxide | number:0}}
+
+
+footer.footer(ng-include='"components/footer/footer.html"')
