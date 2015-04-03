@@ -3,11 +3,11 @@
 angular.module('hStationApp')
   .config(function ($stateProvider) {
     $stateProvider
-      .state('settings.serialport', {
+      .state('settings.users', {
         views: {
           'main': {
-            templateUrl: 'app/settings/serialport/serialport.html',
-            controller: 'SettingsSerialPortCtrl'
+            templateUrl: 'app/settings/users/users.html',
+            controller: 'UsersCtrl'
           }
         }
       });

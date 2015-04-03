@@ -6,15 +6,15 @@ angular.module('hStationApp')
     $scope.sideBarMenu = [
       {
         'title': 'Application',
-        'link': '/settings/app',
         'state': 'settings.app'
       },{
         'title': 'Serial Port',
-        'link': '/serialport',
         'state': 'settings.serialport'
       },{
+        'title': 'Users',
+        'state': 'settings.users'
+      },{
         'title': 'Log',
-        'link': '/settings/log',
         'state': 'settings.log'
       }
     ];
