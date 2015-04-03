@@ -2,7 +2,19 @@ header.page-header
   h1 Application Log
     form.form-inline.pull-right(role='form')
       .form-group
-        input.form-control(type='text', data-ng-model='query', placeholder='Search log', size='40')
+        input.form-control(type='text', ng-model='query', placeholder='Search log', size='40')
 .row
   .col-md-12
-    | Application log
+    table#app-log.table.table-striped.table-condensed.table-responsive(table='app-log-table')
+      //-- Table header
+      thead
+        tr.h4
+          th.text-center.col_level(scope='col') Level
+          th.text-center.col_date_time(scope='col') Date & Time
+          th.text-center.col_message(scope='col') Message
+      //-- Table body
+      tbody
+        tr(ng-repeat="log in logs.file | filter:query ")
+          td.col_level.text-center(ng-class='"log-{{ log.level }}"') {{ log.level }}
+          td.col_date_time.text-right {{ log.timestamp | date:'EEE, dd MMM yyyy @ HH:mm:ss'}}
+          td.col_message {{ log.message }}
