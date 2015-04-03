@@ -7,6 +7,5 @@ angular.module('hStationApp')
         url: '/settings',
         templateUrl: 'app/settings/settings.html',
         controller: 'SettingsCtrl',
-        abstract: true
       });
   });

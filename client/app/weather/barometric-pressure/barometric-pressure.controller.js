@@ -1,48 +1,38 @@
 "use strict";
 
 angular.module('hStationApp')
-  .controller('BarometricPressureCtrl', function ($scope, WeatherService) {
+  .controller('BarometricPressureCtrl', function ($scope) {
 
-    // Load the last 24 hours readings for barometric pressure
-    WeatherService.last24hrs('barometricPressure', function (documents) {
+    // Array for storing readings
+    var points = [];
 
-      $scope.last24hrs = documents;
+    // Iterate through JSON document and add to multidimensional array
+    for (var key in $scope.last24hrs) {
+      if ($scope.last24hrs.hasOwnProperty(key) && $scope.last24hrs[key].barometricPressure) {
+        var x = new Date($scope.last24hrs[key].timestamp);
+        var y = $scope.last24hrs[key].barometricPressure;
 
-      // Array for storing readings
-      var points = [];
+        points[key] = [];
+        points[key].push(x);
+        points[key].push(y);
 
-      // Iterate through JSON document and add to multidimensional array
-      for (var key in documents) {
-        if (documents.hasOwnProperty(key) && documents[key].barometricPressure) {
-          var x = new Date(documents[key].timestamp);
-          var y = documents[key].barometricPressure;
-
-          points[key] = new Array();
-          points[key].push(x);
-          points[key].push(y);
-
-          //console.log('x:' + x + ' y:' + y);
-
-        }
-      }
-
-      // Create scope variable for displaying data
-      $scope.data = [
-        {
-          "key": "Barometric Pressure",
-          "color": "pink",
-          "values": points
-        }
-      ]
-
-    });
-
-    //configuration examples
-    $scope.xAxisTickFormat = function(){
-      return function(d){
-        return d3.time.format('%H:%M')(new Date(d));
       }
     }
 
+    // Create scope variable for displaying data
+    $scope.data = [
+      {
+        "key": "Barometric Pressure",
+        "color": "pink",
+        "values": points
+      }
+    ];
+
+    // Format x-axis date
+    $scope.xAxisTickFormatFunction = function(){
+      return function(d){
+        return d3.time.format('%a %H:%M')(new Date(d));
+      };
+    };
 
   });

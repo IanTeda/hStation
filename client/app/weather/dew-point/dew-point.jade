@@ -3,6 +3,8 @@ header.page-header
     form.form-inline.pull-right(role='form')
       .form-group
         input.form-control(type='text', data-ng-model='query', placeholder='Search log', size='40')
+
 .row
   .col-md-12
-    | This is the carbon-monoxide view.
+    nvd3-line-chart(data='data', showxaxis='true', showyaxis='true', tooltips='true', interactive='true', margin="{left:50,top:50,bottom:50,right:50}", isArea='false', xAxisTickFormat="xAxisTickFormatFunction()", height="400", clipEdge="false", showLegend="true", noData="No Data For You!", interpolate="basis")
+      svg
