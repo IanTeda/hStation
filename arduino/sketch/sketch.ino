@@ -352,6 +352,88 @@ void getSiSensorReading()
   
 }
 
+/*
+ * What voltage am I getting
+ * i.e what is my battery level
+ * http://provideyourown.com/2012/secret-arduino-voltmeter-measure-battery-voltage/
+ */
+
+long readVcc() {
+  // Read 1.1V reference against AVcc
+  // set the reference to Vcc and the measurement to the internal 1.1V reference
+  #if defined(__AVR_ATmega32U4__) || defined(__AVR_ATmega1280__) || defined(__AVR_ATmega2560__)
+    ADMUX = _BV(REFS0) | _BV(MUX4) | _BV(MUX3) | _BV(MUX2) | _BV(MUX1);
+  #elif defined (__AVR_ATtiny24__) || defined(__AVR_ATtiny44__) || defined(__AVR_ATtiny84__)
+    ADMUX = _BV(MUX5) | _BV(MUX0);
+  #elif defined (__AVR_ATtiny25__) || defined(__AVR_ATtiny45__) || defined(__AVR_ATtiny85__)
+    ADMUX = _BV(MUX3) | _BV(MUX2);
+  #else
+    ADMUX = _BV(REFS0) | _BV(MUX3) | _BV(MUX2) | _BV(MUX1);
+  #endif
+
+  delay(2); // Wait for Vref to settle
+  ADCSRA |= _BV(ADSC); // Start conversion
+  while (bit_is_set(ADCSRA,ADSC)); // measuring
+
+  uint8_t low  = ADCL; // must read ADCL first - it then locks ADCH
+  uint8_t high = ADCH; // unlocks both
+
+  long result = (high<<8) | low;
+
+  result = 1125300L / result; // Calculate Vcc (in mV); 1125300 = 1.1*1023*1000
+  return result; // Vcc in millivolts
+}
+
+/*
+ * Read the Arduino temperature
+ * http://www.instructables.com/id/Hidden-Arduino-Thermometer/
+ */
+ 
+ float arduinoTemp = normalizeTemperature(readArduinoTemp);
+ 
+ float normalizeTemperature(long rawData) { 
+  // replace these constants with your 2 data points
+  // these are sample values that will get you in the ballpark (in degrees C)
+  float temp1 = 0;
+  long data1 = 274;
+  float temp2 = 25.0;
+  long data2 = 304;
+ 
+  // calculate the scale factor
+  float scaleFactor = (temp2 - temp1) / (data2 - data1);
+
+  // now calculate the temperature
+  float temp = scaleFactor * (rawData - data1) + temp1;
+
+  return temp;
+}
+ 
+long readArduinoTemp() { 
+  // Read temperature sensor against 1.1V reference
+  #if defined(__AVR_ATmega32U4__)
+    ADMUX = _BV(REFS1) | _BV(REFS0) | _BV(MUX2) | _BV(MUX1) | _BV(MUX0);
+    ADCSRB = _BV(MUX5); // the MUX5 bit is in the ADCSRB register
+  #elif defined (__AVR_ATtiny24__) || defined(__AVR_ATtiny44__) || defined(__AVR_ATtiny84__)
+    ADMUX = _BV(REFS1) | _BV(MUX5) | _BV(MUX1);
+  #elif defined (__AVR_ATtiny25__) || defined(__AVR_ATtiny45__) || defined(__AVR_ATtiny85__)
+    ADMUX = _BV(REFS1) | _BV(MUX3) | _BV(MUX2) | _BV(MUX1) | _BV(MUX0);
+  #else
+    ADMUX = _BV(REFS1) | _BV(REFS0) | _BV(MUX3);
+  #endif
+
+  delay(2); // Wait for ADMUX setting to settle
+  ADCSRA |= _BV(ADSC); // Start conversion
+  while (bit_is_set(ADCSRA,ADSC)); // measuring
+
+  uint8_t low = ADCL; // must read ADCL first - it then locks ADCH
+  uint8_t high = ADCH; // unlocks both
+  long result = (high << 8) | low; // combine the two
+
+  return result;
+}
+
+
+
 
  
 
