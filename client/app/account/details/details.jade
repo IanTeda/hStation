@@ -1,5 +1,43 @@
-header(ng-include='"components/navbar/navbar.html"')
-.container-fluid
-  .row
+div(ng-include='"components/navbar/navbar.html"')
+
+//-- Wrapper div
+div.container
+  div.page-header
     h1 Account Details
+
+  div.row
+    form.form-horizontal.col-md-12
+
+      //-- My first name
+      .form-group
+        label.col-sm-2.control-label(for='firstName') First Name
+        .col-sm-5
+          input#inputEmail3.form-control(type='text', placeholder='First name')
+
+      //-- My last name
+      .form-group
+        label.col-sm-2.control-label(for='lastName') Last Name
+        .col-sm-5
+          input#inputEmail3.form-control(type='text', placeholder='Last name')
+
+      //-- My email
+      .form-group
+        label.col-sm-2.control-label(for='inputEmail3') Email
+        .col-sm-5
+          input#inputEmail3.form-control(type='email', placeholder='Email')
+
+      //-- My password
+      .form-group
+        label.col-sm-2.control-label(for='inputPassword3') Password
+        .col-sm-5
+          ip.form-control-static.col-sm-4 ************
+          button.btn.btn-default.pull-right(ng-click='updatePassword()') Update Password
+
+      //-- My role
+      .form-group
+        label.col-sm-2.control-label(for='inputPassword3') Role
+        .col-sm-5
+          p.form-control-static My role
+
+
 footer.footer(ng-include='"components/footer/footer.html"')
